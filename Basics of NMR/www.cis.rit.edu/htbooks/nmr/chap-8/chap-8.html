@@ -1,0 +1,362 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-8/chap-8.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:26 GMT -->
+<HEAD><TITLE>CHAPTER-8</TITLE></HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 8</H2>
+<H2>PRACTICAL CONSIDERATIONS</H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+	<LI><A HREF="#8.1">Introduction</A>
+	<LI><A HREF="#8.2">Sample Preparation</A>
+	<LI><A HREF="#8.3">Sample Probe Tuning</A>
+	<LI><A HREF="#8.4">Determining a 90 Degree Pulse</A>
+	<LI><A HREF="#8.5">Field Shimming</A>
+	<LI><A HREF="#8.6">Phase Cycling</A>
+	<LI><A HREF="#8.7">1-D Hydrogen Spectra</A>
+	<LI><A HREF="#8.8">Integration</A>
+	<LI><A HREF="#8.9">SNR Improvement</A>
+	<LI><A HREF="#8.10">Variable Temperature </A>
+	<LI><A HREF="#8.11">Troubleshooting</A>
+	<LI><A HREF="#8.12">Cryogen Fills </A>
+	<LI><A HREF="#8.13">Unix Primer </A>
+
+</H4></UL>
+<HR>
+<A NAME="8.1"></A> <H3>Introduction</H3>
+ 
+In previous chapters, you have learned the basic theory of nuclear magnetic resonance.  This chapter emphasizes some of the spectroscopic techniques.  While some of these may be easy for you to understand based on the simple theory you have learned in previous chapters, there may be specific points discussed which are less obvious because they are based on theories not presented in this hypertext book.<P>
+
+When comparing two NMR spectra, always keep in mind the subtle differences in the way the spectra were recorded.  One obvious  example is the effect of field strength.  As the B<FONT SIZE="-1"><SUB>o</SUB></FONT> field increases in magnitude (<I>i.e.</I> 1.5T, 4.7T, 7T) the signal-to-noise ratio generally increases.   The shape of the spectrum may also change.  For example, consider the hydrogen NMR spectrum from three coupled nuclei A, B, and C with the following chemical shifts and J coupling constants.<P>
+
+<CENTER>
+<TABLE  BORDER>
+<TR><TH>Nuclei<TH><IMG SRC="../images/10-delta.gif"> (ppm)
+<TR><TD><CENTER>A</CENTER><TD><CENTER>1.89</CENTER>
+<TR><TD><CENTER>B</CENTER><TD><CENTER>2.00</CENTER>
+<TR><TD><CENTER>C</CENTER><TD><CENTER>2.08</CENTER>
+</TABLE>
+<P>
+<TABLE  BORDER>
+<TR><TH>Interaction<TH>J (Hz)
+<TR><TD><CENTER>AB</CENTER><TD><CENTER>4</CENTER>
+<TR><TD><CENTER>BC</CENTER><TD><CENTER>8</CENTER>
+</TABLE>
+</CENTER>
+<P>
+Compare the 100 MHz 
+<A HREF="h1-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+and 400 MHz
+<A HREF="h1-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+NMR spectra.  The spectral lines from the B type spins are colored red.  You can see how easy it would be to make the wrong choice as to the structure of the molecule based on the 100 MHz spectrum, although the chance of error might be reduced if you had further information, eg. the relative areas under the peaks.  This topic is described in a later section of this chapter.<P>      		 	
+
+
+<A NAME="8.2"></A> <H3>Sample Preparation </H3> 
+
+NMR samples are prepared by dissolving an analyte in a deuterium lock solvent.  Several deuterium lock solvents are available  
+<A HREF="h2-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>.  Some of these solvents will readily absorb moisture from the atmosphere and give water signal in your spectrum.  It is therefore advisable to keep bottles of these solvents tightly capped when not in use.<P>
+
+Most routine high resolution NMR samples are prepared and run in 5 mm glass NMR tubes.  Always fill your NMR tubes to the same height with lock solvent. This will minimize the amount of magnetic field shimming required.   The animation window depicts a sample tube filled with solvent such that it fills the RF coil.  
+<A HREF="h2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+The concentration of your sample should be great enough to give a good signal-to-noise ratio in your spectrum, yet minimize exchange effects  
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+found at high concentrations.  
+<A HREF="h2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+The exact concentration of your sample in the lock solvent will depend on the sensitivity of the spectrometer.  If you have no guidelines for a specific spectrometer, use one drop of analyte for liquids and one or two crystals for solid samples.<P>
+
+The position of spectral absorption lines can be solvent dependent.  Therefore, if you are comparing spectra or trying to identify an unknown sample by comparison to reference spectra, use the same solvent. The hydrogen NMR spectrum of ethanol is a good example of this solvent dependence.  Compare the positions of the CH<FONT SIZE="-1"><SUB>3</SUB></FONT>, 
+CH<FONT SIZE="-1"><SUB>2</SUB></FONT>, and  OH absorption lines in a hydrogen NMR spectrum of ethanol in the lock solvents 
+CDCl<FONT SIZE="-1"><SUB>3</SUB></FONT> 
+<A HREF="h2-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+and D<FONT SIZE="-1"><SUB>2</SUB></FONT>O
+<A HREF="h2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>.   
+Notice also that the relative peak heights are not the same in the two spectra.  This is because the linewidths are not equal.  The area under a peak, not the height of a peak, is proportional to the number of hydrogens in a sample.  This point will be emphasized later in this chapter.<P>
+
+Variations in the polarity and dielectric constant of the lock solvent will also effect the tuning of the probe.  The correction of these effects are covered in the next section of this chapter on sample probe tuning.
+
+
+<A NAME="8.3"></A> <H3>Sample Probe Tuning </H3> 
+
+Variations in the polarity and dielectric constant of the lock solvent will affect the probe tuning.  For this reason the probe should be tuned whenever the lock solvent is changed.  Tuning the probe entails adjusting two capacitors on the RF probe.  
+<A HREF="h3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+One capacitor is called the matching capacitor and the other the tuning capacitor.  The matching capacitor matches the impedance of the loaded probe to that of the 50 Ohm cable coming from the spectrometer.  The tuning capacitor changes the resonance frequency of the RF coil.<P>
+
+Most spectrometers have a probe tuning mode of operation.  This mode of operation presents a display of reflected power vs. frequency on the screen.  The goal is to adjust the display so that the reflected power from the probe is zero at the resonance frequency of the nucleus you are examining.
+<A HREF="h3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+As the polarity and dielectric constant of the lock solvent changes, so does the bandwidth of the RF probe.  
+<A HREF="h3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+This is significant because it affects the amount of RF power needed to produce a 90 degree pulse.  The larger the bandwidth, the more power is needed to produce the 90 degree rotation.  
+<A HREF="../refs/ref-01.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+<P>
+
+
+<A NAME="8.4"></A> <H3>Determinining a 90<SUP>o</SUP> Pulse</H3> 
+
+As pointed out in the previous section of this chapter, changes in the polarity and dielectric constant of the lock solvent affect the bandwidth of the RF probe which in turn affects the amount of RF power needed to produce a 90 degree rotation.  Most NMR spectrometers will not allow you to change the RF power, but they will permit you to change the pulse length.  Therefore, if the bandwidth of the RF probe increases, you will need to increase the RF pulse width to produce a 90 degree pulse.  <P>
+
+To determine the pulse width needed to produce a 90 degree pulse, you should perform the following experiment using a sample which has a single absorption line and a relatively short T<SUB>1</SUB>.  Record a series of spectra with incrementally longer RF pulse widths.  Fourier transform the time domain signals and plot these lines as a function of pulse width.  
+<A HREF="h3-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+The peak height should vary sinusoidally with increasing pulse width.  The 90 degree pulse width will be the first maximum.  The 180 degree pulse width will be the first zero crossing.  Many spectrometers have routines which will automatically record the data necessary to produce these plots.<P>
+
+You should also be aware of the effect of varying the width of the RF pulse on the distribution of frequencies being delivered to your sample.  Recall from the discussion of the convolution theorem in 
+<A HREF="../chap-5/chap-5.html#5.7" TARGET="TEXT">Chapter 5</A> 
+that the Fourier pair of a sine wave which is turned on and off is a sinc function centered at the frequency of the sine wave.  
+<A HREF="h3-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+When you apply an RF pulse of width t in the time domain, you apply a distribution of frequencies to your sample.  Not all of these frequencies will have sufficient B<SUB>1</SUB> magnitude to produce a 90 degree rotation.  The range of frequencies from the center of the distribution to the first zeros in the distribution is +/- 1/t.  As your pulse width increases, the width of the distribution of frequencies in your pulse decreases.  If the distribution is too narrow, you may not be applying the desired rotation to the entire sample.
+<P>
+
+<A NAME="8.5"></A> <H3>Field Shimming </H3> 
+
+The purpose of shimming a magnet is to make the magnetic field more homogeneous and to obtain better spectral resolution.   Shimming can be performed manually or by computer control.   It is not the intent of this section to teach you a step-by-step procedure for shimming, but to present you with the basic theory so that you can, with the aid of your NMR instruction manual, shim your magnet. The reader is encouraged to write down or save the current shim settings before making changes to any of the current shims coil settings.<P>
+
+Broad lines, asymmetric lines, and a loss of resolution are indications that a magnet needs to be shimmed.  The shape of an NMR line is a good indication of which shim is misadjusted.  Consider a single narrow NMR line.  If we zoom in on this line we might see the following shape.  
+<A HREF="h4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>.   
+The following series of spectra depict the appearance of this spectral line in the presence of various inhomogeneities.  
+<A HREF="../refs/ref-17.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+<P>
+
+<CENTER>
+<TABLE  BORDER>
+<TR><TH>Shim<TH>Spectrum 
+<TR><TD><CENTER>Z<SUP>2</SUP></CENTER><TD><CENTER><A HREF="h4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD><CENTER>Z<SUP>3</SUP></CENTER><TD><CENTER><A HREF="h4-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD><CENTER>Z<SUP>4</SUP></CENTER><TD><CENTER><A HREF="h4-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD><CENTER>X, Y, ZX, or ZY</CENTER><TD><CENTER><A HREF="h4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD><CENTER>XY or X<SUP>2</SUP>-Y<SUP>2</SUP></CENTER> 
+	<TD><CENTER><A HREF="h4-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+</TABLE>
+</CENTER>
+<P>
+In general, asymmetric lineshapes result from mis-adjusted even-powered Z shims.  This can be seen by looking at the shape of a Z<SUP>2</SUP> shim field.  
+<A HREF="h4-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+As you go further away from the center of the sample in the +Z or -Z direction, the field increases, giving more components of the spectral line at higher fields.   The higher the power of the Z inhomogeneity, the further away the asymmetry is from the center of the line.   
+<A HREF="h4-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P>
+
+Symmetrically broadened lines are from mis-adjusted odd-powered Z shims.  Consider the shape of the Z<SUP>3</SUP> shim field. 
+<A HREF="h4-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+The top of the sample (+Z) is at a higher field, resulting in higher field spectral components, while the bottom (-Z) is at a lower field, giving more lower field spectral components.  Transverse shims (X,Y) will cause large first order or second order spinning sidebands when the sample is spun.  The shape of these inhomogeneities cause the sample, when it is spun,  to experience a periodic variation in the magnetic field.  Those shims 
+(XY or X<SUP>2</SUP>-Y<SUP>2</SUP>) causing a spinning sample to experience two variations per cycle will create second order spinning sidebands.
+<P>
+
+
+<A NAME="8.6"></A> <H3>Phase Cycling </H3> 
+
+There are a few artifacts of the detection circuitry which may appear in your spectrum if you record a single FID and Fourier transform it.  Phase cycling is the technique used to eliminate these artifacts.  The artifact will be introduced first, followed by the technique used to eliminate it.<P>
+
+Electronic amplifiers often have small offsets in their output when no signal is being put in.  This is referred to as the DC offset of the amplifier.  A DC offset in the time domain is equivalent to a peak at zero frequency in the frequency domain. 
+<A HREF="h6-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  
+If there is an FID on top of a DC offset, its Fourier transform will have an additional peak at zero frequency in the spectrum.
+<A HREF="h6-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A >  This picture has been simplified by presenting only the real part of the signal.<P>
+
+The DC offset could be eliminated by spending thousands of dollars on  better quality amplifiers.  Alternatively, the artifact can be removed by taking an FID recorded with a 90 degree pulse applied along +X'  
+<A HREF="h6-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >,
+an FID recorded  with a 90 degree pulse applied along -X' (note the phase change in the FID)
+<A HREF="h6-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >, 
+multiplying the FID recorded with a 90 degree pulse along -X' by -1
+<A HREF="h6-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >,  
+adding the two FIDs, and Fourier transforming. 
+<A HREF="h6-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  
+ This process only costs a little extra time and a few extra lines of computer code.<P>
+
+Another type of artifact is caused by having unequal gains on the real and imaginary outputs of the quadrature detector.  For a Fourier transform to produce a proper spectrum, it requires true real and imaginary inputs.
+<A HREF="h6-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  
+When the inputs are equal in amplitude, there are no <I>negative frequency</I> artifacts in the spectrum.  If the two inputs are different,  the negative frequency components of a signal do not cancel.  
+<A HREF="h6-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  
+You can tell a negative frequency artifact because it appears to be the mirror image (but smaller) of a peak from the opposite sign end of the spectrum.<P>
+
+Negative frequency artifacts can be removed by recording an FID with M<SUB>x</SUB> or the real signal (M<SUB>y</SUB> or the imaginary signal) from channel 1 (2) of the quadrature detector.   
+<A HREF="h6-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >   
+Another FID is recorded with M<SUB>x</SUB> or the real signal (M<SUB>y</SUB> or the imaginary signal) from channel 2 (1) of the quadrature detector.  The two FIDs are then  averaged.  
+<A HREF="h6-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  
+As a result,  the amplitude of the real and imaginary inputs to the FT are equal, so when the FIDs are Fourier transformed, there are no negative frequency artifacts.
+<A HREF="h6-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  <P>
+ 
+The averaging described above can  be achieved by applying a 90 degree pulse about +X and a 90 degree pulse about +Y, and adding the two resulting FIDs together.  To eliminate all possible errors from different combinations of these types of pulses, phase cycling is applied.  Phase cycling adds together eight FIDs recorded with the following phases 
+<A HREF="h6-12.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A >  
+to eliminate all the possible quadrature artifacts. <P>
+
+
+<A NAME="8.7"></A> <H3>1-D Hydrogen Spectra </H3> 
+
+There are several parameters, in addition to the ones already discussed in this chapter, which must be set before a spectrum can be recorded.  These include the width of the spectrum, number of data points in the spectrum, and the receiver gain.  Some of these are automatically set to default values on some spectrometers.  You are encouraged to refer to 
+<A HREF="../chap-5/chap-5.html" TARGET="TEXT">Chapter 5</A> 
+for a deeper appreciation of the significance of these parameters.<P>
+
+Once an FID is recorded and Fourier transformed, the resultant spectrum must be phased so that all the absorption lines are positive.  You are encouraged to review 
+<A HREF="../chap-5/chap-5.html#5.4" TARGET="TEXT">Chapter 5</A> 
+for an explanation of the need to phase correcting a spectrum.  There are various automatic and manual phase correction algorithms on most NMR spectrometers.<P>
+
+Here are a few examples of simple hydrogen NMR spectra to demonstrate the capabilities of NMR spectroscopy.  As you become more knowledgeable about NMR, you will learn the relationship between peak locations, peak splitting, and molecular structure in NMR spectra.<P>
+
+<CENTER>
+<TABLE  BORDER>
+<TR><TH>Molecule<TH>Formula<TH>Solvent<TH>Spectrum 
+<TR><TD>cyclohexane<TD>C<SUB>6</SUB>H<SUB>12</SUB><TD>CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </CENTER>  
+<TR><TD>benzene<TD>C<SUB>6</SUB>H<SUB>6</SUB><TD>CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </CENTER>   
+<TR><TD>toluene<TD>C<SUB>6</SUB>H<SUB>5</SUB>CH<SUB>3</SUB><TD>CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </CENTER>   
+<TR><TD>ethyl benzene<TD>C<SUB>6</SUB>H<SUB>5</SUB>CH<SUB>2</SUB>CH<SUB>3</SUB>
+	<TD>CDCl<SUB>3</SUB>
+	<TD><CENTER><A HREF="h7-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  </CENTER>  
+<TR><TD>acetone<TD>CH<SUB>3</SUB>(C=O)CH<SUB>3<TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  </CENTER>  
+<TR><TD>methyl ethyl ketone<TD>CH<SUB>3</SUB>(C=O)CH<SUB>2</SUB>CH<SUB>3</SUB><TD>CDCl<SUB>3</SUB> 	<TD><CENTER> <A HREF="h7-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>water<TD>H<SUB>2</SUB>O <TD>D<SUB>2</SUB>O 
+	<TD><CENTER> <A HREF="h7-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>ethanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>OH<TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>ethanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>OH <TD>D<SUB>2</SUB>O
+	<TD><CENTER> <A HREF="h7-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>1-propanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH<SUB>2</SUB>OH <TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>2-propanol<TD>(CH<SUB>3</SUB>)<SUB>2</SUB>CHOH <TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-11.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>t-butanol<TD>(CH<SUB>3</SUB>)<SUB>3</SUB>COH <TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="h7-12.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>2-butanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH(OH)CH<SUB>3</SUB><TD> CDCl<SUB>3</SUB> 	<TD><CENTER> <A HREF="h7-13.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>pyridine<TD>C<SUB>5</SUB>H<SUB>5</SUB>N<TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER><A HREF="h7-14.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+</TABLE>
+</CENTER>
+
+<A NAME="8.8"></A> <H3>Integration </H3> 
+
+In addition to chemical shift and spin-spin coupling information, there is one additional piece of information which the chemist can use in determining the structure of a molecule from an NMR spectrum.  This information is the relative area of absorption peaks in the spectrum. Here an <I>absorption peak</I> is defined as the family of peaks centered at a particular chemical shift.  For example, if there is a triplet of peaks at a specific chemical shift, the number is the sum of the area of the three.     The rule is that peak area is proportional to the number of a given type of spins in the molecule and in the sample.  An example should help you understand this relationship.<P>
+
+Consider the methyl ethyl ketone (CH<SUB>3</SUB>CH<SUB>2</SUB>(C=O)CH<SUB>3</SUB>) molecule and its hydrogen NMR spectrum.
+<A HREF="h8-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+When the
+-CH<SUB>2</SUB>- (<img src="../images/10-delta.gif"> = 2.25 ppm),
+-CH<SUB>3</SUB> (<img src="../images/10-delta.gif"> = 2.0 ppm), and
+CH<SUB>3</SUB>- (<img src="../images/10-delta.gif"> = 0.9 ppm)
+peaks are integrated we get the following spectrum.  
+<A HREF="h8-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+The areas under the three types of peaks on this spectrometer are 26:39:39.  Dividing each number by 13, we obtain a 2:3:3 ratio which is proportional to the number of -CH<SUB>2</SUB>- to -CH<SUB>3</SUB>  to CH<SUB>3</SUB>- hydrogens.
+<P>
+
+There are a few assumptions which were made in presenting this rule.   
+<UL>
+<LI>The T<SUB>1</SUB> and T<SUB>2</SUB> values of all the spins are equal.
+<LI>There is no spin decoupling being performed.  
+<LI>The signal-to-noise ratio is good.
+<LI>There is no sloping baseline in the spectrum.
+</UL>
+Spin decoupling will be discussed in
+<A HREF="../chap-9/chap-9.html#9.2" TARGET="TEXT">Chapter 9</A>. <P>
+You may correct for a sloping baseline by performing a baseline correction to the spectrum.   A poor signal-to-noise ratio may be improved by performing signal averaging, discussed next.   
+<P>
+
+
+<A NAME="8.9"></A> <H3>SNR Improvement </H3> 
+
+The signal-to-noise ratio (SNR) of a spectral peak is the ratio of the average height of the peak to the standard deviation of the noise height in the baseline.  Often spectroscopists approximate this quantity as the average peak height divided by the amplitude of the noise in the baseline.  
+<A HREF="h9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+The signal to noise ratio may be improved by performing signal averaging.  Signal averaging is the collection and averaging together of several spectra.  The signals are present in each of the averaged spectra so their contribution to the resultant spectrum add.  Noise is random so it does not add, but begins to cancel as the number of spectra averaged increases.  The signal-to-noise improvement from signal averaging is proportional to the square root of the number of spectra (N) averaged.  <P>
+<CENTER>
+SNR <img src="../images/10-prop.gif">  N<SUP>1/2</SUP>
+</CENTER>
+<P>
+Because of the need to perform phase cycling, you will need to have the number of averages equal to a multiple of the minimum number of phase cycling steps.  Compare the results of averaging together the following number of spectra of a very dilute solution of methyl ethyl ketone.<P>
+
+<CENTER>
+<TABLE  BORDER>
+<TR><TH>N<TH>N<SUP>1/2</SUP><TH>Spectrum 
+<TR><TD>1<TD>1.00 
+	<TD><CENTER><A HREF="h9-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD>8<TD>2.83 
+	<TD><CENTER><A HREF="h9-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD>16<TD>4.00 
+	<TD><CENTER><A HREF="h9-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>80<TD>8.94 
+	<TD><CENTER><A HREF="h9-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD>800<TD>28.28 
+	<TD><CENTER><A HREF="h9-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+</TABLE>
+</CENTER>
+<P>
+
+
+<A NAME="8.10"></A> <H3>Variable Temperature </H3> 
+
+Many NMR spectrometers have the ability to control the temperature of the sample in the probe.  A schematic representation of the variable temperature hardware on an NMR spectrometer is depicted in the animation window.  
+<A HREF="h10-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+All of these spectrometers permit you to set the temperature to values above room temperature by just entering the desired temperature.  You should be careful not to exceed the maximum temperature allowable for your probe because doing so will melt adhesives and components in the probe.  Controlling the temperature below room temperature requires the use of hardware to cool the gas flowing over the sample.  If this gas is air, it must be dry air to avoid condensation of water on the sample.  Once the sample and probe have been cooled or heated, you should slowly return the probe to room temperature.  Do not expose a cold probe to the moist atmosphere; condensation will result.<P>
+
+<A NAME="8.11"></A> <H3> Troubleshooting </H3> 
+
+By now you may realize that an NMR spectrometer is a complex piece of instrumentation with many sub systems which must be functioning properly in order to record a useable NRM spectrum.  The intent of this section is to provide you with a systematic method of identifying a problem with the spectrometer.  Once a problem is identified, you are not necessarily expected to be able to solve it, but you will at least be able to describe the steps you took to diagnose the problem when speaking to a system administrator or a service representative from the manufacturer of your spectrometer.  Click on this icon to start the diagnosis process in the animation window.  
+<A HREF="h11-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P>
+
+
+
+<A NAME="8.12"></A> <H3>Cryogen Fills </H3> 
+
+Superconducting magnets require liquid nitrogen (N<SUB>2</SUB>) and liquid Helium (He).  Because it is difficult to make a perfect dewar to hold these cryogens, they need to be periodically replenished.  Liquid nitrogen is typically filled every 7 to 10 days and liquid helium every 200 to 300 days.  Cryogen fills must be performed correctly to avoid injury to you and the magnet.  The injuries to you from cryogenic liquids were described in 
+<A HREF="../chap-7/chap-7.html#7.6" TARGET="TEXT">Chapter 7</A>.  
+Injury to a magnet could include breaking a seal on a dewar or quenching a magnet.  Both forms of magnet injuries are repairable, but at the least entail recharging the magnet; at the most, they can entail replacing the magnet.<P>
+
+When filling the magnet with liquid nitrogen, you must be sure not to exceed the recommended fill pressure and rate for your magnet.   If your magnet has two liquid nitrogen ports, one should be used for filling and the other for venting the boil-off gaseous nitrogen and overfill liquid nitrogen.  A piece of tubing is typically placed on the vent port to direct the overfill liquid nitrogen away from the magnet seals, probe, and electronics.  It is highly recommended that your liquid nitrogen tanks be made of non-magnetic stainless steel.<P>
+
+Liquid helium fills are typically a two-person operation.  Because they are done so infrequently, it is good to review the process before each fill.  The fill requires a supply dewar of liquid helium, a special liquid helium transfer line, 
+and a tank of pure compressed helium gas.  
+<A HREF="h12-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+Liquid helium is transferred from the liquid helium supply dewar up through the transfer line, into the helium dewar of the magnet.  
+<A HREF="h12-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P> 
+
+The transfer line goes into the top of the liquid helium supply dewar, but should never rest on the bottom of the dewar.  The bottom of the dewar may contain frozen water, oxygen, and nitrogen which will be forced into your magnet if the transfer line touches the bottom during the transfer process.  
+<A HREF="h12-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+The compressed helium gas, mentioned earlier, is for pressurizing the liquid helium supply dewar with about 2 to 4 psi of pressure.  
+<A HREF="h12-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+Gauges on helium supply dewars can be very inaccurate, so do not count on them to give you an accurate reading. 
+<A HREF="h12-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+A helium pressure above the liquid forces the Helium into the magnet dewar.  <P>
+
+The transfer line is usually inserted into the magnet until it contacts a transfer flange in the bottom of the magnet.  The nitrogen ports on the magnet should be plugged with a check valve during filling of the helium dewar of the magnet.  
+<A HREF="h12-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+This step prevents cryopumping, a process whereby nitrogen, water, and oxygen are condensed out of the atmosphere into the nitrogen dewar due to the magnet stacks being cooled by the helium.  Many labs loosely plug the helium vents with tissue during the fill.  This cuts down on cryopumping should the flow of the venting He drop.  
+<A HREF="h12-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P> 
+
+The best way to determine if the magnet is full is to look for a change in the gas cloud coming out of the magnet vents.  When the magnet is full the cloud becomes very thick with a deep white center plume with a slight blue tint. 
+<A HREF="h12-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+The helium vents on the magnet should be closed promptly after the magnet is full.   
+<P>
+
+
+
+
+<A NAME="8.13"></A> <H3>Unix Primer </H3> 
+
+Most NMR spectrometers are controlled by a computer workstation.  The NMR program which gives your spectrometer the look and feel you are used to is running on this computer.  This computer is most likely running a UNIX operating system.  The operating system is equivalent to DOS on a Microsoft system or OS-5 on a Macintosh system.  Although you may be able to perform all the file transfer and manipulation commands from your NMR program, you may find it useful to know a few UNIX commands.  This chapter is intended to give you enough information about UNIX to perform simple tasks in the UNIX operating system.<P>
+
+The UNIX file system is divided into directories, which are equivalent to folders in some operating systems.  Because UNIX is a multi-user system, there must be a way to keep your directories separate (and safe) from someone else's.  To achieve this, there are accounts with passwords and ownership of directories.  For example, you have an account which has a password.  Logging on under your account gives you access to your directories and to other directories for which you have access (permission).<P>
+
+The most useful, but least used command in UNIX is man.  This is short for manual and gives you on-line help on every UNIX command.  The more you use it, the easier it is to use.  The animation window contains a table of a few simple UNIX commands.  
+<A HREF="h13-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+Entries in italics are examples and can be any string of characters or numbers. <P>
+
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+Go to the: [<A HREF="../chap-9/chap-9.html">next chapter</A> 
+           | <A HREF="#top">chapter top</A> 
+           | <A HREF="../chap-7/chap-7.html">previous chapter</A> 
+           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-8/chap-8.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:42 GMT -->
+</HTML>

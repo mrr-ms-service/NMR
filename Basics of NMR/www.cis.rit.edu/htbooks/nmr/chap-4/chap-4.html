@@ -1,0 +1,184 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-4/chap-4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:44:53 GMT -->
+<HEAD><TITLE>CHAPTER-4</TITLE></HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 4</H2>
+<H2>NMR  SPECTROSCOPY</H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+        <LI><A HREF="#4.6">Chemical Shift</A>
+        <LI><A HREF="#4.7">Spin-Spin Coupling </A>
+        <LI><A HREF="#4.1">The Time Domain NMR Signal</A>
+        <LI><A HREF="#4.2">The +/- Frequency Convention</A>
+</H4></UL>
+<HR>
+
+
+<A NAME="4.6"></A> <H3>Chemical Shift</H3> 
+
+When an atom is placed in a magnetic field, its electrons circulate about the direction of the applied magnetic field.  This circulation causes a small magnetic field at the nucleus which opposes the externally applied field.
+<A HREF="../refs/ref-09.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+<A HREF="d6-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+The magnetic field at the nucleus (the effective field) is therefore generally less than the applied field by a fraction 
+<IMG SRC="../images/10-sigma.gif">.<P>
+
+<CENTER>
+B = B<FONT SIZE="-1"><SUB>o</SUB></FONT> (1-<FONT FACE="SYMBOL">s</FONT>)
+</CENTER><P>
+
+In some cases, such as the benzene molecule, the circulation of the electrons in the aromatic <IMG SRC="../images/10-pi.gif"> orbitals creates a magnetic field at the hydrogen nuclei which enhances the B<FONT SIZE="-1"><SUB>o</SUB></FONT>  field.  This phenomenon is called deshielding.  
+<A HREF="d6-1a.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+In this example, the B<FONT SIZE="-1"><SUB>o</SUB></FONT>  field is applied perpendicular to the plane of the molecule.  The ring current is traveling clockwise if you look down at the plane. <P>
+
+The electron density around each nucleus in a molecule varies according to the types of nuclei and bonds in the molecule.  The opposing field and therefore the effective field at each nucleus will vary.  This is called the chemical shift phenomenon.<P>
+
+Consider the methanol molecule.
+<A HREF="d6-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
+The resonance frequency of two types of nuclei in this example differ.  This difference will depend on the strength of the magnetic field, B<FONT SIZE="-1"><SUB>o</SUB></FONT>,  used to perform the NMR spectroscopy.  The greater the value of B<FONT SIZE="-1"><SUB>o</SUB></FONT>,  the greater the frequency difference.  This relationship could make it difficult to compare NMR spectra taken on spectrometers operating at different field strengths.  The term chemical shift was developed to avoid this problem.  <P>
+
+The chemical shift of a nucleus is the difference between the resonance frequency of the nucleus and a standard, relative to the standard.  This quantity is reported in ppm and given the symbol delta,  <IMG SRC="../images/10-delta.gif">.<P>
+
+<CENTER>
+<FONT FACE="SYMBOL">d</FONT> = (<FONT FACE="SYMBOL">n</FONT> - 
+<FONT FACE="SYMBOL">n</FONT><FONT SIZE="-1"><SUB>REF</SUB></FONT>)
+x10<FONT SIZE="-1"><SUP>6</SUP></FONT>
+/ <FONT FACE="SYMBOL">n</FONT><FONT SIZE="-1"><SUB>REF</SUB></FONT>
+</CENTER><P>
+
+In NMR spectroscopy, this standard is often tetramethylsilane, Si(CH<SUB>3</SUB>)<SUB>4</SUB>, abbreviated TMS.  The chemical shift is a very precise metric of the chemical environment around a nucleus.  For example, the hydrogen chemical shift of a CH<FONT SIZE="-1"><SUB>2</SUB></FONT> hydrogen next to a Cl will be different than that of a CH<FONT SIZE="-1"><SUB>3</SUB></FONT> next to the same Cl.  It is therefore difficult to give a detailed list of chemical shifts in a limited space.  The animation window displays a chart of selected hydrogen chemical shifts of pure liquids and some gasses.
+<A HREF="d6-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
+
+The magnitude of the screening depends on the atom.  For example, carbon-13 chemical shifts are much greater than hydrogen-1 chemical shifts.
+The following tables present a few selected chemical shifts of fluorine-19 containing compounds,
+<A HREF="d6-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+carbon-13 containing compounds,
+<A HREF="d6-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+nitrogen-14 containing compounds,
+<A HREF="d6-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+and phosphorous-31 containing compounds.
+<A HREF="d6-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+These shifts are all relative to the bare nucleus.  The reader is directed to a more comprehensive list of chemical shifts for use in spectral interpretation.
+<A HREF="../refs/ref-40.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+<A HREF="../refs/ref-41.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+<A HREF="../refs/ref-42.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
+
+
+<A NAME="4.7"></A> <H3>Spin-Spin Coupling</H3> 
+
+Nuclei experiencing the same chemical environment or chemical shift are called equivalent.  Those nuclei experiencing different environment or having different chemical shifts are nonequivalent.  Nuclei which are close to one another exert an influence on each other's effective magnetic field.  This effect shows up in the NMR spectrum when the nuclei are nonequivalent.  If the distance between non-equivalent nuclei is less than or equal to three bond lengths, this effect is observable.  This effect is called spin-spin coupling or J coupling.<P>
+
+Consider the following example.         There are two nuclei, A and B, three bonds away from one another in a molecule.  
+<A HREF="d7-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+The spin of each nucleus can be either aligned with the external field such that the fields are N-S-N-S, called spin up <IMG SRC="../images/12-up.gif">, or opposed to the external field such that the fields are N-N-S-S, called spin down <IMG SRC="../images/12-down.gif">.   The magnetic field at nucleus A will be either greater than B<FONT SIZE="-1"><SUB>o</SUB></FONT> or less than B<FONT SIZE="-1"><SUB>o</SUB></FONT> by a constant amount due to the influence of nucleus B.  
+<A HREF="d7-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+There are a total of four possible configurations for the two nuclei in a magnetic field.  Arranging these configurations in order of increasing energy gives the following arrangement.
+<A HREF="d7-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+The vertical lines in this diagram represent the allowed transitions between energy levels.  In NMR, an allowed transition is one where the spin of one nucleus changes from spin up <IMG SRC="../images/12-up.gif"> to spin down <IMG SRC="../images/12-down.gif">, or 
+spin down <IMG SRC="../images/12-down.gif"> to spin up <IMG SRC="../images/12-up.gif">.   Absorptions of energy where two or more nuclei change spin at the same time are not allowed.  There are two absorption frequencies for the A nucleus and two for the B nucleus represented by the vertical lines between the energy levels in this diagram.<P>
+
+The NMR spectrum for nuclei A and B reflects the splittings observed in the energy level diagram.  The A absorption line is split into 2 absorption lines centered on <IMG SRC="../images/10-delta.gif"><FONT SIZE="-1"><SUB>A</SUB></FONT>,  and the B absorption line is split into 2 lines centered on <IMG SRC="../images/10-delta.gif"><FONT SIZE="-1"><SUB>B</SUB></FONT>.  The distance between two split absorption lines is called the J coupling constant or the spin-spin splitting constant and is a measure of the magnetic interaction between two nuclei. 
+<A HREF="d7-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+For the next example, consider a molecule with three spin 1/2 nuclei, one type A and two type B.  
+<A HREF="d7-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+The type B nuclei are both three bonds away from the type A nucleus.  The magnetic field at the A nucleus has three possible values due to four possible spin configurations of the two B nuclei.  
+<A HREF="d7-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+The magnetic field at a B nucleus has two possible values.  
+<A HREF="d7-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+The energy level diagram for this molecule has six states or levels because there are two sets of levels with the same energy.
+<A HREF="d7-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Energy levels with the same energy are said to be degenerate.  The vertical lines represent the allowed transitions or absorptions of energy.  Note that there are two lines drawn between some levels because of the degeneracy of those levels.<P>
+
+The resultant NMR spectrum is depicted in the animation window. 
+<A HREF="d7-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Note that the center absorption line of those centered at <IMG SRC="../images/10-delta.gif"><FONT SIZE="-1"><SUB>A</SUB></FONT>  is twice as high as the either of the outer two.  This is because there were twice as many transitions in the energy level diagram for this transition.  The peaks at <IMG SRC="../images/10-delta.gif"><FONT SIZE="-1"><SUB>B</SUB></FONT>  are taller because there are twice as many B type spins than A type spins.<P>
+
+The complexity of the splitting pattern in a spectrum increases as the number of B nuclei increases.  The following table contains a few  examples. <P>
+<CENTER>
+<TABLE  BORDER>
+<TR><TH>Configuration <TH>Peak Ratios
+<TR><TD><CENTER>A</CENTER><TD><CENTER>1</CENTER>
+<TR><TD><CENTER>AB</CENTER><TD><CENTER>1:1</CENTER>
+<TR><TD><CENTER>AB<FONT SIZE="-1"><SUB>2</SUB></FONT></CENTER> <TD><CENTER>1:2:1</CENTER>
+<TR><TD><CENTER>AB<FONT SIZE="-1"><SUB>3</SUB></FONT></CENTER> <TD><CENTER>1:3:3:1</CENTER>
+<TR><TD><CENTER>AB<FONT SIZE="-1"><SUB>4</SUB></FONT></CENTER> <TD><CENTER>1:4:6:4:1</CENTER>
+<TR><TD><CENTER>AB<FONT SIZE="-1"><SUB>5</SUB></FONT></CENTER> <TD><CENTER>1:5:10:10:5:1</CENTER>
+<TR><TD><CENTER>AB<FONT SIZE="-1"><SUB>6</SUB></FONT></CENTER> <TD><CENTER>1:6:15:20:15:6:1</CENTER>
+</TABLE>
+</CENTER>                                       
+
+<P>
+This series is called Pascal's triangle and can be calculated from the coefficients of the expansion of the equation
+<CENTER>(x+1)<SUP>n</SUP></CENTER><P>
+where n is the number of B nuclei in the above table.<P>
+
+When there are two different types of nuclei three bonds away  
+<A HREF="d7-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+there will be two values of J, one for each pair of nuclei.  By now you get the idea of the number of possible configurations and the energy level diagram for these configurations, so we can skip to the spectrum.   In the following example J<FONT SIZE="-1"><SUB>AB</SUB></FONT> is greater J<FONT SIZE="-1"><SUB>BC</SUB></FONT>.
+<A HREF="d7-11.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+<P>
+
+
+<A NAME="4.1"></A> <H3>The Time Domain NMR Signal </H3> 
+
+An NMR sample may contain many different magnetization components, each with its own Larmor frequency.   These magnetization components are associated with the nuclear spin configurations joined by an allowed transition line in the energy level diagram.  Based on the number of allowed absorptions due to chemical shifts and spin-spin couplings of the different nuclei in a molecule, an NMR spectrum may contain many different frequency lines.  <P>
+
+In pulsed NMR spectroscopy,  signal is detected after these magnetization vectors are rotated into the XY plane.  Once a magnetization vector is in the XY plane it rotates about the direction of the B<FONT SIZE="-1"><SUB>o</SUB></FONT> field, the +Z axis.  As  transverse magnetization  rotates about  the Z  axis, it will induce a current in a coil of wire located around the X  axis.  
+<A HREF="d1-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
+Plotting current as a function  of time gives a sine  wave.
+<A HREF="d1-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+This wave will, of course, decay with time constant 
+T<FONT SIZE="-1"><SUB>2</SUB></FONT>* 
+due to dephasing of the spin packets.  This signal is called a  free induction decay  (FID). 
+<A HREF="d1-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+We will  see in <A HREF="../chap-5/chap-5.html" TARGET="TEXT">Chapter 5</A> 
+how the FID is converted into a frequency domain spectrum. 
+<A HREF="d1-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+You will see in <A HREF="../chap-6/chap-6.html" TARGET="TEXT">Chapter 6</A>
+what sequence of events will produce a time domain signal.
+<P>
+
+
+<A NAME="4.2"></A> <H3>The +/- Frequency Convention</H3> 
+
+Transverse  magnetization vectors rotating faster  than the  rotating frame of reference are said to be rotating at a positive frequency relatve to the rotating frame (+<FONT FACE="SYMBOL">n</FONT>).
+<A HREF="d2-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+Vectors  rotating slower than the rotating frame are said to be rotating at a negative frequency relative to the rotating frame 
+(-<FONT FACE="SYMBOL">n</FONT>).
+<A HREF="d2-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+It is worthwhile noting here that in most NMR spectra, the resonance frequency of a nucleus, as well as the magnetic field experienced by the nucleus and the chemical shift of a nucleus, increase from right to left.  
+The frequency plots used in this hypertext book to describe Fourier transforms will use the more conventional mathematical axis of frequency increasing from left to right. <P>
+  
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+Go to the: [<A HREF="../chap-5/chap-5.html">next chapter</A> 
+           | <A HREF="#top">chapter top</A> 
+           | <A HREF="../chap-3/chap-3.html">previous chapter</A> 
+           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-4/chap-4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:00 GMT -->
+</HTML>
+

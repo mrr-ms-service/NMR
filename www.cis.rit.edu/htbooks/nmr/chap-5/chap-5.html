@@ -1,0 +1,321 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-5/chap-5.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:00 GMT -->
+<HEAD><TITLE>CHAPTER-5</TITLE></HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 5</H2>
+<H2>FOURIER TRANSFORMS</H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+	<LI><A HREF="#5.1">Introduction</A>
+ 	<LI><A HREF="#5.2"> The + and - Frequency Problem </A>
+	<LI><A HREF="#5.3"> The Fourier Transform </A>
+	<LI><A HREF="#5.4"> Phase Correction </A>
+	<LI><A HREF="#5.6"> Fourier Pairs </A>
+	<LI><A HREF="#5.7"> The Convolution Theorem </A>
+	<LI><A HREF="#5.8"> The Digital FT </A>
+	<LI><A HREF="#5.9"> Sampling Error </A>
+	<LI><A HREF="#5.10"> The Two-Dimensional FT </A>
+
+</H4></UL>
+<HR>
+<A NAME="5.1"></A><H3>Introduction</H3> 
+
+
+A  detailed description of the Fourier transform ( FT ) has waited until now, when you  have a better appreciation of why it is needed.  A Fourier transform is an operation which converts functions from time to frequency  domains.  An inverse Fourier transform ( IFT ) converts from the frequency domain to the time domain. <P>
+
+Recall  from  <A HREF="../chap-2/chap-2.html#2.9" TARGET="TEXT" >Chapter 2 </A> that the  Fourier  transform is a mathematical   technique  for converting time  domain  data  to  frequency  domain  data,  and  vice versa. 
+<A HREF="../chap-2/b9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+
+<A NAME="5.2"></A><H3>The + and - Frequency Problem</H3> 
+To begin our detailed description of the FT consider the following.  A magnetization vector, starting at +x, is rotating about the Z axis in  a clockwise direction. The plot of M<FONT SIZE="-1"><SUB>x</SUB></FONT>
+ as a function of time is  a cosine wave.  
+<A HREF="e2-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
+Fourier transforming this  gives peaks at both +<IMG SRC="../images/10-nu.gif"> and -<IMG SRC="../images/10-nu.gif"> 
+because the FT can not distinguish between a  +<IMG SRC="../images/10-nu.gif"> 
+and a -<IMG SRC="../images/10-nu.gif">
+ rotation  of the  vector from the data supplied.
+<A HREF="e2-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+A plot of M<FONT SIZE="-1"><SUB>y</SUB></FONT> as a function of time is a -sine function.
+<A HREF="e2-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
+Fourier  transforming this gives peaks at  +<IMG SRC="../images/10-nu.gif"> and -<IMG SRC="../images/10-nu.gif"> 
+because the FT can  not  distinguish between a positive vector rotating  at  +<IMG SRC="../images/10-nu.gif"> 
+and a  negative  vector rotating  at  -<IMG SRC="../images/10-nu.gif"> 
+from the data  supplied.
+<A HREF="e2-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+The solution is to input both the  M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT> into the FT.  The FT is designed to handle two orthogonal input functions called the real and imaginary components.
+<A HREF="e2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+Detecting just  the M<FONT SIZE="-1"><SUB>x</SUB></FONT> or M<FONT SIZE="-1"><SUB>y</SUB></FONT> component for input into the FT is called linear detection.  This was the detection scheme on many older  NMR spectrometers and some magnetic resonance imagers.  It required  the computer to discard half of the frequency domain data.
+<A HREF="e2-6.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+Detection  of both M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT> is  called quadrature detection and is the method of detection on modern  spectrometers and imagers.  It is the method of choice since now the FT can distinguish between 
++<IMG SRC="../images/10-nu.gif"> and -<IMG SRC="../images/10-nu.gif">, and all of the frequency domain data be used.
+<A HREF="e2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+
+<A NAME="5.3"></A> <H3>The Fourier Transform </H3> 
+An  FT is defined by the  integral
+<A HREF="../refs/ref-03.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+<A HREF="../refs/ref-04.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
+<CENTER><IMG SRC="images/ft_eq_1.gif"></CENTER><P>
+
+Think of f(<IMG SRC="../images/10-omega.gif">) as the overlap of f(t) with a wave of frequency 
+<IMG SRC="../images/10-omega.gif">. <P>
+
+<CENTER><IMG SRC="images/ft_eq_2.gif"></CENTER><P>
+
+This is easy to picture  by looking at  the real part of <I>f</I>(<IMG SRC="../images/10-omega.gif">)  only. <P>
+<CENTER><IMG SRC="images/ft_eq_3.gif"></CENTER><P>
+
+Consider the function of time, f( t ) = cos( 4t ) + cos( 9t ).
+<A HREF="e3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+To understand the FT, examine the product of f(t) with cos(<IMG SRC="../images/10-omega.gif">t) for 
+<IMG SRC="../images/10-omega.gif"> values between 1 and 10, and then the summation of the values of this product between 1 and 10 seconds.  The summation will only be examined for time values between 0 and 10 seconds.<P>
+
+<CENTER>
+<TABLE>
+<TR><TD><A HREF="e3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=1
+<TR><TD><A HREF="e3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+
+		<IMG SRC="../images/10-omega.gif">=2
+<TR><TD><A HREF="e3-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=3
+<TR><TD><A HREF="e3-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=4
+<TR><TD><A HREF="e3-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=5
+<TR><TD><A HREF="e3-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=6
+<TR><TD><A HREF="e3-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=7
+<TR><TD><A HREF="e3-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=8
+<TR><TD><A HREF="e3-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=9
+<TR><TD><A HREF="e3-11.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		<IMG SRC="../images/10-omega.gif">=10
+<TR><TD><A HREF="e3-12.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+		f(<IMG SRC="../images/10-omega.gif">)
+</TABLE>
+</CENTER><P>
+
+The inverse Fourier transform (IFT)  is best depicted as an summation of the time domain spectra of frequencies in 
+f(<IMG SRC="../images/10-omega.gif">).
+<A HREF="e3-13.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+
+
+<A NAME="5.4"></A> <H3>Phase Correction </H3> 
+
+<P ALIGN="JUSTIFY">The actual FT will make use of an input consisting of a REAL and an IMAGINARY part.  
+You can think of M<FONT SIZE="-1"><SUB>x</SUB></FONT> as the REAL input, 
+and M<FONT SIZE="-1"><SUB>y</SUB></FONT> as the IMAGINARY input.  
+The resultant output of the FT will therefore have a  REAL and an IMAGINARY component, too.  </P>
+
+Consider the following function:  <P>
+<CENTER>
+f(t) = e<SUP>-at</SUP> e<SUP>-i2<FONT FACE="Symbol">p</FONT><FONT FACE="Symbol">n</FONT>t</SUP>
+<A HREF="e4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><P>
+
+<P ALIGN="JUSTIFY">In FT NMR spectroscopy, the real output of the FT is taken as the frequency domain spectrum.  
+To see an esthetically pleasing (absorption) frequency domain spectrum, 
+we want to input a cosine function into the real part and a sine function into the imaginary parts of  the FT.  
+This is what happens if the cosine part is input as the imaginary and the sine as the real.
+<A HREF="e4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></P>
+
+<P ALIGN="JUSTIFY">In an ideal NMR experiment all frequency components contained in the recorded FID have no phase shift. 
+In practice, during a real NMR experiment a phase correction must be applied to either the time or frequency domain
+spectra to obtain an absorption spectrum as the real output of the FT.
+  
+This process is equivalent to the coordinate transformation described in 
+<A HREF="../chap-2/chap-2.html#2.6" TARGET="TEXT">Chapter 2</A>
+</P>
+
+<CENTER>
+<IMG SRC="images/cord-mat.gif">
+</CENTER>
+
+<P ALIGN="JUSTIFY">If the above mentioned FID is recorded such that there is a 45<FONT SIZE="-1"><SUP>o</SUP></FONT> 
+phase shift in the real and imaginary FIDs, 
+<A HREF="e4-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+the coordinate transformation matrix can be used with 
+<IMG SRC="../images/12-phi.gif"> = - 45<FONT SIZE="-1"><SUP>o</SUP></FONT>.
+The corrected FIDs look like a cosine function in the real and a sine in the imaginary.
+<A HREF="e4-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></P>
+
+<P ALIGN="JUSTIFY">Fourier transforming the phase corrected FIDs gives an absorption spectrum for the real output of the FT.
+<A HREF="e4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+
+
+</P>
+
+<P ALIGN="JUSTIFY">The phase shift also varies with frequency, 
+so the NMR spectra require both constant and linear corrections to the phasing of the Fourier transformed signal. <P>
+<CENTER>
+<IMG SRC="../images/12-phi.gif"> = m <FONT FACE="Symbol">n</FONT> + b
+</CENTER></P>
+
+<P ALIGN="JUSTIFY">Constant phase corrections, b, arise from the inability of the spectrometer to detect the exact  
+M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT>.
+Linear phase corrections, m,  arise  from the inability of the spectrometer to detect transverse magnetization starting 
+immediately after the RF pulse.  
+The following drawing depicts the greater loss of phase in a high frequency FID when the initial yellow section is lost.
+  
+<A HREF="e4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+
+
+From the practical point of view, the phase correction is applied in the frequency domain rather then in the time domain 
+because we know that a real frequency domain spectrum should be composed of all positive peaks. 
+We can therefore adjust b and m until all positive peaks are seen in the real output of the Fourier transform.</P>
+
+
+
+
+In magnetic resonance, the M<FONT SIZE="-1"><SUB>x</SUB></FONT> or M<FONT SIZE="-1"><SUB>y</SUB></FONT> signals are displayed. 
+A magnitude signal might occasionally be used in some applications.  
+The magnitude signal is equal to the square root of the sum of the squares of 
+M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT>. <P>
+
+
+
+
+
+<A NAME="5.6"></A> <H3>Fourier Pairs </H3> 
+
+To  better understand FT NMR  functions, you need to know some common  Fourier pairs. 
+<A HREF="../refs/ref-04.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+<A HREF="../refs/ref-13.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+A Fourier pair is two functions, the frequency  domain form  and the  corresponding time  domain form.   Here are a few Fourier pairs which are useful in NMR.  The amplitude of the Fourier pairs has been neglected since it is not relevant in NMR.
+<P>
+
+<A HREF="e6-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Constant value at all time <P>
+
+<A HREF="e6-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+
+Real: cos(2<IMG SRC="../images/10-pi.gif"><IMG SRC="../images/10-nu.gif">t), 
+Imaginary: -sin(2<IMG SRC="../images/10-pi.gif"><IMG SRC="../images/10-nu.gif">t)<P>
+
+<A HREF="e6-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Comb Function (A series of delta functions separated by T.)<P>
+
+<A HREF="e6-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Exponential Decay:  e<SUP>-at</SUP> for t > 0.<P>
+
+<A HREF="e6-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+A square pulse starting at 0 that is T seconds long.<P>
+
+
+<A HREF="e6-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Gaussian: exp(-at<FONT SIZE="-1"><SUP>2</SUP></FONT>)<P>
+
+
+<A NAME="5.7"></A> <H3>Convolution Theorem</H3> 
+
+To the magnetic resonance scientist, the  most important theorem concerning Fourier transforms is the convolution  theorem.   
+The convolution theorem  says that the FT of a  convolution of  two functions is proportional to the products of the individual Fourier transforms, and vice versa.
+<A HREF="../refs/ref-03.html#[3]" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+<A HREF="../refs/ref-13.html#[13]" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+<P>
+
+If f(<IMG SRC="../images/10-omega.gif">) = FT( f(t) )   and   
+g(<IMG SRC="../images/10-omega.gif">) = FT( g(t) )<P>
+
+then f(<IMG SRC="../images/10-omega.gif">) g(<IMG SRC="../images/10-omega.gif">) 
+= FT( g(t) <IMG SRC="../images/10-convl.gif"> f(t) ) and 
+f(<IMG SRC="../images/10-omega.gif">) <IMG SRC="../images/10-convl.gif">
+ g(<IMG SRC="../images/10-omega.gif">) = FT( g(t) f(t) )<P>
+
+It will be easier to see this with pictures.  In the animation window we are trying to find the FT of a sine wave which is turned on and off.
+<A HREF="f5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+The convolution theorem tells us that this is a sinc function at the frequency of the sine wave.<P>
+
+Another application of the convolution theorem is in noise reduction.  
+With the convolution theorem it can be seen that the convolution of  an NMR spectrum with a Lorentzian function is the same as the Fourier Transform of multiplying the time domain signal by an exponentially decaying function.  
+<A HREF="e5-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P>
+
+
+<A NAME="5.8"></A> <H3>The Digital FT</H3> 
+In a nuclear magnetic resonance spectrometer, the computer does not see a continuous FID, 
+but rather an FID which is sampled at a constant interval.  
+Each data point making up the FID will have discrete amplitude and time values.  
+Therefore, the computer needs to take the FT of a series of delta functions which vary in intensity.
+
+<A HREF="e8-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+What is the FT of a signal represented by this series of delta functions?  
+The answer will be addressed in the next heading, 
+but first some information on relationships between the sampled time domain data and the resultant frequency domain spectrum. 
+An n point time domain spectrum is sampled at <FONT FACE="Symbol">d</FONT>t and takes a time t to record.  
+<A HREF="e8-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+The corresponding complex frequency domain spectrum that the discrete FT produces has n points, 
+a width f, and resolution <FONT FACE="Symbol">d</FONT>f.  
+The relationships between the quantities are as follows.<P>
+
+<CENTER>
+ f = (1/<FONT FACE="Symbol">d</FONT>t)<P>
+<FONT FACE="Symbol">d</FONT>f = (1/t)
+</CENTER><P>
+
+ 
+
+
+
+<A NAME="5.9"></A> <H3>Sampling Error </H3> 
+The wrap around problem or artifact in a nuclear magnetic resonance spectrum is the appearance of one side of the spectrum on the opposite side.  
+In terms of a one dimensional frequency domain spectrum, wrap around is the occurrence of a low frequency peak which occurs on the high frequency side of the spectrum. <P>
+
+The convolution theorem can explain why this problem results from sampling the  transverse  magnetization  at  too slow  a  rate.  
+First, observe what the FT of a correctly sampled FID looks like.  
+<A HREF="e9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+
+With quadrature detection, the spectral width is equal to the inverse of the sampling frequency, 
+or the width of the green box in the animation window.  <P>
+
+When the sampling frequency is less than the spectral width, wrap around occurs.
+<A HREF="e9-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+<A NAME="5.10"></A> <H3>The Two-Dimensional FT </H3> 
+
+The  two-dimensional Fourier transform (2-DFT)
+<A HREF="../refs/ref-16.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+is  an  FT  performed  on  a two dimensional  array of data. <P>
+
+Consider the two-dimensional array of data depicted in the animation window.  
+<A HREF="e10-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+This data has a t' and a t" dimension.   A FT is first performed on the data in one dimension and then in the second.  
+The first set of  Fourier transforms are performed in the t' dimension to yield an f' by t" set of data.
+<A HREF="e10-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+
+The second set of Fourier transforms is performed in the t" dimension to yield an f' by f" set of data.  
+<A HREF="e10-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+The 2-DFT is required to perform state-of-the-art MRI.  In MRI, data is collected in the equivalent of  the t' and t" dimensions, called k-space.  This raw data is Fourier transformed to yield the image which is the equivalent of the f' by f" data described above.<P>
+
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+Go to the: [<A HREF="../chap-6/chap-6.html">next chapter</A> 
+           | <A HREF="#top">chapter top</A> 
+           | <A HREF="../chap-4/chap-4.html">previous chapter</A> 
+           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-5/chap-5.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:11 GMT -->
+</HTML>
+

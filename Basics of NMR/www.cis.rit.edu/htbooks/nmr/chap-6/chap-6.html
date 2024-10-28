@@ -1,0 +1,124 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-6/chap-6.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:12 GMT -->
+<HEAD><TITLE>CHAPTER-6</TITLE></HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 6</H2>
+<H2>PULSE  SEQUENCES</H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+	<LI><A HREF="#4.1">Introduction</A>
+	<LI><A HREF="#4.3">The 90-FID Sequence </A>
+	<LI><A HREF="#4.4">The Spin-Echo Sequence</A>
+ 	<LI><A HREF="#4.5">The Inversion Recovery Sequence</A>
+
+</H4></UL>
+<HR>
+<A NAME="4.1"></A> <H3>Introduction </H3> 
+
+You have seen in <A HREF="../chap-5/chap-5.html" TARGET="TEXT">Chapter 5</A> how a time domain signal can be converted into a frequency domain signal.  In this chapter you will learn a few of the ways that a time domain signal can be created.  Three methods are presented here, but there are an infinite number of possibilities.  These methods are called pulse sequences.  A pulse sequence is a set of RF pulses applied to a sample to produce a specific form of NMR signal.  <P>
+
+
+<A NAME="4.3"></A> <H3>The 90-FID Sequence</H3> 
+
+In  the 90-FID pulse  sequence, net  magnetization is rotated down  into the  X'Y' plane with  a 
+90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse.  
+<A HREF="../chap-3/c14-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+The net magnetization vector begins to precess about the +Z axis.
+<A HREF="../chap-3/c13-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+The magnitude of the vector also decays with time.
+<A HREF="d3-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+A timing diagram is a multiple axis plot of some aspect of a pulse sequence versus time. A timing diagram for a 90-FID pulse sequence has a plot of RF energy versus time and another for signal versus time.
+<A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+<A HREF="../refs/ref-12.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+<A HREF="d3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+When this sequence is repeated, for example when signal-to-noise improvement is needed, the amplitude of the signal after being Fourier transformed (S) will depend on 
+T<FONT SIZE="-1"><SUB>1</SUB></FONT>  and the time between repetitions, called the repetition time (TR), of the sequence.  In the signal equation below, <I>k</I> is a proportionality constant and 
+<IMG SRC="../images/10-rho.gif"> is the density of spins in the sample.<P>
+
+<CENTER>
+S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - e<SUP>-TR/T1</SUP> )
+</CENTER><P>
+
+
+<A NAME="4.4"></A> <H3>The Spin-Echo Sequence </H3> 
+
+Another commonly used pulse sequence is the spin-echo  pulse  sequence.   
+<A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+<A HREF="../refs/ref-12.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+Here a 90<FONT SIZE="-1"><SUP>o</SUP></FONT> 
+pulse  is first applied  to the spin system.
+<A HREF="d4-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+The 90<FONT SIZE="-1"><SUP>o</SUP></FONT> 
+degree pulse rotates  the  magnetization down into the  X'Y' plane.  The transverse magnetization begins to dephase.
+<A HREF="d4-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+
+At some point in time after the 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse, a 
+180<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse is applied.  
+This pulse rotates the magnetization by 180<FONT SIZE="-1"><SUP>o</SUP></FONT> about the X' axis.
+<A HREF="d4-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+
+The 180<FONT SIZE="-1"><SUP>o</SUP></FONT> 
+pulse causes the magnetization  to  at least partially rephase and to produce a signal called an echo.
+<A HREF="d4-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+A timing  diagram shows the relative positions of the two radio frequency  pulses and the signal.
+<A HREF="d4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+The signal equation for a repeated spin echo sequence as a function of the repetition time, TR, and the echo time (TE) defined as the time between the 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse and the maximum amplitude in the echo is<P>
+
+<CENTER>
+S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - e<SUP>-TR/T1</SUP> ) e<SUP>-TE/T2</SUP>
+</CENTER><P>
+
+
+<A NAME="4.5"></A> <H3>The Inversion Recovery Sequence </H3> 
+
+An  inversion recovery pulse sequence can  also be used to record an NMR spectrum.  In this sequence, a 
+180<FONT SIZE="-1"><SUP>o</SUP></FONT>  
+pulse is first applied.  This rotates the net magnetization down to the -Z axis.  
+<A HREF="d5-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
+The magnetization undergoes spin-lattice relaxation and returns toward its equilibrium position along the +Z axis.  
+<A HREF="d5-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
+Before it reaches equilibrium, a 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse is applied which rotates the longitudinal magnetization into the XY plane.  In this example, the 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse is applied shortly after the 180<FONT SIZE="-1"><SUP>o</SUP></FONT>  pulse.
+<A HREF="d5-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
+Once magnetization is present in the XY plane it rotates about the Z axis and dephases giving a FID.<P>  
+
+Once again, the  timing  diagram  shows the  relative positions of the  two radio frequency pulses and the signal.
+<A HREF="d5-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+The signal as a function of TI when the sequence is not repeated is<P>
+
+<CENTER>
+S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - 2e<SUP>-TI/T1</SUP> )
+<A HREF="d5-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+</CENTER><P>
+
+It should be noted at this time that the zero crossing of this function occurs for TI = 
+T<FONT SIZE="-1"><SUB>1</SUB></FONT> <I>ln</I>2.
+
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+Go to the: [<A HREF="../chap-7/chap-7.html">next chapter</A> 
+           | <A HREF="#top">chapter top</A> 
+           | <A HREF="../chap-5/chap-5.html">previous chapter</A> 
+           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-6/chap-6.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:15 GMT -->
+</HTML>
+

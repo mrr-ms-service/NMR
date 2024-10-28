@@ -1,0 +1,179 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-9/chap-9.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:42 GMT -->
+<HEAD><TITLE>CHAPTER-9</TITLE></HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 9</H2>
+<H2>CARBON-13 NMR</H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+	<LI><A HREF="#9.1">Introduction</A>
+ 	<LI><A HREF="#9.2">Decoupling </A>
+	<LI><A HREF="#9.3">NOE </A>
+	<LI><A HREF="#9.3a">Population Inversion</A>
+	<LI><A HREF="#9.4">1-D C-13 Spectra </A>
+</H4></UL>
+<HR>
+
+<A NAME="9.1"></A> <H3>Introduction </H3> 
+
+Many of the molecules studied by NMR contain carbon.  Unfortunately, the carbon-12 nucleus does not have a nuclear spin, but the carbon-13 (C-13) nucleus does due to the presence of an unpaired neutron.  Carbon-13 nuclei make up approximately one percent of the carbon nuclei on earth.  Therefore, carbon-13 NMR spectroscopy will be less sensitive (have a poorer SNR) than hydrogen NMR spectroscopy.  With the appropriate concentration, field strength,  and pulse sequences, however, carbon-13 NMR spectroscopy can be used to supplement the previously described hydrogen NMR information. Advances in superconducting magnet design and RF sample coil efficiency have helped make carbon-13 spectroscopy  routine on most NMR spectrometers.  <P>
+
+The <I>sensitivity</I> of an NMR spectrometer is a measure of the minimum number of spins detectable by the spectrometer.  Since the NMR signal increases as the population difference between the energy levels increases, the sensitivity improves as the field strength increases.  
+<A HREF="../refs/ref-05.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+The sensitivity of carbon-13 spectroscopy can be increased by any technique which increases the population difference between the lower and upper energy levels, or increases the density of spins in the sample.  The population difference can be increased by decreasing the sample temperature or by increasing the field strength.  Several techniques for increasing the carbon-13 signal have been reported in the NMR literature.
+<A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  <P>
+
+Unfortunately, or fortunately, depending on your perspective, the presence of spin-spin coupling between a carbon-13 nucleus and the nuclei of the hydrogen atoms bonded to the carbon-13, splits the carbon-13 peaks and causes an even poorer signal-to-noise ratio.  This problem can be addressed by the use of a technique known as decoupling, addressed in the next section. <P>
+
+<A NAME="9.2"></A> <H3>Decoupling </H3> 
+
+The signal-to-noise ratio in an NMR spectrometer is related to the population difference between the lower and upper spin state.  The larger this difference the larger the signal.  We know from chapter 3 that this difference is proportional to the strength of the B<SUB>o</SUB> magnetic field. <P>
+
+To understand decoupling, consider the familiar hydrogen NMR spectrum of 
+HC-(CH<SUB>2</SUB>CH<SUB>3</SUB>)<SUB>3</SUB>.   
+<A HREF="i2-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+The HC hydrogen peaks are difficult to see in the spectrum due to the splitting from the 6 -CH<SUB>2</SUB>- hydrogens.  If the effect of the 6 -CH<SUB>2</SUB>- hydrogens could be removed, we would lose the 1:6:15:20:15:6:1 splitting for the HC hydrogen and get one peak.  
+<A HREF="i2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+We would also lose the 1:3:1 splitting for the CH<SUB>3</SUB> hydrogens and get one peak.  The process of removing the spin-spin splitting between spins is called decoupling.  Decoupling is achieved with the aid of a saturation pulse.    If the affect of the   
+HC hydrogen is removed, we see the following spectrum.   
+<A HREF="i2-2a.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+Similarly, if the affect of the -CH<SUB>3</SUB> hydrogens is removed, we see this spectrum.  
+<A HREF="i2-2b.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+<P>
+
+A saturation pulse is a relatively low power B<SUB>1</SUB> field left on long enough for all magnetization to disappear.  
+<A HREF="../refs/ref-12.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+A saturation pulse applied along X' rotates magnetization clockwise about X' several times.  As the magnetization is rotating, T<SUB>2</SUB> processes cause the magnetization to dephase.  At the end of the pulse there is no net Z, X, or Y magnetization.  It is easier to see this behavior with the use of plots of M<SUB>Z</SUB>, M<SUB>X'</SUB>,  and M<SUB>Y'</SUB> as a function of time.  
+<A HREF="i2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+Since the B<SUB>1</SUB> pulse is long, its frequency content is small.  It therefore can be set to coincide with the location of the -CH<SUB>2</SUB>-  quartet and saturate the -CH<SUB>2</SUB>-  spin system.  By saturating the -CH<SUB>2</SUB>- spins, the -CH<SUB>2</SUB>- peaks and the splittings disappear, causing the height of the now unsplit HC- and -CH<SUB>3</SUB> peaks to be enhanced.<P>
+
+Now that the concept of decoupling has been introduced, consider the carbon-13 spectrum from CH<SUB>3</SUB>I.  The NMR spectrum from the carbon-13 nucleus will yield one absorption peak in the spectrum.  
+<A HREF="i2-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+Adding the nuclear spin from one hydrogen will split the carbon-13 peak into two peaks.  
+<A HREF="i2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+Adding one more hydrogen will split each of the two carbon-13 peaks into two, giving a 1:2:1 ratio.  
+<A HREF="i2-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+The final hydrogen will split each of the previous peaks, giving a 1:3:3:1 ratio.  
+<A HREF="i2-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+If the hydrogen spin system is saturated, the four lines collapse into a single line having an  intensity which is eight times greater than the outer peak in the 1:3:3:1 quartet since 1+3+3+1=8 .  
+<A HREF="i2-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+In reality, we see a single line with a relative intensity of 24.  
+<A HREF="../refs/ref-10.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+Where did the extra factor of three come from?<P>
+ 
+
+<A NAME="9.3"></A> <H3>NOE </H3> 
+
+The answer to the question raised in the previous paragraph is the nuclear Overhauser effect (NOE).  To understand the NOE, consider a set of coupled hydrogen and carbon-13 nuclei.  
+<A HREF="i3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+Assume that the red-green nuclei are carbon-13 and the blue-pink nuclei are hydrogen.  <P>
+
+T<SUB>1CC</SUB> is T<SUB>1</SUB> relaxation due to interactions between carbon-13 nuclei.
+<A HREF="i3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+T<SUB>1HH</SUB> is T<SUB>1</SUB> relaxation due to interactions between hydrogen nuclei.
+<A HREF="i3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+T<SUB>1CH</SUB> is T<SUB>1</SUB> relaxation due to interactions between carbon-13 and hydrogen nuclei.
+<A HREF="i3-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   <P>
+
+M<SUB>Z</SUB>(C) is the magnetization due to carbon-13 nuclei.   M<SUB>o</SUB>(C) is the equilibrium magnetization of carbon-13.  M<SUB>Z</SUB>(H) is the magnetization due to hydrogen nuclei.   M<SUB>o</SUB>(H) is the equilibrium magnetization of hydrogen. 
+<P>
+
+The equations governing the change in the Z magnetization with time are:<P>
+
+<CENTER><img src="images/eq1.gif"></CENTER><P>
+
+If we saturate the hydrogen spins, M<SUB>Z</SUB>(H) = 0.<P>
+
+<CENTER><img src="images/eq2.gif"></CENTER><P>
+
+Letting the system equilibrate, d M<SUB>Z</SUB>(C) /dt = 0 .<P>
+
+<CENTER><img src="images/eq3.gif"></CENTER><P>
+
+Rearranging the previous equation, we obtain an equation for M<SUB>Z</SUB>(C) . <P>
+
+<CENTER><img src="images/eq4.gif"> .</CENTER><P>
+
+Note that M<SUB>Z</SUB>(C) has increased by M<SUB>o</SUB>(H) T<SUB>1CC</SUB> / T<SUB>1CH</SUB> which is approximately 2 M<SUB>o</SUB>(C), giving a total increase of a factor of 3 relative to the total area of the undecoupled peaks.  This explains the extra factor of three (for a total intensity increase of 24)  for the carbon-13 peak when hydrogen decoupling is used in the carbon-13 spectrum of CH<SUB>3</SUB>I.  
+<A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+<P>
+
+The following spin-echo sequence has been modified to decouple the hydrogen spins from the carbon-13 spins.  
+<A HREF="i3-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+The signal is recorded as the second half of the echo.
+
+
+
+<A NAME="9.3a"></A> <H3>Population Inversion </H3> 
+
+Another method of improving the NMR signal in systems with spin-spin coupling is population inversion.  To understand the concept of a population inversion, recall from <A HREF="../chap-3/chap-3.html#3.8" TARGET="TEXT">Chapter 3</A>
+that Boltzmann statistics tell us that there are more spins in the lower spin state than the upper one of a two spin state system.  Population inversion is the interchange of the populations of these two spin states so that there are more spins in the upper state then the lower one.  <P>
+
+To understand how a population inversion improves the signal-to-noise ratio in a spectrum, consider the CHI<SUB>3</SUB> molecule.  
+CHI<SUB>3</SUB> will have four energy levels (L<SUB>1</SUB>, L<SUB>2</SUB>, L<SUB>3</SUB>, and L<SUB>4</SUB>)  <A HREF="i3a-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+due to C-H spin-spin coupling.  There are two carbon-13 absorption frequencies f<SUB>1</SUB> and f<SUB>2</SUB> and two hydrogen absorption frequencies f<SUB>3</SUB> and f<SUB>4</SUB>.    The population distribution between the four levels is such that the lowest state has the greatest population and the highest the lowest population.  The two intermediate states will have populations between the outer two as indicated by the thickness of the levels in the accompanying diagram.  The four lines in the spectrum will have intensities related to the population difference between the two levels spanned by the frequency.  The two carbon-13 absorption lines (f<SUB>1</SUB> and f<SUB>2</SUB>) will have a lower intensity than the hydrogen lines (f<SUB>3</SUB> and f<SUB>4</SUB>) due to the smaller population difference between the two states joined by f<SUB>1</SUB> and f<SUB>2</SUB>.  <P>
+
+If the populations of L<SUB>3</SUB> and L<SUB>4</SUB> are inverted 
+<A HREF="i3a-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+with a frequency selective 180 degree pulse at f<SUB>3</SUB>, the signal at f<SUB>2</SUB> will be enhanced because of the greater population difference between the states joined by f<SUB>2</SUB>.   It should be noted that the signal at f<SUB>1</SUB>  will be inverted because the upper state of the two joined by f<SUB>1</SUB>  has a greater population than the lower one.   An example of a population inverting pulse sequence designed to enhance the carbon-13 spectral lines is depicted in the animation window.<P>  
+
+
+<A NAME="9.4"></A> <H3>1-D C-13 Spectra </H3> 
+
+The following table of compounds contains links to their corresponding one-dimensional carbon-13 NMR spectra.  The spectra were recorded on a 300 MHz NMR spectrometer with a delay time between successive scans of two seconds.  This relatively short delay time may cause differences in the peak heights due to variations in T<SUB>1</SUB> values.  Other differences may be caused by variations in the nuclear Overhauser effect.  In spectra recorded with deuterated chloroform (CDCl<SUB>3</SUB>) as the lock solvent, the three peaks at <img src="../images/10-delta.gif"> = 75 are due to splitting of the CDCl<SUB>3</SUB> carbon-13 peak by the nuclear spin = 1 deuterium nucleus.<P>
+ 
+<CENTER>
+<TABLE  BORDER>
+<TR><TH>Molecule<TH>Formula<TH>Solvent<TH>Spectrum 
+<TR><TD>cyclohexane<TD>C<SUB>6</SUB>H<SUB>12</SUB><TD>CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </CENTER>  
+<TR><TD>benzene<TD>C<SUB>6</SUB>H<SUB>6</SUB><TD>CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </CENTER>   
+<TR><TD>toluene<TD>C<SUB>6</SUB>H<SUB>5</SUB>CH<SUB>3</SUB><TD>CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </CENTER>   
+<TR><TD>ethyl benzene<TD>C<SUB>6</SUB>H<SUB>5</SUB>CH<SUB>2</SUB>CH<SUB>3</SUB>
+	<TD>CDCl<SUB>3</SUB>
+	<TD><CENTER><A HREF="i4-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  </CENTER>  
+<TR><TD>acetone<TD>CH<SUB>3</SUB>(C=O)CH<SUB>3<TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  </CENTER>  
+<TR><TD>methyl ethyl ketone<TD>CH<SUB>3</SUB>(C=O)CH<SUB>2</SUB>CH<SUB>3</SUB><TD>CDCl<SUB>3</SUB> 	<TD><CENTER> <A HREF="i4-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>ethanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>OH<TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>ethanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>OH <TD>D<SUB>2</SUB>O
+	<TD><CENTER> <A HREF="i4-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>1-propanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH<SUB>2</SUB>OH <TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>2-propanol<TD>(CH<SUB>3</SUB>)<SUB>2</SUB>CHOH <TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-11.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>t-butnol<TD>(CH<SUB>3</SUB>)<SUB>3</SUB>COH <TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER> <A HREF="i4-12.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>2-butanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH(OH)CH<SUB>3</SUB><TD> CDCl<SUB>3</SUB> 	<TD><CENTER> <A HREF="i4-13.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+<TR><TD>pyridine<TD>C<SUB>5</SUB>H<SUB>5</SUB>N<TD> CDCl<SUB>3</SUB> 
+	<TD><CENTER><A HREF="i4-14.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
+</TABLE>
+</CENTER>
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+Go to the: [<A HREF="../chap-10/chap-10.html">next chapter</A> 
+           | <A HREF="#top">chapter top</A> 
+           | <A HREF="../chap-8/chap-8.html">previous chapter</A> 
+           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-9/chap-9.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:50 GMT -->
+</HTML>
+
+

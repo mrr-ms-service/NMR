@@ -1,0 +1,313 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-7/chap-7.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:15 GMT -->
+<HEAD><TITLE>CHAPTER-7</TITLE>
+<meta name="keywords" content="NMR, nmr, nuclear magneric resonance, nmr spectroscopy, magnets, superconducting magnets">
+</HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 7</H2>
+<H2>NMR  HARDWARE</H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+	<LI><A HREF="#7.1">Hardware Overview</A>
+ 	<LI><A HREF="#7.2">Magnet</A>
+	<LI><A HREF="#7.7">Field Lock</A>
+	<LI><A HREF="#7.8">Shim Coils</A>
+	<LI><A HREF="#7.10">Sample Probe</A>
+	<LI><A HREF="#7.4">RF Coils </A>
+	<LI><A HREF="#7.3">Gradient Coils</A>
+	<LI><A HREF="#7.5">Quadrature Detector</A>
+	<LI><A HREF="#7.9">Digital Filtering</A>
+	<LI><A HREF="#7.6">Safety </A>
+</H4></UL>
+<HR>
+<A NAME="7.1"></A> <H3>Hardware Overview </H3> 
+
+The graphics window displays a schematic representation of the major systems of a nuclear magnetic resonance spectrometer and a few of the major interconnections. 
+This overview briefly states the function of each component. 
+Some will be described in detail later in this chapter. 
+<A HREF="i1-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+
+At the top of the schematic representation, you will find the superconducting magnet of the NMR spectrometer.  The magnet produces the B<FONT SIZE="-1"><SUB>o</SUB></FONT> 
+field necessary for the NMR experiments. Immediately within the bore of the magnet are the shim coils for homogenizing the B<FONT SIZE="-1"><SUB>o</SUB></FONT> field.  Within the shim coils is the probe.  The probe contains the RF coils for producing the B<FONT SIZE="-1"><SUB>1</SUB></FONT>  magnetic field necessary to rotate the spins by 90<FONT SIZE="-1"><SUP>o</SUP></FONT> or 180<FONT SIZE="-1"><SUP>o</SUP></FONT>. The RF coil also detects the signal from the spins within the sample. The sample is positioned within the RF coil of the probe.  Some probes also contain a set of gradient coils.  These coils produce a gradient in B<FONT SIZE="-1"><SUB>o</SUB></FONT> along the X, Y, or Z axis.  Gradient coils are used for for gradient enhanced spectroscopy (See <A HREF="../chap-11/chap-11.html#11.6" TARGET="TEXT">Chapter 11</A>.), diffusion (See <A HREF="../chap-11/chap-11.html#11.2" TARGET="TEXT">Chapter 11</A>.), and NMR microscopy 
+(See <A HREF="../chap-11/chap-11.html#11.5" TARGET="TEXT">Chapter 11</A>.) experiments. <P>
+
+The heart of the spectrometer is the computer. It controls all of the components of the spectrometer. The RF components under control of the computer are the RF frequency source and pulse programmer. The source produces a sine wave of the desired frequency. The pulse programmer sets the width, and in some cases the shape, of the RF pulses.  The RF amplifier increases the pulses power from milli Watts to tens or hundreds of Watts. The computer also controls the gradient pulse programmer which sets the shape and amplitude of gradient fields. The gradient amplifier increases the power of the gradient pulses to a level sufficient to drive the gradient coils. <P>
+
+The operator of the spectrometer gives input to the computer through a console terminal with a mouse and keyboard.  Some spectrometers also have a separate small interface for carrying out some of the more routine procedures on the spectrometer.  A pulse sequence is selected and customized from the console terminal. The operator can see spectra on a video display located on the console and can make hard copies of spectra using a printer.<P>
+
+The next sections of this chapter go into more detail concerning the magnet, lock, shim coils, gradient coils, RF coils, and RF detector of nuclear magnetic resonance spectrometer.<P>
+
+
+
+<A NAME="7.2"></A> <H3>Magnet </H3> 
+
+The NMR magnet is arguably the most important part of the NMR spectrometer. 
+The NMR magnet is one of the most expensive components of the nuclear magnetic resonance spectrometer system. 
+NMR magnet technology has evolved considerably since the development of NMR.  
+Early NMR magnets were iron core permanent or electromagnets producing magnetic fields of less than 1.5 T.  
+Today, most NMR magnets are of the superconducting type. 
+Superconducting NMR magnets range in field strength from approximately 6 to 23.5 T.  
+The accompanying diagram charts the evolution of NMR magnets.  
+<A HREF="i2-00.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+ 
+  
+This is a picture of a 7.0 Tesla superconducting magnet from an NMR spectrometer.
+<A HREF="i2-0.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+A superconducting magnet has an electromagnet made of superconducting wire. 
+Superconducting wire has a resistance approximately equal to zero when it is cooled to a temperature close to absolute zero (-273.15<SUP>o</SUP> C or 0 K) by immersing it in liquid helium.  
+Once current is caused to flow in the coil it will continue to flow for as long as the coil is kept at liquid helium temperatures. 
+<A HREF="i2-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>   
+(Some losses do occur over time due to the infinitesimally small resistance of the coil. 
+These losses can be on the order of a ppm of the main magnetic field per year.) 
+<P>
+
+The length of superconducting wire in the magnet is typically several miles. 
+The superconducting elements of the wire are made of (NbTaTi)<sub>3</sub>Sn.  
+This material is brittle and therefore is embedded in copper for strength. 
+The Cu has a high resistance compared to the superconductor which is carrying the current. 
+The wire has a rectangular cross section to allow the maximum current density, and hence maximum magnetic field. 
+This wire is wound into a multi-turn solenoid or coil.  
+The coil of wire is kept at a temperature of 4.2K or less by immersing it in liquid helium.  
+The coil and liquid helium are kept in a large dewar.  
+This dewar is typically surrounded by a liquid nitrogen (77.4K) dewar, 
+which acts as a thermal buffer between the room temperature air (293K) and the liquid helium. 
+A longer liquid helium hold time can be achieved by inserting a thermal reservoir between the liquid helium and liquid nitrogen that has a temperature less than the liquid nitrogen. 
+This is typically implemented as a can surrounding the liquid He reservoir.  
+The can is attached to the liquid He fill pipes.  
+These pipes have a temperature gradient of 4.2K at the liquid helium and room temperature outside the magnet.  
+The manufacturing trick is to attach them at the point along the tubes which has a temperature midway between 4.2 and 77.4K, 
+thus giving the can the desired temperature.   
+A cross sectional view of the superconducting magnet, depicting the concentric dewars, can be found in the animation window.  
+<A HREF="i2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+
+
+Most NMR magnets today are shielded magnets.  
+These magnets have an additional superconducting coil outside of the main coil which cancel out much of the fringe field from the main coil.  
+As a consequence, the stray field outside the magnet is very small. 
+Having a small fringe field becomes important in higher field magnets where safety concerns become more important.<P>
+
+The following image is an actual cut-away view of a superconducting magnet.  
+<A HREF="i2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+The magnet is supported by three legs, and the concentric nitrogen and helium dewars are supported by stacks coming out of the top of the magnet. 
+A room temperature bore hole extends through the center of the assembly.  
+The sample probe and shim coils are located within this bore hole.  
+Also depicted in this picture is the liquid nitrogen level sensor, an electronic assembly for monitoring the liquid nitrogen level.  <P>
+
+Going from the outside of the magnet to the inside, 
+<A HREF="i2-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+we see a vacuum region followed by a liquid nitrogen reservoir.  
+The vacuum region is filled with several layers of a reflective mylar film.
+The function of the mylar is to reflect thermal photons, and thus diminish heat from entering the magnet.  
+Within the inside wall of the liquid nitrogen reservoir, we see another vacuum filled with some reflective mylar.  
+The liquid helium reservoir comes next.  
+This reservoir houses the superconducting solenoid or coil of wire.  <P>
+
+Taking a closer look at the solenoid it is clear to see the coil and the bore tube extending through the magnet.  
+<A HREF="i2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+
+Many NMR magnets that operate at very high fields take advantage of Joule-Thomson (JT) cooling to decrease the liquid He temperature below 4.2K.  
+Because of the lower temperature (~2K), more current can be passed through the superconducting wire and thus achiev a higher magnetic field value in the magnet.  
+<A HREF="i2-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+<P>
+
+
+
+
+
+<A NAME="7.7"></A> <H3>Field Lock</H3> 
+
+In order to produce a high resolution NMR spectrum of a sample, especially one which requires signal averaging or phase cycling, you need to have a temporally constant and spatially homogeneous magnetic field.  Consistency of the B<FONT SIZE="-1"><SUB>o</SUB></FONT> field over time will be discussed here; homogeneity will be discussed in the next section of this chapter.  The field strength might vary over time due to aging of the magnet, movement of metal objects near the magnet, and temperature fluctuations.  Here is an example of a one line  NMR  spectrum of cyclohexane recorded while the B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic field was drifting a very significant amount.  
+<A HREF="g7-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+The field lock can compensate for these variations.<P>
+
+The field lock is a separate NMR spectrometer within your spectrometer.  This spectrometer is typically tuned to the deuterium NMR resonance frequency.  It constantly monitors the resonance frequency of the deuterium signal and makes minor changes in the 
+B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic field to keep the resonance frequency constant.  The deuterium signal comes from the deuterium solvent used to prepare the sample.  The animation window 
+<A HREF="g7-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+contains plots of the deuterium resonance lock frequency, the small additional magnetic field used to correct the lock frequency, and the resultant B<FONT SIZE="-1"><SUB>o</SUB></FONT> field as a function of time while the magnetic field is drifting.  The lock frequency plot displays the frequency without correction.  In reality, this frequency would be kept constant by the application of the lock field which offsets the drift.<P>
+
+
+On most NMR spectrometers the deuterium lock serves a second function.  It provides the <IMG SRC="../images/10-delta.gif">=0 reference.  The resonance frequency of the deuterium signal in many lock solvents is well known.  Therefore the difference in resonance frequency of the lock solvent and TMS is also known.  As a consequence, TMS does not need to be added to the sample to set 
+<IMG SRC="../images/10-delta.gif">=0; the spectrometer can use the lock frequency to calculate 
+<IMG SRC="../images/10-delta.gif">=0.<P>
+
+<P>
+
+<A NAME="7.8"></A> <H3>Shim Coils</H3> 
+
+The purpose of shim coils on a spectrometer is to correct minor spatial inhomogeneities in the 
+B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic field.  These inhomogeneities could be caused by the magnet design, materials in the probe, variations in the thickness of the sample tube, sample permeability, and ferromagnetic materials around the magnet.  A shim coil is designed to create a small magnetic field which will oppose and cancel out an inhomogeneity in the 
+B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic field.  
+<A HREF="g8-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+Because these variations may exist in a variety of functional forms (linear, parabolic, etc.), shim coils are needed which can create a variety of opposing fields.  Some of the functional forms are listed in the table below.<P>
+
+<CENTER>
+Shim Coil Functional Forms<BR>
+
+<TABLE  BORDER>
+<TR><TH>Shim<TH>Function 
+<TR><TD><CENTER>Z<SUP>0</SUP></CENTER><TD><CENTER><A HREF="g8-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>Z</CENTER><TD><CENTER><A HREF="g8-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>  
+<TR><TD><CENTER>Z<SUP>2</SUP></CENTER><TD><CENTER><A HREF="g8-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>Z<SUP>3</SUP></CENTER><TD><CENTER><A HREF="g8-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>Z<SUP>4</SUP></CENTER><TD><CENTER><A HREF="g8-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>Z<SUP>5</SUP></CENTER><TD><CENTER><A HREF="g8-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>X</CENTER><TD><CENTER><A HREF="g8-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>XZ</CENTER><TD><CENTER><A HREF="g8-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>XZ<SUP>2</SUP></CENTER><TD><CENTER><A HREF="g8-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>X<SUP>2</SUP>Y<SUP>2</SUP></CENTER><TD><CENTER><A HREF="g8-11.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>XY</CENTER><TD><CENTER><A HREF="g8-12.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>Y</SUP></CENTER><TD><CENTER><A HREF="g8-13.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>YZ</CENTER><TD><CENTER><A HREF="g8-14.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>YZ<SUP>2</SUP></CENTER><TD><CENTER><A HREF="g8-15.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>XZ<SUP>3</SUP></CENTER><TD><CENTER><A HREF="g8-16.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>X<SUP>2</SUP>Y<SUP>2</SUP>Z</CENTER><TD><CENTER><A HREF="g8-17.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>YZ<SUP>3</SUP></CENTER><TD><CENTER><A HREF="g8-18.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>XYZ</CENTER><TD><CENTER><A HREF="g8-19.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>X<SUP>3</SUP></CENTER><TD><CENTER><A HREF="g8-20.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+<TR><TD><CENTER>Y<SUP>3</SUP></CENTER></CENTER><TD><CENTER><A HREF="g8-21.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER> 
+</TABLE>
+</CENTER><P>
+
+By passing the appropriate amount of current through each coil a homogeneous 
+B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic field can be achieved.  
+The optimum shim current settings are found by either minimizing the linewidth, maximizing the size of the FID, or maximizing the signal from the field lock.  On most spectrometers, the shim coils are controllable by the computer.  A computer algorithm has the task of finding the best shim value by maximizing the lock signal.<P>
+
+<A NAME="7.10"></A> <H3>Sample Probe</H3>
+
+The sample probe is the name given to that part of the spectrometer which accepts the sample, sends RF energy into the sample, and detects the signal emanating from the sample.  It contains the RF coil, sample spinner, temperature controlling circuitry, and gradient coils.   The RF coil and gradient coils will be described in the next two sections.  The sample spinner and temperature controlling circuitry will be described here.<P>
+
+The purpose of the sample spinner is to rotate the NMR sample tube about its axis.  
+In doing so, each spin in the sample located at a given position along the Z axis and radius from the Z axis, will experience the average magnetic field in the circle defined by this Z and radius.  The net effect is a narrower spectral linewidth.   To appreciate this phenomenon, consider the following examples.  <P> 
+
+Picture an axial cross section of a cylindrical tube containing sample.  In a very homogeneous B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic field this sample will yield a narrow spectrum.  
+<A HREF="g10-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+In a more inhomogeneous field the sample will yield a broader spectrum due to the presence of lines from the parts of the sample experiencing different B<FONT SIZE="-1"><SUB>o</SUB></FONT> magnetic fields.
+<A HREF="g10-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
+When the sample is spun about its z-axis, inhomogeneities in the X and Y directions are averaged out and the NMR line width becomes narrower.
+<A HREF="g10-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>   <P> 
+
+Many scientists need to examine properties of their samples as a function of temperature.  As a result many instruments have the ability to maintain the temperature of the sample above and below room temperature.  Air or nitrogen which has been warmed or cooled is passed over the sample to heat or cool the sample.  The temperature at the sample is monitored with the aid of a thermocouple and electronic circuitry maintains the temperature by increasing or decreasing the temperature of the gas passing over the sample.  More information on this topic will be presented in <A HREF="../chap-8/chap-8.html#8.10" TARGET="TEXT">Chapter 8</A>.  
+<P>
+
+
+<A NAME="7.4"></A> <H3>RF Coils </H3> 
+
+RF coils <A HREF="../refs/ref-29.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+create the B<FONT SIZE="-1"><SUB>1</SUB></FONT> field which rotates the net magnetization in a pulse sequence. They also detect the transverse magnetization as it precesses in the XY plane.  Most RF coils on NMR spectrometers are of the saddle coil design 
+<A HREF="i4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+and act as the transmitter of the B<FONT SIZE="-1"><SUB>1</SUB></FONT> field and receiver of RF energy from the sample.  You may find one or more RF coils in a probe.<P>
+
+Each of these RF coils must resonate, that is they must efficiently store energy, at the Larmor frequency of the nucleus being examined with the NMR spectrometer.  All NMR coils are composed of an inductor, or inductive elements, and a set of capacitive elements. The resonant frequency, <IMG SRC="../images/10-nu.gif">, of an RF coil is determined by the inductance (L) and capacitance (C) of the inductor capacitor circuit. <P>
+
+<CENTER>
+<IMG SRC="images/coil-eq.gif"> 
+</CENTER><P>
+
+RF coils used in NMR spectrometers need to be tuned for the specific sample being studied.   An RF coil has a bandwidth or specific range of frequencies at which it resonates.   When you place a sample in an RF coil, the conductivity and dielectric constant of the sample  affect the resonance frequency.   If this frequency is different from the resonance frequency of the nucleus you are studying,  the coil will not efficiently set up the B<FONT SIZE="-1"><SUB>1</SUB></FONT> field nor efficiently detect the signal from the sample.  You will be rotating the net magnetization by an angle less than 90 degrees when you think you are rotating by 90 degrees.  This will produce less transverse magnetization and less signal.  Furthermore, because the coil will not be efficiently detecting the signal, your signal-to-noise ratio will be poor.  <P>
+
+The B<FONT SIZE="-1"><SUB>1</SUB></FONT> field of an RF coil must be perpendicular to the 
+B<FONT SIZE="-1"><SUB>o</SUB></FONT>  magnetic field.  Another requirement of an RF coil in an NMR spectrometer is that the B<FONT SIZE="-1"><SUB>1</SUB></FONT> field needs to be homogeneous over the volume of your sample.  If it is not, you will be rotating spins by a distribution of rotation angles and you will obtain strange spectra. <P>
+
+<A NAME="7.3"></A> <H3>Gradient Coils</H3> 
+
+The gradient coils produce the gradients in the B<FONT SIZE="-1"><SUB>o</SUB></FONT>  magnetic field needed for performing gradient enhanced spectroscopy, diffusion measurements, and NMR microscopy.   
+<A HREF="../refs/ref-32.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
+The gradient coils are located inside the RF probe.  Not all probes have gradient coils, and not all NMR spectrometers have the hardware necessary to drive these coils.<P>
+ 
+The gradient coils are room temperature coils (<I>i.e.</I> do not require cooling with cryogens to operate) which, because of their configuration, create the desired gradient. Since the vertical bore superconducting magnet is most common, the gradient coil system will be described for this magnet. <P>
+
+Assuming the standard magnetic resonance coordinate system, a gradient in B<FONT SIZE="-1"><SUB>o</SUB></FONT>
+ in the Z direction is achieved with an antihelmholtz type of coil. Current in the two coils flow in opposite directions creating a magnetic field gradient between the two coils.  The B field at the center of one coil adds to the B<FONT SIZE="-1"><SUB>o</SUB></FONT>
+ field,  while the B field at the center of the other coil subtracts from the 
+B<FONT SIZE="-1"><SUB>o</SUB></FONT>  field.
+<A HREF="i3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+The X and Y gradients in the B<FONT SIZE="-1"><SUB>o</SUB></FONT> field are created by a pair of <I>figure-8</I> coils. The X axis <I>figure-8</I> coils create a gradient in B<FONT SIZE="-1"><SUB>o</SUB></FONT> in the X direction due to the direction of the current through the coils.
+<A HREF="i3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+The Y axis <I>figure-8</I> coils provides a similar gradient in B<FONT SIZE="-1"><SUB>o</SUB></FONT> along the Y axis. 
+<A HREF="i3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+
+
+
+<A NAME="7.5"></A> <H3>Quadrature Detector </H3> 
+
+The quadrature detector 
+<A HREF="../refs/ref-01.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+is a device which separates out the M<FONT SIZE="-1"><SUB>x'</SUB></FONT>
+and M<FONT SIZE="-1"><SUB>y'</SUB></FONT>
+signals from the signal from the RF coil. For this reason it can be thought of as a laboratory to rotating frame of reference converter. The heart of a quadrature detector is a device called a doubly balanced mixer. The doubly balanced mixer has two inputs and one output. If the input signals are Cos(A) and Cos(B), the output will be 1/2 Cos(A+B) and 1/2 Cos(A-B). For this reason the device is often called a product detector since the product of Cos(A) and Cos(B) is the output. 
+<A HREF="../refs/ref-07.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+<A HREF="i5-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+The quadrature detector typically contains two doubly balanced mixers, two filters, two amplifiers, and a 90<FONT SIZE="-1"><SUP>o</SUP></FONT> phase shifter. 
+<A HREF="i5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+There are two inputs and two outputs on the device. Frequency <IMG SRC="../images/10-nu.gif">
+and <IMG SRC="../images/10-nu.gif"><FONT SIZE="-1"><SUB>o</SUB></FONT> 
+are put in and the 
+M<FONT SIZE="-1"><SUB>X'</SUB></FONT>  and M<FONT SIZE="-1"><SUB>Y'</SUB></FONT> components of the transverse magnetization come out. There are some potential problems which can occur with this device which will cause artifacts in the spectrum. One is called a DC offset artifact and the other is called a quadrature artifact.  <P>
+
+
+
+<A NAME="7.9"></A> <H3>Digital Filtering </H3> 
+
+Many newer spectrometers employ a combination of oversampling, digital filtering, and decimation to eliminate the wrap around artifact.  Oversampling creates a larger spectral or sweep width, but generates too much data to be conveniently stored.  Digital filtering eliminates the high frequency components from the data, and decimation reduces the size of the data set.  The following flowchart summarizes the effects of the three steps by showing the result of performing an FT after each step. 
+<A HREF="g9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+
+Let's examine oversampling, digital filtering, and decimation in more detail to see how this combination of steps can be used to reduce the wrap around problem.  <P>
+
+Oversampling is the digitization of a time domain signal at a frequency much greater than necessary to record the desired spectral width.  For example, if the sampling frequency, f<SUB><FONT SIZE="-1">s</FONT></SUB>, is increased by a factor of 10, the sweep width will be 10 times greater, thus eliminating wraparound.  Unfortunately digitizing at 10 times the speed also increases the amount of raw data by a factor of 10, thus increasing storage requirements and processing time.<P>
+
+Filtering is the removal of a select band of frequencies from a signal.   For an example of filtering, consider the following frequency domain signal.
+<A HREF="g9-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Frequencies above f<FONT SIZE="-1">o</FONT> could be removed from this frequency domain signal by multipling the signal by this rectangular function.  
+<A HREF="g9-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+In NMR, this step would be equivalent to taking a large sweep width spectrum and setting to zero intensity those spectral frequencies which are farther than some distance from the center of the spectrum.<P>
+
+Digital filtering is the removal of these frequencies using the time domain signal.  Recall from 
+<A HREF="../chap-5/chap-5.html#5.7" TARGET="TEXT">Chapter 5</A> 
+that if two functions are multiplied in one domain (<I>i.e.</I> frequency), we must convolve the FT of the two functions together in the other domain (<I>i.e.</I> time).   To filter out frequencies above f<FONT SIZE="-1">o</FONT> from the time domain signal, the signal must be convolved with the Fourier transform of the rectangular function, a sinc function.  
+(See <A HREF="../chap-5/chap-5.html#5.6" TARGET="TEXT">Chapter 5</A>.)
+<A HREF="g9-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+This process eliminates frequencies greater than f<FONT SIZE="-1">o</FONT> from the time domain signal.  Fourier transforming the resultant time domain signal yields a frequency domain signal without the higher frequencies.  In NMR, this step will remove spectral components with frequencies greater than +f<SUB>o</SUB> and less than -f<SUB>o</SUB>.
+<P>
+
+Decimation is the elimination of data points from a data set.  A decimation ratio of 4/5 means that 4 out of every 5 data points are deleted, or every fifth data point is saved.  Decimating the digitally filtered data above, followed by a Fourier transform, will reduce the data set by a factor of five. <A HREF="g9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+ 
+High speed digitizers, capable of digitizing at 2 MHz, and dedicated high speed integrated circuits, capable of performing the convolution on the time domain data as it is being recorded, are used to realize this procedure.<P>
+<P>
+
+<A NAME="7.6"></A> <H3>Safety</H3> 
+
+There are some important safety considerations which one should be familiar with before using an NMR spectrometer. These concern the use of strong magnetic fields and cryogenic liquids. <P>
+
+Magnetic fields from high field magnets can literally pick up and pull ferromagnetic items into the bore of the magnet. Caution must be taken to keep all ferromagnetic items away from the magnet because they can seriously damage the magnet, shim coils, and probe.  The force exerted on the concentric cryogenic dewars within a magnet by a large metal object stuck to the magnet can break dewars and magnet supports.  The kinetic energy of an object being sucked into a magnet can smash a dewar or an electrical connector on a probe.  Small ferromagnetic objects are just as much a concern as larger ones.  A small metal sliver can get sucked into the bore of the magnet and destroy the homogeneity of the magnet achieved with a set of shim settings. <P>
+
+There are additional concerns regarding the effect of magnetic fields on electronic circuitry, specifically pacemakers. An individual with a pacemaker walking through a strong magnetic field can induce currents in the pacemaker circuitry which will cause it to fail and possibly cause death.  A person with a pacemaker must not be able to inadvertently stray into a magnetic field of five or more Gauss.  Although not as important as a pacemaker, mechanical watches and some digital watches will also be affected by magnetic fields.  Magnetic fields of approximately 50 Gauss will erase credit cards and magnetic storage media.  <P>
+
+The liquid nitrogen and liquid helium used in NMR spectrometers are at a temperature of 77.4 K and 4.2 K respectively.    These liquids can cause frostbite, which is not a concern unless you are filling the magnet.  If you are filling the magnet or if you are operating the spectrometer, suffocation is another concern you need to be aware of.  If the magnet quenches, or suddenly stops being a superconductor, it will rapidly boil off all its cryogens, and the nitrogen and helium gasses in a confined space can cause suffocation.
+
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+Go to the: [<A HREF="../chap-8/chap-8.html">next chapter</A> 
+           | <A HREF="#top">chapter top</A> 
+           | <A HREF="../chap-6/chap-6.html">previous chapter</A> 
+           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-7/chap-7.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:45:26 GMT -->
+</HTML>
+
+
+

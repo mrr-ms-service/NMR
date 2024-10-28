@@ -1,0 +1,269 @@
+<HTML>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-2/chap-2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:44:33 GMT -->
+<HEAD><TITLE>CHAPTER-2</TITLE></HEAD>
+<BODY>
+<BODY BGCOLOR="#ffffff">
+
+<CENTER><H1>The Basics of NMR</H1>
+<H2>Chapter 2</H2>
+<H2>THE MATHEMATICS OF NMR </H2></CENTER>
+
+<HR COLOR="#CC0000">
+<H4><UL>
+
+       <LI><A HREF="#2.0">Logarithms and Decibels</A> 
+      <LI><A HREF="#2.1">Exponential Functions </A>
+       <LI><A HREF="#2.2">Trigonometric Functions </A>
+        <LI><A HREF="#2.3">Differentials and Integrals </A>
+        <LI><A HREF="#2.4">Vectors </A>
+        <LI><A HREF="#2.5">Matrices </A>
+        <LI><A HREF="#2.6">Coordinate Transformations </A>
+        <LI><A HREF="#2.7">Convolutions </A>
+        <LI><A HREF="#2.8">Imaginary Numbers </A>
+        <LI><A HREF="#2.9">The Fourier Transform </A>
+
+</H4></UL>
+
+<HR COLOR="#CC0000">
+<A NAME="2.0"></A>
+
+
+<H3>Logarithms and Decibels</H3>
+
+<P ALIGN="JUSTIFY">
+Scientists have many shorthand ways of representing numbers.  
+These representations make it easier for the scientist to perform a calculation or represent a number.  
+A logarithm (log) of a number x is defined by the following equations. 
+If</P>
+
+<CENTER>x = 10<SUP><FONT SIZE=-1>y</FONT></SUP></CENTER>
+
+<P>then</P>
+
+<CENTER>log(x) = y.</CENTER>
+
+<P ALIGN="JUSTIFY">You will see in the next section, logarithms do not need to be based on powers of 10.  </P>
+
+<P ALIGN="JUSTIFY">Logarithms are useful, in part, because of some of the relationships when using them.  
+For example, </P>
+
+<CENTER>
+log(x) + log(y) = log(xy)<BR>
+log(x) - log(y) = log(x/y)<BR>
+log(1/x) = log(x<SUP>-1</SUP>) = -log(x)<BR>
+log(x<SUP>y</SUP>) = y log(x)
+</CENTER>
+
+
+<P ALIGN="JUSTIFY">A useful application of base ten logarithms is the concept of a decibel.  
+A decibel is a logarithmic  representation of a ratio of two quantities.  
+For the ratio of two power levels (P<SUB><FONT SIZE=-1>1</FONT></SUB> and P<SUB><FONT SIZE=-1>2</FONT></SUB>) a decibel (dB) is defined as</P>
+
+<CENTER>
+dB = 10 log(P<SUB><FONT SIZE=-1>1</FONT></SUB>/P<SUB><FONT SIZE=-1>2</FONT></SUB>).</CENTER>
+
+<P ALIGN="JUSTIFY">Sometimes it is necessary to calculate decibels from voltage readings.  
+The relationship between power (P) and voltage (V) is</P>
+
+<CENTER>P = V<SUP><FONT SIZE=-1>2</FONT></SUP>/R</CENTER>
+
+<P ALIGN="JUSTIFY">where R is the resistance of the circuit, which is usually constant.  
+Substituting this equation into the definition of a dB we have</P>
+
+<CENTER>dB = 10 log((V<SUP><FONT SIZE=-1>2</SUP><SUB>1</FONT></SUB>/R)/(V<SUP><FONT SIZE=-1>2</SUP><SUB>2</FONT></SUB>/R))<BR>
+dB = 10 log((V<SUP><FONT SIZE=-1>2</SUP><SUB>1</FONT></SUB>)/(V<SUP><FONT SIZE=-1>2</SUP><SUB>2</FONT></SUB>))<BR>
+dB = 10 log((V<SUB><FONT SIZE=-1>1</FONT></SUB>)/(V<SUB><FONT SIZE=-1>2</FONT></SUB>))<SUP><FONT SIZE=-1>2</FONT></SUP><BR>
+db = 20 log(V<SUB><FONT SIZE=-1>1</FONT></SUB>/V<SUB><FONT SIZE=-1>2</FONT></SUB>).<P>
+</CENTER>
+
+
+
+
+
+<A NAME="2.1">
+</A> <H3>Exponential Functions </H3> 
+
+The  number 2.71828183 occurs so often in calculations that it is given the symbol <I>e</I>.  When <I>e</I> is raised to the power x, it is often written <I>exp</I>(x). <P>
+
+<CENTER>
+e<FONT SIZE="-1"><SUP>x</SUP></FONT> = exp(x) = 2.71828183<FONT SIZE="-1"><SUP>x</SUP></FONT>
+</CENTER><P>
+
+Logarithms based on powers of e are called natural logarithms.  If<P>
+
+<CENTER> x = e<FONT SIZE="-1"><SUP>y</SUP></FONT></CENTER><P> 
+
+then <P>
+
+<CENTER> <I>ln</I>(x) = y,</CENTER><P>
+
+Many of the dynamic NMR processes are exponential in nature.  For example, signals decay exponentially as a function of time.  It is therefore essential to understand the nature of exponential curves.  Three common exponential functions are <P>
+<CENTER>y = e<FONT SIZE="-1"><SUP>-x/t</SUP></FONT> 
+<A HREF="b1-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><BR>
+<CENTER>y = (1 - e<FONT SIZE="-1"><SUP>-x/t</SUP></FONT>) 
+<A HREF="b1-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><BR>
+<CENTER>y = (1 - 2e<FONT SIZE="-1"><SUP>-x/t</SUP></FONT>)
+<A HREF="b1-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><BR>
+where <I>x</I> is a constant.
+
+
+
+<A NAME="2.2"></A> <H3>Trigonometric Functions </H3> 
+
+The  basic trigonometric  functions sine 
+<A HREF="b2-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+and  cosine 
+<A HREF="b2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+describe sinusoidal functions which  are  90<FONT SIZE="-1"><SUP>o</SUP></FONT> out of  phase.  <P> 
+
+The trigonometric identities are used in geometric calculations.
+<A HREF="b2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+
+<CENTER>
+Sin(&theta;) = Opposite / Hypotenuse<BR>
+Cos(&theta;) = Adjacent / Hypotenuse<BR>
+Tan(&theta;) = Opposite / Adjacent<P>
+
+Csc(&theta;) = 1 / Sin(&theta;) = Hypotenuse / Opposite <BR>
+Sec(&theta;) = 1 / Cos(&theta;) = Hypotenuse / Adjacent <BR>
+Cot(&theta;) = 1 / Tan(&theta;) = Adjacent / Opposite 
+</CENTER>
+
+<P ALIGN="JUSTIFY">Three additional identities are useful in understanding how the detector on a nuclear magnetic resonance spectrometer operates.</P>
+
+
+<CENTER>
+Cos(&theta;<SUB>1</SUB>) Cos(<&theta;<SUB>2</SUB>)
+= 1/2 Cos(&theta;<SUB>1</SUB> - <&theta;<SUB>2</SUB>)
++ 1/2 Cos(&theta;<SUB>1</SUB> + &theta;<SUB>2</SUB>)<P>
+
+Sin(&theta;<SUB>1</SUB>) Cos(&theta;<SUB>2</SUB>) 
+= 1/2 Sin(&theta;<SUB>1</SUB> + &theta;<SUB>2</SUB>)
+ + 1/2 Sin(&theta;<SUB>1</SUB> - &theta;<SUB>2</SUB>)<P>
+
+Sin(&theta;<SUB>1</SUB>) Sin(&theta;<SUB>2</SUB>) 
+= 1/2 Cos(&theta;<SUB>1</SUB> - &theta;<SUB>2</SUB>) 
+- 1/2 Cos(&theta;<SUB>1</SUB> + &theta;<SUB>2</SUB>)
+
+</CENTER>
+
+<P>
+
+The  function sin(x) / x  occurs often and  is called sinc(x).  
+<A HREF="b2-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
+
+
+
+<A NAME="2.3"></A> <H3>Differentials and Integrals </H3> 
+
+A  differential can be thought of as the slope of a function at any point.  For  the  function <P>
+
+<CENTER><IMG SRC="images/f2-1.gif"></CENTER><BR>
+
+the differential of y with respect to x is<P> 
+
+<CENTER>
+<IMG SRC="images/f2-2.gif"><A HREF="b3-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+</CENTER>
+
+<P>
+An  integral is the  area under  a function between  the limits  of the integral. <P>
+
+<CENTER>
+<IMG SRC="images/f2-3.gif"><A HREF="b3-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
+</CENTER><BR>
+
+An integral can also be considered a sumation; in fact most integration  is  performed by  computers  by  adding up values of the function between the integral limits. 
+<A HREF="../refs/ref-07.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
+
+<A NAME="2.4"></A> <H3>Vectors </H3> 
+
+A vector is a quantity having both a magnitude and a direction. 
+<A HREF="../refs/ref-06.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+ The magnetization from  nuclear spins is represented as a vector emanating from the origin of the coordinate system.   Here it is along the +Z axis.
+<A HREF="b4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </P>
+
+In this picture 
+<A HREF="b4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+the vector is in the XY plane between the +X and +Y axes.  
+The vector has X and Y components and a magnitude equal to <P>
+<CENTER>
+( X<FONT SIZE="-1"><SUP>2</SUP></FONT> + Y<FONT SIZE="-1"><SUP>2</SUP></FONT> )<FONT SIZE="-1"><SUP>1/2</SUP></FONT>
+</CENTER>
+
+
+<A NAME="2.5"></A> <H3>Matrices </H3> 
+
+A  matrix  is a  set of  numbers  arranged in  a rectangular array. 
+<A HREF="../refs/ref-06.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+This matrix has 3 rows and 4 columns and is said to be  a  3 by 4  matrix. <BR>
+<CENTER><IMG SRC="images/matrix.gif"></CENTER><BR>
+To multiply matrices the number of columns in the first must equal the number of rows in the second.  
+<A HREF="b5-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
+Click sequentially on the next start buttons to see the individual steps associated with the multiplication.
+<A HREF="b5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+<A HREF="b5-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+<A HREF="b5-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
+<A HREF="b5-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </P>
+
+<A NAME="2.6"></A> <H3>Coordinate Transformations</H3> 
+A   coordinate  transformation  is  used  to  convert  the coordinates  of a  vector  in  one coordinate  system (XY) to that in another coordinate system (X"Y").   
+<A HREF="b6-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+
+
+<A NAME="2.7"></A> <H3>Convolution</H3> 
+The convolution of two functions is the overlap of the two functions  as one function  is passed over  the second. 
+<A HREF="../refs/ref-04.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+The convolution symbol is <IMG SRC="images/conv-sym.gif">.  The convolution of h(t) and g(t) is defined mathematically as<P>
+
+<CENTER><IMG SRC="images/conv-fun.gif"></CENTER><P>
+
+The above equation is depicted for rectangular shaped h(t) and g(t) functions in this animation.
+<A HREF="b7-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
+
+
+
+<A NAME="2.8"></A> <H3>Imaginary Numbers </H3> 
+Imaginary  numbers 
+<A HREF="../refs/ref-07.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+are those  which result from calculations involving  the  square root  of -1.  Imaginary  numbers are symbolized by <I>i</I>.<P>
+
+A complex number is one which has a real (RE)  and an  imaginary (IM) part.  The  real and imaginary parts of a complex number are orthogonal.   
+<A HREF="b8-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+Two useful relations between complex numbers and exponentials are <P>
+
+<CENTER>e<FONT SIZE><SUP>+ix</SUP></FONT SIZE> = cos(x) +<I>i</I>sin(x)</CENTER>
+and <BR>
+<CENTER>e<FONT SIZE><SUP>-ix</SUP></FONT SIZE> = cos(x) -<I>i</I>sin(x).</CENTER><P>
+
+
+
+<A NAME="2.9"></A> <H3>Fourier Transforms </H3> 
+
+The  Fourier transform (FT) is  a mathematical technique for converting  time domain  data to  frequency domain  data, and vice  versa.   
+<A HREF="b9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
+
+The Fourier transform will be explained in detail in <A HREF="../chap-5/chap-5.html" TARGET="TEXT" >Chapter 5.</A> <P>
+
+<HR COLOR="#CC0000">
+
+<H5>
+<CENTER>
+
+Go to the: [<A HREF="../chap-3/chap-3.html">next chapter</A> | <A HREF="#top">chapter top</A> | <A HREF="../chap-1/chap-1.html">previous chapter</A> | 
+<A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+
+Copyright &copy; 1997-2017 J.P. Hornak.<BR>
+All Rights Reserved.
+</CENTER>
+</H5>
+
+</BODY>
+
+<!-- Mirrored from www.cis.rit.edu/htbooks/nmr/chap-2/chap-2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jun 2021 07:44:39 GMT -->
+</HTML>
+
+
