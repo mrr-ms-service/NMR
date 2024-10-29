@@ -5,23 +5,23 @@
 <BODY>
 <BODY BGCOLOR="#ffffff">
 
-<CENTER><H1>The Basics of NMR</H1>
-<H2>Chapter 2</H2>
-<H2>THE MATHEMATICS OF NMR </H2></CENTER>
+<CENTER><H1>Основы ЯМР</H1>
+<H2>Глава 2</H2>
+<H2>МАТЕМАТИКА ЯМР</H2></CENTER>
 
 <HR COLOR="#CC0000">
 <H4><UL>
 
-       <LI><A HREF="#2.0">Logarithms and Decibels</A> 
-      <LI><A HREF="#2.1">Exponential Functions </A>
-       <LI><A HREF="#2.2">Trigonometric Functions </A>
-        <LI><A HREF="#2.3">Differentials and Integrals </A>
-        <LI><A HREF="#2.4">Vectors </A>
-        <LI><A HREF="#2.5">Matrices </A>
-        <LI><A HREF="#2.6">Coordinate Transformations </A>
-        <LI><A HREF="#2.7">Convolutions </A>
-        <LI><A HREF="#2.8">Imaginary Numbers </A>
-        <LI><A HREF="#2.9">The Fourier Transform </A>
+       <LI><A HREF="#2.0">Логарифмы и децибелы</A>
+      <LI><A HREF="#2.1">Экспоненциальные функции</A>
+       <LI><A HREF="#2.2">Тригонометрические функции</A>
+        <LI><A HREF="#2.3">Дифференциалы и интегралы</A>
+        <LI><A HREF="#2.4">Векторы</A>
+        <LI><A HREF="#2.5">Матрицы</A>
+        <LI><A HREF="#2.6">Преобразования координат</A>
+        <LI><A HREF="#2.7">Извилины</A>
+        <LI><A HREF="#2.8">Мнимые числа</A>
+        <LI><A HREF="#2.9">Преобразование Фурье</A>
 
 </H4></UL>
 
@@ -29,24 +29,20 @@
 <A NAME="2.0"></A>
 
 
-<H3>Logarithms and Decibels</H3>
+<H3>Логарифмы и децибелы</H3>
 
 <P ALIGN="JUSTIFY">
-Scientists have many shorthand ways of representing numbers.  
-These representations make it easier for the scientist to perform a calculation or represent a number.  
-A logarithm (log) of a number x is defined by the following equations. 
-If</P>
+Ученые имеют много сокращенных способов представления чисел. Эти представления облегчают ученым выполнение вычислений или представление числа. Логарифм (log) числа x определяется следующими уравнениями. Если</P>
 
 <CENTER>x = 10<SUP><FONT SIZE=-1>y</FONT></SUP></CENTER>
 
-<P>then</P>
+<P>затем</P>
 
 <CENTER>log(x) = y.</CENTER>
 
-<P ALIGN="JUSTIFY">You will see in the next section, logarithms do not need to be based on powers of 10.  </P>
+<P ALIGN="JUSTIFY">В следующем разделе вы увидите, что логарифмы не обязательно должны быть основаны на степенях числа 10.</P>
 
-<P ALIGN="JUSTIFY">Logarithms are useful, in part, because of some of the relationships when using them.  
-For example, </P>
+<P ALIGN="JUSTIFY">Логарифмы полезны, отчасти, из-за некоторых соотношений при их использовании. Например,</P>
 
 <CENTER>
 log(x) + log(y) = log(xy)<BR>
@@ -56,20 +52,18 @@ log(x<SUP>y</SUP>) = y log(x)
 </CENTER>
 
 
-<P ALIGN="JUSTIFY">A useful application of base ten logarithms is the concept of a decibel.  
-A decibel is a logarithmic  representation of a ratio of two quantities.  
-For the ratio of two power levels (P<SUB><FONT SIZE=-1>1</FONT></SUB> and P<SUB><FONT SIZE=-1>2</FONT></SUB>) a decibel (dB) is defined as</P>
+<P ALIGN="JUSTIFY">Полезным применением логарифмов по основанию 10 является концепция децибела.
+ Децибел — это логарифмическое представление отношения двух величин.
+ Для отношения двух уровней мощности (P<SUB><FONT SIZE=-1>1</FONT></SUB> and P<SUB><FONT SIZE=-1>2</FONT></SUB>) децибел (дБ) определяется как</P>
 
 <CENTER>
 dB = 10 log(P<SUB><FONT SIZE=-1>1</FONT></SUB>/P<SUB><FONT SIZE=-1>2</FONT></SUB>).</CENTER>
 
-<P ALIGN="JUSTIFY">Sometimes it is necessary to calculate decibels from voltage readings.  
-The relationship between power (P) and voltage (V) is</P>
+<P ALIGN="JUSTIFY">Иногда необходимо рассчитать децибелы по показаниям напряжения. Соотношение между мощностью (P) и напряжением (V) следующее:</P>
 
 <CENTER>P = V<SUP><FONT SIZE=-1>2</FONT></SUP>/R</CENTER>
 
-<P ALIGN="JUSTIFY">where R is the resistance of the circuit, which is usually constant.  
-Substituting this equation into the definition of a dB we have</P>
+<P ALIGN="JUSTIFY">где R — сопротивление цепи, которое обычно постоянно. Подставляя это уравнение в определение дБ, имеем</P>
 
 <CENTER>dB = 10 log((V<SUP><FONT SIZE=-1>2</SUP><SUB>1</FONT></SUB>/R)/(V<SUP><FONT SIZE=-1>2</SUP><SUB>2</FONT></SUB>/R))<BR>
 dB = 10 log((V<SUP><FONT SIZE=-1>2</SUP><SUB>1</FONT></SUB>)/(V<SUP><FONT SIZE=-1>2</SUP><SUB>2</FONT></SUB>))<BR>
@@ -82,55 +76,55 @@ db = 20 log(V<SUB><FONT SIZE=-1>1</FONT></SUB>/V<SUB><FONT SIZE=-1>2</FONT></SUB
 
 
 <A NAME="2.1">
-</A> <H3>Exponential Functions </H3> 
+</A> <H3>Экспоненциальные функции</H3>
 
-The  number 2.71828183 occurs so often in calculations that it is given the symbol <I>e</I>.  When <I>e</I> is raised to the power x, it is often written <I>exp</I>(x). <P>
+Число 2,71828183 встречается в вычислениях так часто, что ему присваивается символ <I>e</I>. Когда <I>e</I> возводится в степень x, это часто записывается как <I>exp</I>(x). <P>
 
 <CENTER>
 e<FONT SIZE="-1"><SUP>x</SUP></FONT> = exp(x) = 2.71828183<FONT SIZE="-1"><SUP>x</SUP></FONT>
 </CENTER><P>
 
-Logarithms based on powers of e are called natural logarithms.  If<P>
+Логарифмы, основанные на степенях e, называются натуральными логарифмами. Если<P>
 
 <CENTER> x = e<FONT SIZE="-1"><SUP>y</SUP></FONT></CENTER><P> 
 
-then <P>
+затем <P>
 
 <CENTER> <I>ln</I>(x) = y,</CENTER><P>
 
-Many of the dynamic NMR processes are exponential in nature.  For example, signals decay exponentially as a function of time.  It is therefore essential to understand the nature of exponential curves.  Three common exponential functions are <P>
+Многие динамические процессы ЯМР имеют экспоненциальную природу. Например, сигналы экспоненциально затухают как функция времени. Поэтому важно понимать природу экспоненциальных кривых. Три общие экспоненциальные функции: <P>
 <CENTER>y = e<FONT SIZE="-1"><SUP>-x/t</SUP></FONT> 
 <A HREF="b1-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><BR>
 <CENTER>y = (1 - e<FONT SIZE="-1"><SUP>-x/t</SUP></FONT>) 
 <A HREF="b1-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><BR>
 <CENTER>y = (1 - 2e<FONT SIZE="-1"><SUP>-x/t</SUP></FONT>)
 <A HREF="b1-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><BR>
-where <I>x</I> is a constant.
+где <I>x</I> — константа.
 
 
 
-<A NAME="2.2"></A> <H3>Trigonometric Functions </H3> 
+<A NAME="2.2"></A> <H3>Тригонометрические функции</H3>
 
-The  basic trigonometric  functions sine 
+Основные тригонометрические функции синус
 <A HREF="b2-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-and  cosine 
+ и косинус
 <A HREF="b2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-describe sinusoidal functions which  are  90<FONT SIZE="-1"><SUP>o</SUP></FONT> out of  phase.  <P> 
+ описывают синусоидальные функции, сдвинутые по фазе на 90<FONT SIZE="-1"><SUP>o</SUP></FONT>.  <P>
 
-The trigonometric identities are used in geometric calculations.
+Тригонометрические тождества используются в геометрических расчетах.
 <A HREF="b2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
 
 <CENTER>
-Sin(&theta;) = Opposite / Hypotenuse<BR>
-Cos(&theta;) = Adjacent / Hypotenuse<BR>
-Tan(&theta;) = Opposite / Adjacent<P>
+Sin(&theta;) = Противоположность / Гипотенуза<BR>
+Cos(&theta;) = Прилегающая / Гипотенуза<BR>
+Tan(&theta;) = Противоположность / Прилегающая<P>
 
-Csc(&theta;) = 1 / Sin(&theta;) = Hypotenuse / Opposite <BR>
-Sec(&theta;) = 1 / Cos(&theta;) = Hypotenuse / Adjacent <BR>
-Cot(&theta;) = 1 / Tan(&theta;) = Adjacent / Opposite 
+Csc(&theta;) = 1 / Sin(&theta;) = Гипотенуза / Противоположная сторона<BR>
+Sec(&theta;) = 1 / Cos(&theta;) = Гипотенуза / Соседняя <BR>
+Cot(&theta;) = 1 / Tan(&theta;) = Соседняя / Противоположная
 </CENTER>
 
-<P ALIGN="JUSTIFY">Three additional identities are useful in understanding how the detector on a nuclear magnetic resonance spectrometer operates.</P>
+<P ALIGN="JUSTIFY">Три дополнительных тождества полезны для понимания того, как работает детектор спектрометра ядерного магнитного резонанса.</P>
 
 
 <CENTER>
@@ -150,114 +144,114 @@ Sin(&theta;<SUB>1</SUB>) Sin(&theta;<SUB>2</SUB>)
 
 <P>
 
-The  function sin(x) / x  occurs often and  is called sinc(x).  
+Функция sin(x) / x встречается часто и называется sinc(x).
 <A HREF="b2-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
 
 
 
-<A NAME="2.3"></A> <H3>Differentials and Integrals </H3> 
+<A NAME="2.3"></A> <H3>Дифференциалы и интегралы</H3>
 
-A  differential can be thought of as the slope of a function at any point.  For  the  function <P>
+Дифференциал можно рассматривать как наклон функции в любой точке. Для функции <P>
 
 <CENTER><IMG SRC="images/f2-1.gif"></CENTER><BR>
 
-the differential of y with respect to x is<P> 
+дифференциал y относительно x равен <P>
 
 <CENTER>
 <IMG SRC="images/f2-2.gif"><A HREF="b3-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
 </CENTER>
 
 <P>
-An  integral is the  area under  a function between  the limits  of the integral. <P>
+Интеграл — это площадь под функцией между пределами интеграла. <P>
 
 <CENTER>
 <IMG SRC="images/f2-3.gif"><A HREF="b3-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
 </CENTER><BR>
 
-An integral can also be considered a sumation; in fact most integration  is  performed by  computers  by  adding up values of the function between the integral limits. 
+Интеграл также можно считать суммированием; на самом деле, большая часть интегрирования выполняется компьютерами путем сложения значений функции между пределами интеграла.
 <A HREF="../refs/ref-07.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
 
-<A NAME="2.4"></A> <H3>Vectors </H3> 
+<A NAME="2.4"></A> <H3>Векторы</H3>
 
-A vector is a quantity having both a magnitude and a direction. 
+Вектор — это величина, имеющая как величину, так и направление.
 <A HREF="../refs/ref-06.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
- The magnetization from  nuclear spins is represented as a vector emanating from the origin of the coordinate system.   Here it is along the +Z axis.
+ Намагниченность от ядерных спинов представляется как вектор, исходящий из начала системы координат. Здесь он направлен вдоль оси +Z.
 <A HREF="b4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </P>
 
-In this picture 
+На этом рисунке
 <A HREF="b4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-the vector is in the XY plane between the +X and +Y axes.  
-The vector has X and Y components and a magnitude equal to <P>
+ вектор находится в плоскости XY между осями +X и +Y. Вектор имеет компоненты X и Y и величину, равную <P>
 <CENTER>
 ( X<FONT SIZE="-1"><SUP>2</SUP></FONT> + Y<FONT SIZE="-1"><SUP>2</SUP></FONT> )<FONT SIZE="-1"><SUP>1/2</SUP></FONT>
 </CENTER>
 
 
-<A NAME="2.5"></A> <H3>Matrices </H3> 
+<A NAME="2.5"></A> <H3>Матрицы</H3>
 
-A  matrix  is a  set of  numbers  arranged in  a rectangular array. 
+Матрица — это набор чисел, организованных в прямоугольный массив.
 <A HREF="../refs/ref-06.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
-This matrix has 3 rows and 4 columns and is said to be  a  3 by 4  matrix. <BR>
+Эта матрица имеет 3 строки и 4 столбца и называется матрицей 3 на 4.<BR>
 <CENTER><IMG SRC="images/matrix.gif"></CENTER><BR>
-To multiply matrices the number of columns in the first must equal the number of rows in the second.  
+Для умножения матриц количество столбцов в первой матрице должно равняться количеству строк во второй.
 <A HREF="b5-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-Click sequentially on the next start buttons to see the individual steps associated with the multiplication.
+Последовательно нажимайте на кнопки «Следующий старт», чтобы увидеть отдельные шаги, связанные с умножением.
 <A HREF="b5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
 <A HREF="b5-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
 <A HREF="b5-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
 <A HREF="b5-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> </P>
 
-<A NAME="2.6"></A> <H3>Coordinate Transformations</H3> 
-A   coordinate  transformation  is  used  to  convert  the coordinates  of a  vector  in  one coordinate  system (XY) to that in another coordinate system (X"Y").   
+<A NAME="2.6"></A> <H3>Преобразования координат</H3>
+Преобразование координат используется для преобразования координат вектора в одной системе координат (XY) в координаты в другой системе координат (X"Y").
 <A HREF="b6-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
 
 
-<A NAME="2.7"></A> <H3>Convolution</H3> 
-The convolution of two functions is the overlap of the two functions  as one function  is passed over  the second. 
+<A NAME="2.7"></A> <H3>Свертка</H3>
+Свертка двух функций — это перекрытие двух функций, когда одна функция проходит над второй.
 <A HREF="../refs/ref-04.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
-The convolution symbol is <IMG SRC="images/conv-sym.gif">.  The convolution of h(t) and g(t) is defined mathematically as<P>
+Символ свертки — <IMG SRC="images/conv-sym.gif">. Свертка h(t) и g(t) определяется математически как <P>
 
 <CENTER><IMG SRC="images/conv-fun.gif"></CENTER><P>
 
-The above equation is depicted for rectangular shaped h(t) and g(t) functions in this animation.
+В этой анимации приведенное выше уравнение изображено для прямоугольных функций h(t) и g(t).
 <A HREF="b7-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
 
 
 
-<A NAME="2.8"></A> <H3>Imaginary Numbers </H3> 
-Imaginary  numbers 
+<A NAME="2.8"></A> <H3>Мнимые числа</H3>
+Мнимые числа
 <A HREF="../refs/ref-07.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
-are those  which result from calculations involving  the  square root  of -1.  Imaginary  numbers are symbolized by <I>i</I>.<P>
+ — это числа, которые получаются в результате вычислений, включающих квадратный корень из -1. Мнимые числа обозначаются буквой <I>i</I>.<P>
 
-A complex number is one which has a real (RE)  and an  imaginary (IM) part.  The  real and imaginary parts of a complex number are orthogonal.   
+Комплексное число — это число, которое имеет действительную (RE) и мнимую (IM) части. Действительная и мнимая части комплексного числа ортогональны.
 <A HREF="b8-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-Two useful relations between complex numbers and exponentials are <P>
+Два полезных соотношения между комплексными числами и экспонентами: <P>
 
 <CENTER>e<FONT SIZE><SUP>+ix</SUP></FONT SIZE> = cos(x) +<I>i</I>sin(x)</CENTER>
-and <BR>
+и <BR>
 <CENTER>e<FONT SIZE><SUP>-ix</SUP></FONT SIZE> = cos(x) -<I>i</I>sin(x).</CENTER><P>
 
 
 
-<A NAME="2.9"></A> <H3>Fourier Transforms </H3> 
+<A NAME="2.9"></A> <H3>Преобразования Фурье</H3>
 
-The  Fourier transform (FT) is  a mathematical technique for converting  time domain  data to  frequency domain  data, and vice  versa.   
+Преобразование Фурье (ПФ) — это математический метод преобразования данных временной области в данные частотной области и наоборот.
 <A HREF="b9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-The Fourier transform will be explained in detail in <A HREF="../chap-5/chap-5.html" TARGET="TEXT" >Chapter 5.</A> <P>
+Преобразование Фурье будет подробно объяснено в <A HREF="../chap-5/chap-5.html" TARGET="TEXT" >Главе 5.</A> <P>
 
 <HR COLOR="#CC0000">
 
 <H5>
 <CENTER>
 
-Go to the: [<A HREF="../chap-3/chap-3.html">next chapter</A> | <A HREF="#top">chapter top</A> | <A HREF="../chap-1/chap-1.html">previous chapter</A> | 
-<A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
+Переход к: [<A HREF="../chap-1/chap-1.html">Предыдущая глава</A> | <A HREF="#top">Начало главы</A> | <A HREF="../chap-3/chap-3.html">Следующая глава</A> |
+<A HREF="../bnmr.html" TARGET="NEW">Обложка</A> ]<P>
 
-Copyright &copy; 1997-2017 J.P. Hornak.<BR>
-All Rights Reserved.
+Авторские права © 1997-2017 JP Hornak. <BR>
+Все права защищены.
+
 </CENTER>
 </H5>
 

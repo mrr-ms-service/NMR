@@ -4,80 +4,80 @@
 <HEAD><TITLE>CHAPTER-5</TITLE></HEAD>
 <BODY>
 <BODY BGCOLOR="#ffffff">
-<CENTER><H1>The Basics of NMR</H1>
-<H2>Chapter 5</H2>
-<H2>FOURIER TRANSFORMS</H2></CENTER>
+<CENTER><H1>Основы ЯМР</H1>
+<H2>Глава 5</H2>
+<H2>ПРЕОБРАЗОВАНИЯ ФУРЬЕ</H2></CENTER>
 
 <HR COLOR="#CC0000">
 <H4><UL>
-	<LI><A HREF="#5.1">Introduction</A>
- 	<LI><A HREF="#5.2"> The + and - Frequency Problem </A>
-	<LI><A HREF="#5.3"> The Fourier Transform </A>
-	<LI><A HREF="#5.4"> Phase Correction </A>
-	<LI><A HREF="#5.6"> Fourier Pairs </A>
-	<LI><A HREF="#5.7"> The Convolution Theorem </A>
-	<LI><A HREF="#5.8"> The Digital FT </A>
-	<LI><A HREF="#5.9"> Sampling Error </A>
-	<LI><A HREF="#5.10"> The Two-Dimensional FT </A>
+	<LI><A HREF="#5.1">Введение</A>
+ 	<LI><A HREF="#5.2">Проблема + и - частоты</A>
+	<LI><A HREF="#5.3">Преобразование Фурье</A>
+	<LI><A HREF="#5.4">Фазовая коррекция</A>
+	<LI><A HREF="#5.6">Пары Фурье</A>
+	<LI><A HREF="#5.7">Теорема о свертке</A>
+	<LI><A HREF="#5.8">Цифровое ПФ</A>
+	<LI><A HREF="#5.9">Ошибка выборки</A>
+	<LI><A HREF="#5.10">Двумерное ПФ</A>
 
-</H4></UL>
+</UL></H4>
 <HR>
-<A NAME="5.1"></A><H3>Introduction</H3> 
+<A NAME="5.1"></A><H3>Введение</H3>
 
 
-A  detailed description of the Fourier transform ( FT ) has waited until now, when you  have a better appreciation of why it is needed.  A Fourier transform is an operation which converts functions from time to frequency  domains.  An inverse Fourier transform ( IFT ) converts from the frequency domain to the time domain. <P>
+Подробное описание преобразования Фурье (ПФ) ждало своего часа, пока вы не поймете, зачем оно нужно. Преобразование Фурье — это операция, которая преобразует функции из временной области в частотную. Обратное преобразование Фурье (ОПФ) преобразует из частотной области во временную. <P>
 
-Recall  from  <A HREF="../chap-2/chap-2.html#2.9" TARGET="TEXT" >Chapter 2 </A> that the  Fourier  transform is a mathematical   technique  for converting time  domain  data  to  frequency  domain  data,  and  vice versa. 
+Вспомним из <A HREF="../chap-2/chap-2.html#2.9" TARGET="TEXT" >Главы 2 </A>, что преобразование Фурье — это математический метод преобразования данных временной области в данные частотной области и наоборот.
 <A HREF="../chap-2/b9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
 
-<A NAME="5.2"></A><H3>The + and - Frequency Problem</H3> 
-To begin our detailed description of the FT consider the following.  A magnetization vector, starting at +x, is rotating about the Z axis in  a clockwise direction. The plot of M<FONT SIZE="-1"><SUB>x</SUB></FONT>
- as a function of time is  a cosine wave.  
-<A HREF="e2-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
-Fourier transforming this  gives peaks at both +<IMG SRC="../images/10-nu.gif"> and -<IMG SRC="../images/10-nu.gif"> 
-because the FT can not distinguish between a  +<IMG SRC="../images/10-nu.gif"> 
-and a -<IMG SRC="../images/10-nu.gif">
- rotation  of the  vector from the data supplied.
+<A NAME="5.2"></A><H3>Проблема + и - частоты</H3>
+Для начала подробного описания преобразования Фурье рассмотрим следующее. Вектор намагниченности, начинающийся с +x, вращается вокруг оси Z по часовой стрелке. График M<FONT SIZE="-1"><SUB>x</SUB></FONT>
+как функции времени представляет собой косинусоиду.
+<A HREF="e2-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+Преобразование Фурье дает пики как при +<IMG SRC="../images/10-nu.gif">, так и при -<IMG SRC="../images/10-nu.gif">,
+поскольку преобразование Фурье не может отличить +<IMG SRC="../images/10-nu.gif">
+и -<IMG SRC="../images/10-nu.gif">
+вращение вектора из предоставленных данных.
 <A HREF="e2-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
 
-A plot of M<FONT SIZE="-1"><SUB>y</SUB></FONT> as a function of time is a -sine function.
+График M<FONT SIZE="-1"><SUB>y</SUB></FONT> как функции времени представляет собой функцию -синуса.
 <A HREF="e2-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
-Fourier  transforming this gives peaks at  +<IMG SRC="../images/10-nu.gif"> and -<IMG SRC="../images/10-nu.gif"> 
-because the FT can  not  distinguish between a positive vector rotating  at  +<IMG SRC="../images/10-nu.gif"> 
-and a  negative  vector rotating  at  -<IMG SRC="../images/10-nu.gif"> 
-from the data  supplied.
+Преобразование Фурье дает пики при +<IMG SRC="../images/10-nu.gif"> и -<IMG SRC="../images/10-nu.gif">
+поскольку FT не может отличить положительный вектор, вращающийся при +<IMG SRC="../images/10-nu.gif">,
+от отрицательного вектора, вращающегося при -<IMG SRC="../images/10-nu.gif">,
+из предоставленных данных.
 <A HREF="e2-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
-The solution is to input both the  M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT> into the FT.  The FT is designed to handle two orthogonal input functions called the real and imaginary components.
+Решение состоит в том, чтобы ввести в FT как M<FONT SIZE="-1"><SUB>x</SUB></FONT>, так и M<FONT SIZE="-1"><SUB>y</SUB></FONT>. FT разработан для обработки двух ортогональных входных функций, называемых реальной и мнимой компонентами.
 <A HREF="e2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-Detecting just  the M<FONT SIZE="-1"><SUB>x</SUB></FONT> or M<FONT SIZE="-1"><SUB>y</SUB></FONT> component for input into the FT is called linear detection.  This was the detection scheme on many older  NMR spectrometers and some magnetic resonance imagers.  It required  the computer to discard half of the frequency domain data.
+Обнаружение только компонента M<FONT SIZE="-1"><SUB>x</SUB></FONT> или M<FONT SIZE="-1"><SUB>y</SUB></FONT> для ввода в FT называется линейным обнаружением. Это была схема обнаружения на многих старых ЯМР-спектрометрах и некоторых магнитно-резонансных томографах. Она требовала от компьютера отбрасывать половину данных частотной области.
 <A HREF="e2-6.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
 
-Detection  of both M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT> is  called quadrature detection and is the method of detection on modern  spectrometers and imagers.  It is the method of choice since now the FT can distinguish between 
-+<IMG SRC="../images/10-nu.gif"> and -<IMG SRC="../images/10-nu.gif">, and all of the frequency domain data be used.
+Обнаружение как M<FONT SIZE="-1"><SUB>x</SUB></FONT>, так и M<FONT SIZE="-1"><SUB>y</SUB></FONT>называется квадратурным обнаружением и является методом обнаружения на современных спектрометрах и устройствах формирования изображений. Это метод выбора, поскольку теперь FT может различать
++<IMG SRC="../images/10-nu.gif"> и -<IMG SRC="../images/10-nu.gif">, и все данные частотной области могут быть использованы.
 <A HREF="e2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
 
-<A NAME="5.3"></A> <H3>The Fourier Transform </H3> 
-An  FT is defined by the  integral
+<A NAME="5.3"></A> <H3>Преобразование Фурье</H3>
+Преобразование Фурье определяется интегралом
 <A HREF="../refs/ref-03.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="../refs/ref-04.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
 <CENTER><IMG SRC="images/ft_eq_1.gif"></CENTER><P>
 
-Think of f(<IMG SRC="../images/10-omega.gif">) as the overlap of f(t) with a wave of frequency 
+Думайте о f(<IMG SRC="../images/10-omega.gif">) как о наложении f(t) с волной частоты
 <IMG SRC="../images/10-omega.gif">. <P>
 
 <CENTER><IMG SRC="images/ft_eq_2.gif"></CENTER><P>
 
-This is easy to picture  by looking at  the real part of <I>f</I>(<IMG SRC="../images/10-omega.gif">)  only. <P>
+Это легко представить, взглянув только на действительную часть <I>f</I>(<IMG SRC="../images/10-omega.gif">). <P>
 <CENTER><IMG SRC="images/ft_eq_3.gif"></CENTER><P>
 
-Consider the function of time, f( t ) = cos( 4t ) + cos( 9t ).
+Рассмотрим функцию времени f( t ) = cos( 4t ) + cos( 9t ).
 <A HREF="e3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-To understand the FT, examine the product of f(t) with cos(<IMG SRC="../images/10-omega.gif">t) for 
-<IMG SRC="../images/10-omega.gif"> values between 1 and 10, and then the summation of the values of this product between 1 and 10 seconds.  The summation will only be examined for time values between 0 and 10 seconds.<P>
+Чтобы понять FT, исследуйте произведение f(t) с cos(<IMG SRC="../images/10-omega.gif">t) для
+<IMG SRC="../images/10-omega.gif"> значений от 1 до 10, а затем суммирование значений этого произведения от 1 до 10 секунд. Суммирование будет рассматриваться только для значений времени от 0 до 10 секунд.<P>
 
 <CENTER>
 <TABLE>
@@ -107,158 +107,131 @@ To understand the FT, examine the product of f(t) with cos(<IMG SRC="../images/1
 </TABLE>
 </CENTER><P>
 
-The inverse Fourier transform (IFT)  is best depicted as an summation of the time domain spectra of frequencies in 
-f(<IMG SRC="../images/10-omega.gif">).
+Обратное преобразование Фурье (ОПФ) лучше всего описать как суммирование спектров частот во временной области в f(<IMG SRC="../images/10-omega.gif">).
 <A HREF="e3-13.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
 
 
-<A NAME="5.4"></A> <H3>Phase Correction </H3> 
+<A NAME="5.4"></A> <H3>Фазовая коррекция</H3>
 
-<P ALIGN="JUSTIFY">The actual FT will make use of an input consisting of a REAL and an IMAGINARY part.  
-You can think of M<FONT SIZE="-1"><SUB>x</SUB></FONT> as the REAL input, 
-and M<FONT SIZE="-1"><SUB>y</SUB></FONT> as the IMAGINARY input.  
-The resultant output of the FT will therefore have a  REAL and an IMAGINARY component, too.  </P>
+<P ALIGN="JUSTIFY">Фактическое FT будет использовать вход, состоящий из ДЕЙСТВИТЕЛЬНОЙ и МНИМОЙ части.
+Вы можете думать о M<FONT SIZE="-1"><SUB>x</SUB></FONT> как о ДЕЙСТВИТЕЛЬНОМ входе, а о M<FONT SIZE="-1"><SUB>y</SUB></FONT> как о МНИМОМ входе. Результирующий выход ПФ, таким образом, также будет иметь ДЕЙСТВИТЕЛЬНЫЙ и МНИМЫЙ компонент.</P>
 
-Consider the following function:  <P>
+Рассмотрим следующую функцию: <P>
 <CENTER>
 f(t) = e<SUP>-at</SUP> e<SUP>-i2<FONT FACE="Symbol">p</FONT><FONT FACE="Symbol">n</FONT>t</SUP>
 <A HREF="e4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER><P>
 
-<P ALIGN="JUSTIFY">In FT NMR spectroscopy, the real output of the FT is taken as the frequency domain spectrum.  
-To see an esthetically pleasing (absorption) frequency domain spectrum, 
-we want to input a cosine function into the real part and a sine function into the imaginary parts of  the FT.  
-This is what happens if the cosine part is input as the imaginary and the sine as the real.
+<P ALIGN="JUSTIFY">В спектроскопии ЯМР FT реальный выход FT принимается как спектр частотной области. Чтобы увидеть эстетически приятный (поглощающий) спектр частотной области, мы хотим ввести функцию косинуса в действительную часть и функцию синуса в мнимые части ПФ. Вот что происходит, если часть косинуса вводится как мнимая, а синус как действительная.
 <A HREF="e4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></P>
 
-<P ALIGN="JUSTIFY">In an ideal NMR experiment all frequency components contained in the recorded FID have no phase shift. 
-In practice, during a real NMR experiment a phase correction must be applied to either the time or frequency domain
-spectra to obtain an absorption spectrum as the real output of the FT.
-  
-This process is equivalent to the coordinate transformation described in 
-<A HREF="../chap-2/chap-2.html#2.6" TARGET="TEXT">Chapter 2</A>
+<P ALIGN="JUSTIFY">В идеальном эксперименте ЯМР все частотные компоненты, содержащиеся в записанном ЗСИ, не имеют фазового сдвига. На практике во время реального эксперимента ЯМР необходимо применить фазовую коррекцию к спектрам либо временной, либо частотной области, чтобы получить спектр поглощения как реальный выходной сигнал ПФ. Этот процесс эквивалентен преобразованию координат, описанному в
+<A HREF="../chap-2/chap-2.html#2.6" TARGET="TEXT">Главе 2</A>
 </P>
 
 <CENTER>
 <IMG SRC="images/cord-mat.gif">
 </CENTER>
 
-<P ALIGN="JUSTIFY">If the above mentioned FID is recorded such that there is a 45<FONT SIZE="-1"><SUP>o</SUP></FONT> 
-phase shift in the real and imaginary FIDs, 
+<P ALIGN="JUSTIFY">Если вышеупомянутый ЗСИ записан таким образом, что в действительном и мнимом ЗСИ имеется сдвиг фаз 45<FONT SIZE="-1"><SUP>o</SUP></FONT>,
 <A HREF="e4-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
-the coordinate transformation matrix can be used with 
+матрицу преобразования координат можно использовать с
 <IMG SRC="../images/12-phi.gif"> = - 45<FONT SIZE="-1"><SUP>o</SUP></FONT>.
-The corrected FIDs look like a cosine function in the real and a sine in the imaginary.
+Скорректированные ЗСИ выглядят как функция косинуса в действительной части и синуса в мнимой части.
 <A HREF="e4-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></P>
 
-<P ALIGN="JUSTIFY">Fourier transforming the phase corrected FIDs gives an absorption spectrum for the real output of the FT.
+<P ALIGN="JUSTIFY">Преобразование Фурье скорректированных по фазе ЗСИ дает спектр поглощения для реального выходного сигнала ПФ.
 <A HREF="e4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 
 
 </P>
 
-<P ALIGN="JUSTIFY">The phase shift also varies with frequency, 
-so the NMR spectra require both constant and linear corrections to the phasing of the Fourier transformed signal. <P>
+<P ALIGN="JUSTIFY">Фазовый сдвиг также изменяется в зависимости от частоты, поэтому спектры ЯМР требуют как постоянных, так и линейных поправок к фазировке преобразованного Фурье сигнала.<P>
 <CENTER>
 <IMG SRC="../images/12-phi.gif"> = m <FONT FACE="Symbol">n</FONT> + b
 </CENTER></P>
 
-<P ALIGN="JUSTIFY">Constant phase corrections, b, arise from the inability of the spectrometer to detect the exact  
-M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT>.
-Linear phase corrections, m,  arise  from the inability of the spectrometer to detect transverse magnetization starting 
-immediately after the RF pulse.  
-The following drawing depicts the greater loss of phase in a high frequency FID when the initial yellow section is lost.
+<P ALIGN="JUSTIFY">Постоянные фазовые коррекции, b, возникают из-за неспособности спектрометра обнаружить точные
+M<FONT SIZE="-1"><SUB>x</SUB></FONT> и M<FONT SIZE="-1"><SUB>y</SUB></FONT>.
+Линейные фазовые коррекции, m, возникают из-за неспособности спектрометра обнаружить поперечную намагниченность, начинающуюся сразу после РЧ-импульса. Следующий рисунок изображает большую потерю фазы в высокочастотном ЗСИ, когда теряется начальный желтый участок.
   
 <A HREF="e4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 
 
-From the practical point of view, the phase correction is applied in the frequency domain rather then in the time domain 
-because we know that a real frequency domain spectrum should be composed of all positive peaks. 
-We can therefore adjust b and m until all positive peaks are seen in the real output of the Fourier transform.</P>
+С практической точки зрения фазовая коррекция применяется в частотной области, а не во временной, поскольку мы знаем, что реальный спектр частотной области должен состоять из всех положительных пиков. Поэтому мы можем корректировать b и m до тех пор, пока все положительные пики не будут видны в реальном выходе преобразования Фурье.</P>
 
 
 
 
-In magnetic resonance, the M<FONT SIZE="-1"><SUB>x</SUB></FONT> or M<FONT SIZE="-1"><SUB>y</SUB></FONT> signals are displayed. 
-A magnitude signal might occasionally be used in some applications.  
-The magnitude signal is equal to the square root of the sum of the squares of 
-M<FONT SIZE="-1"><SUB>x</SUB></FONT> and M<FONT SIZE="-1"><SUB>y</SUB></FONT>. <P>
+В магнитном резонансе отображаются сигналы M<FONT SIZE="-1"><SUB>x</SUB></FONT> или M<FONT SIZE="-1"><SUB>y</SUB></FONT>. В некоторых приложениях иногда может использоваться сигнал амплитуды.
+Сигнал амплитуды равен квадратному корню из суммы квадратов
+M<FONT SIZE="-1"><SUB>x</SUB></FONT> и M<FONT SIZE="-1"><SUB>y</SUB></FONT>. <P>
 
 
 
 
 
-<A NAME="5.6"></A> <H3>Fourier Pairs </H3> 
+<A NAME="5.6"></A> <H3>Пары Фурье</H3>
 
 To  better understand FT NMR  functions, you need to know some common  Fourier pairs. 
 <A HREF="../refs/ref-04.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
 <A HREF="../refs/ref-13.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
-A Fourier pair is two functions, the frequency  domain form  and the  corresponding time  domain form.   Here are a few Fourier pairs which are useful in NMR.  The amplitude of the Fourier pairs has been neglected since it is not relevant in NMR.
+Чтобы лучше понять функции ЯМР ПФ, вам нужно знать некоторые общие пары Фурье. Пара Фурье — это две функции, форма частотной области и соответствующая форма временной области. Вот несколько пар Фурье, которые полезны в ЯМР. Амплитуда пар Фурье была проигнорирована, поскольку она не имеет значения в ЯМР.
 <P>
 
 <A HREF="e6-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-Constant value at all time <P>
+Постоянное значение во все времена<P>
 
 <A HREF="e6-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 
-Real: cos(2<IMG SRC="../images/10-pi.gif"><IMG SRC="../images/10-nu.gif">t), 
-Imaginary: -sin(2<IMG SRC="../images/10-pi.gif"><IMG SRC="../images/10-nu.gif">t)<P>
+Действительная часть: cos(2<IMG SRC="../images/10-pi.gif"><IMG SRC="../images/10-nu.gif">t),
+Мнимая часть: -sin(2<IMG SRC="../images/10-pi.gif"><IMG SRC="../images/10-nu.gif">t)<P>
 
 <A HREF="e6-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-Comb Function (A series of delta functions separated by T.)<P>
+Функция гребенки (серия дельта-функций, разделенных символом T.)<P>
 
 <A HREF="e6-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-Exponential Decay:  e<SUP>-at</SUP> for t > 0.<P>
+Экспоненциальный спад: e<SUP>-at</SUP> для t > 0.<P>
 
 <A HREF="e6-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-A square pulse starting at 0 that is T seconds long.<P>
+Прямоугольный импульс, начинающийся с 0 и длительностью T секунд.<P>
 
 
 <A HREF="e6-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-Gaussian: exp(-at<FONT SIZE="-1"><SUP>2</SUP></FONT>)<P>
+Гаусса: exp(-at<FONT SIZE="-1"><SUP>2</SUP></FONT>)<P>
 
 
-<A NAME="5.7"></A> <H3>Convolution Theorem</H3> 
+<A NAME="5.7"></A> <H3>Теорема о свертке</H3>
 
-To the magnetic resonance scientist, the  most important theorem concerning Fourier transforms is the convolution  theorem.   
-The convolution theorem  says that the FT of a  convolution of  two functions is proportional to the products of the individual Fourier transforms, and vice versa.
-<A HREF="../refs/ref-03.html#[3]" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
+Для ученого, изучающего магнитный резонанс, самой важной теоремой, касающейся преобразований Фурье, является теорема о свертке. Теорема о свертке гласит, что преобразование Фурье свертки двух функций пропорционально произведениям отдельных преобразований Фурье, и наоборот.
+<A HREF="../refs/ref-03.html#[3]" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
 <A HREF="../refs/ref-13.html#[13]" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <P>
 
-If f(<IMG SRC="../images/10-omega.gif">) = FT( f(t) )   and   
+Если f(<IMG SRC="../images/10-omega.gif">) = FT( f(t) ) и
 g(<IMG SRC="../images/10-omega.gif">) = FT( g(t) )<P>
 
-then f(<IMG SRC="../images/10-omega.gif">) g(<IMG SRC="../images/10-omega.gif">) 
-= FT( g(t) <IMG SRC="../images/10-convl.gif"> f(t) ) and 
+тогда f(<IMG SRC="../images/10-omega.gif">) g(<IMG SRC="../images/10-omega.gif">)
+= FT( g(t) <IMG SRC="../images/10-convl.gif"> f(t) ) и
 f(<IMG SRC="../images/10-omega.gif">) <IMG SRC="../images/10-convl.gif">
  g(<IMG SRC="../images/10-omega.gif">) = FT( g(t) f(t) )<P>
 
-It will be easier to see this with pictures.  In the animation window we are trying to find the FT of a sine wave which is turned on and off.
-<A HREF="f5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-The convolution theorem tells us that this is a sinc function at the frequency of the sine wave.<P>
+Это будет легче увидеть на картинках. В окне анимации мы пытаемся найти FT синусоиды, которая включается и выключается.
+<A HREF="f5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Теорема о свертке говорит нам, что это функция sinc на частоте синусоиды.<P>
 
-Another application of the convolution theorem is in noise reduction.  
-With the convolution theorem it can be seen that the convolution of  an NMR spectrum with a Lorentzian function is the same as the Fourier Transform of multiplying the time domain signal by an exponentially decaying function.  
+Другое применение теоремы о свертке — шумоподавление. С помощью теоремы о свертке можно увидеть, что свертка спектра ЯМР с функцией Лоренца совпадает с преобразованием Фурье умножения сигнала временной области на экспоненциально затухающую функцию.
 <A HREF="e5-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P>
 
 
-<A NAME="5.8"></A> <H3>The Digital FT</H3> 
-In a nuclear magnetic resonance spectrometer, the computer does not see a continuous FID, 
-but rather an FID which is sampled at a constant interval.  
-Each data point making up the FID will have discrete amplitude and time values.  
-Therefore, the computer needs to take the FT of a series of delta functions which vary in intensity.
+<A NAME="5.8"></A> <H3>Цифровое ПФ</H3>
+В спектрометре ядерного магнитного резонанса компьютер видит не непрерывный ЗСИ, а ЗСИ, который дискретизируется с постоянным интервалом. Каждая точка данных, составляющая ЗСИ, будет иметь дискретные значения амплитуды и времени. Поэтому компьютеру необходимо взять ПФ ряда дельта-функций, которые различаются по интенсивности.
 
 <A HREF="e8-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-What is the FT of a signal represented by this series of delta functions?  
-The answer will be addressed in the next heading, 
-but first some information on relationships between the sampled time domain data and the resultant frequency domain spectrum. 
-An n point time domain spectrum is sampled at <FONT FACE="Symbol">d</FONT>t and takes a time t to record.  
-<A HREF="e8-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-The corresponding complex frequency domain spectrum that the discrete FT produces has n points, 
-a width f, and resolution <FONT FACE="Symbol">d</FONT>f.  
-The relationships between the quantities are as follows.<P>
+Что такое ПФ сигнала, представленного этой серией дельта-функций? Ответ будет дан в следующем заголовке, но сначала некоторая информация о взаимосвязях между выборочными данными временной области и результирующим спектром частотной области. Спектр временной области из n точек выбирается в <FONT FACE="Symbol">d</FONT>t и требует времени t для записи.
+<A HREF="e8-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
+Соответствующий комплексный спектр частотной области, который создает дискретное FT, имеет n точек, ширину f и разрешение <FONT FACE="Symbol">d</FONT>f. Соотношения между величинами следующие.<P>
 
 <CENTER>
  f = (1/<FONT FACE="Symbol">d</FONT>t)<P>
@@ -269,49 +242,48 @@ The relationships between the quantities are as follows.<P>
 
 
 
-<A NAME="5.9"></A> <H3>Sampling Error </H3> 
-The wrap around problem or artifact in a nuclear magnetic resonance spectrum is the appearance of one side of the spectrum on the opposite side.  
-In terms of a one dimensional frequency domain spectrum, wrap around is the occurrence of a low frequency peak which occurs on the high frequency side of the spectrum. <P>
+<A NAME="5.9"></A> <H3>Ошибка выборки</H3>
+Проблема или артефакт обертывания в спектре ядерного магнитного резонанса — это появление одной стороны спектра на противоположной стороне. В терминах одномерного спектра частотной области обертывание — это возникновение низкочастотного пика, который происходит на высокочастотной стороне спектра. <P>
 
-The convolution theorem can explain why this problem results from sampling the  transverse  magnetization  at  too slow  a  rate.  
-First, observe what the FT of a correctly sampled FID looks like.  
+Теорема о свертке может объяснить, почему эта проблема возникает из-за выборки поперечной намагниченности со слишком низкой скоростью. Сначала посмотрите, как выглядит ПФ правильно выбранного ЗСИ.
 <A HREF="e9-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 
-With quadrature detection, the spectral width is equal to the inverse of the sampling frequency, 
-or the width of the green box in the animation window.  <P>
+При квадратурном детектировании спектральная ширина равна обратной частоте выборки или ширине зеленого поля в окне анимации. <P>
 
-When the sampling frequency is less than the spectral width, wrap around occurs.
+Если частота дискретизации меньше ширины спектра, происходит циклический скачок.
 <A HREF="e9-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-<A NAME="5.10"></A> <H3>The Two-Dimensional FT </H3> 
+<A NAME="5.10"></A> <H3>Двумерное ПФ</H3>
 
-The  two-dimensional Fourier transform (2-DFT)
-<A HREF="../refs/ref-16.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>  
-is  an  FT  performed  on  a two dimensional  array of data. <P>
+Двумерное преобразование Фурье (2-ДПФ)
+<A HREF="../refs/ref-16.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
+— это преобразование Фурье, выполняемое над двумерным массивом данных.<P>
 
-Consider the two-dimensional array of data depicted in the animation window.  
+Рассмотрим двумерный массив данных, изображенный в окне анимации.
 <A HREF="e10-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-This data has a t' and a t" dimension.   A FT is first performed on the data in one dimension and then in the second.  
-The first set of  Fourier transforms are performed in the t' dimension to yield an f' by t" set of data.
+Эти данные имеют измерения t' и t". Сначала выполняется преобразование Фурье для данных в одном измерении, а затем во втором. Первый набор преобразований Фурье выполняется в измерении t' для получения набора данных размером f' на t".
 <A HREF="e10-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
 
-The second set of Fourier transforms is performed in the t" dimension to yield an f' by f" set of data.  
+Второй набор преобразований Фурье выполняется в измерении t" для получения набора данных размером f' на f".
 <A HREF="e10-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-The 2-DFT is required to perform state-of-the-art MRI.  In MRI, data is collected in the equivalent of  the t' and t" dimensions, called k-space.  This raw data is Fourier transformed to yield the image which is the equivalent of the f' by f" data described above.<P>
+2-DFT требуется для выполнения современной МРТ. В МРТ данные собираются в эквиваленте измерений t' и t", называемом k-пространством. Эти необработанные данные преобразуются Фурье для получения изображения, которое является эквивалентом данных f' на f", описанных выше.<P>
 
 
 <HR COLOR="#CC0000">
 
 <H5>
 <CENTER>
-Go to the: [<A HREF="../chap-6/chap-6.html">next chapter</A> 
-           | <A HREF="#top">chapter top</A> 
-           | <A HREF="../chap-4/chap-4.html">previous chapter</A> 
-           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
 
-Copyright &copy; 1997-2017 J.P. Hornak.<BR>
-All Rights Reserved.
+Переход к: [
+    <A HREF="../chap-4/chap-4.html">Предыдущая глава</A> |
+    <A HREF="#top">Начало главы</A> |
+    <A HREF="../chap-6/chap-6.html">Следующая глава</A> |
+    <A HREF="../bnmr.html" TARGET="NEW">Обложка</A> ]<P>
+
+Авторские права © 1997-2017 JP Hornak. <BR>
+Все права защищены.
+
 </CENTER>
 </H5>
 </BODY>

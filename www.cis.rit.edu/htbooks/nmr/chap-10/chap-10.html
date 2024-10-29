@@ -10,127 +10,126 @@
 
 <HR COLOR="#CC0000">
 <H4><UL>
-	<LI><A HREF="#10.1">Introduction </A>
-	<LI><A HREF="#10.2">J-resolved </A>
+	<LI><A HREF="#10.1">Введение</A>
+	<LI><A HREF="#10.2">J-решено</A>
 	<LI><A HREF="#10.3">COSY</A>
-	<LI><A HREF="#10.4">Examples </A>
+	<LI><A HREF="#10.4">Примеры</A>
 </H4></UL>
 <HR>
 
 
 <A NAME="10.1"></A> <H3>Introduction </H3> 
 
-In <A HREF="../chap-6/chap-6.html#4.4" TARGET="TEXT">Chapter 6</A> we saw the mechanics of the spin echo sequence.  Recall that a 90 degree pulse rotates magnetization from a single type of spin into the XY plane.  
+В <A HREF="../chap-6/chap-6.html#4.4" TARGET="TEXT">Главе 6</A> мы рассмотрели механику последовательности спинового эха. Вспомним, что 90-градусный импульс поворачивает намагниченность из одного типа спина в плоскость XY.
 <A HREF="../chap-6/d4-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
-The magnetization dephases,  
+ Намагниченность дефазируется,
 <A HREF="../chap-6/d4-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
-and then a 180 degree pulse is applied  
+ а затем применяется 180-градусный импульс
 <A HREF="../chap-6/d4-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
-which  refocusses the magnetization.  
+ , который перефокусирует намагниченность.
 <A HREF="../chap-6/d4-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
 <P>
 
-When a molecule with J coupling (spin-spin coupling) is subjected  to a spin-echo sequence, something unique but predictable occurs.  Look at what happens to the molecule <I>A<SUB>2</SUB>-C-C-B</I> where <I>A</I>  and <I>B</I>  are spin-1/2 nuclei experiencing resonance.  
+Когда молекула с J-связью (спин-спиновая связь) подвергается спин-эхо последовательности, происходит нечто уникальное, но предсказуемое. Посмотрите, что происходит с молекулой <I>A<SUB>2</SUB>-C-C-B</I>, где <I>A</I> и <I>B</I> являются ядрами со спином 1/2, испытывающими резонанс.
 <A HREF="j1-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-The NMR spectrum from a 90-FID sequence looks like this.
+ Спектр ЯМР из последовательности 90-FID выглядит следующим образом.
 <A HREF="j1-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 <P>
 
-With a spin-echo sequence this same molecule gives a rather peculiar spectrum once the echo is Fourier transformed.  Here is a series of spectra recorded at different TE times.  The amplitude of the peaks have been standardized to be all positive when TE=0 ms. 
+С последовательностью спин-эхо эта же молекула дает довольно своеобразный спектр после преобразования эха Фурье. Вот ряд спектров, записанных в разное время TE. Амплитуда пиков была стандартизирована, чтобы быть положительной при TE=0 мс.
 <A HREF="j1-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-To understand what is happening, consider the magnetization vectors from the <I>A</I> nuclei.  There are two absorptions lines in the spectrum from the <I>A</I> nuclei, one at <img src="../images/10-nu.gif">+J/2 and one at 
-<img src="../images/10-nu.gif">-J/2.  At equilibrium, the magnetization vectors from the 
-<img src="../images/10-nu.gif">+J/2 and <img src="../images/10-nu.gif">-J/2 lines in the spectrum are both along +Z.  
+Чтобы понять, что происходит, рассмотрим векторы намагниченности от ядер <I>A</I>. В спектре есть две линии поглощения от ядер <I>A</I>, одна при <img src="../images/10-nu.gif">+J/2 и одна при
+<img src="../images/10-nu.gif">-J/2. В состоянии равновесия векторы намагниченности от линий
+<img src="../images/10-nu.gif">+J/2 и <img src="../images/10-nu.gif">-J/2 в спектре оба направлены вдоль +Z.
 <A HREF="j1-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 <P>
 
 
-A 90 degree pulse rotates both magnetization vectors into the XY plane.  
+Импульс в 90 градусов поворачивает оба вектора намагниченности в плоскость XY.
 <A HREF="j1-5.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
-Assuming a rotating frame of reference at <img src="../images/10-nu.gif"><SUB>o</SUB> = <img src="../images/10-nu.gif">, the vectors precess according to their Larmor frequency and dephase due to T<SUB>2</SUB>*.  
-<A HREF="j1-6.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
+Предполагая вращающуюся систему отсчета при <img src="../images/10-nu.gif"><SUB>o</SUB> = <img src="../images/10-nu.gif">, векторы прецессируют в соответствии с их частотой Лармора и дефазируются из-за T<SUB>2</SUB>*.
+<A HREF="j1-6.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
 
-When the 180 degree pulse is applied, it rotates the magnetization vectors by 180 degrees about the X' axis.  In addition 
+Когда применяется импульс в 180 градусов, он поворачивает векторы намагниченности на 180 градусов вокруг оси X'. Кроме того, векторы намагниченности
   
-the <img src="../images/10-nu.gif">+J/2 and <img src="../images/10-nu.gif">-J/2 magnetization vectors change places because the 180 degree pulse also flips the spin state of the <I>B</I> nucleus which is causing the splitting of the <I>A</I> spectral lines.
+ <img src="../images/10-nu.gif">+J/2 and <img src="../images/10-nu.gif">-J/2 меняются местами, поскольку импульс в 180 градусов также переворачивает спиновое состояние ядра <I>B</I>, что вызывает расщепление спектральных линий <I>A</I>.
 <A HREF="j1-7.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
 <P>
 
-The two groups of vectors will refocus as they evolve at their own Larmor frequency. 
+Две группы векторов будут перефокусироваться по мере их эволюции на собственной частоте Лармора.
 <A HREF="j1-8.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
-In this example the precession in the XY plane has been stopped when the vectors have refocussed.  You will notice that the two groups of vecotrs do not refocus on the -Y axis.  The phase of the two vectors on refocussing varies as a function of TE.  This phase varies as a function of TE at a rate equal to the size of the spin-spin coupling frequency.   Therefore, measuring this rate of change of phase will give us the size of the spin-spin coupling constant.  This is the basis of one type of two-dimensional (2-D) NMR spectroscopy.<P>
+В этом примере прецессия в плоскости XY была остановлена, когда векторы перефокусировались. Вы заметите, что две группы векторов не перефокусируются на оси -Y. Фаза двух векторов при перефокусировке изменяется как функция TE. Эта фаза изменяется как функция TE со скоростью, равной размеру частоты спин-спиновой связи. Следовательно, измерение этой скорости изменения фазы даст нам размер константы спин-спиновой связи. Это основа одного типа двумерной (2-D) ЯМР-спектроскопии.<P>
 
 
-<A NAME="10.2"></A> <H3>J-resolved </H3> 
+<A NAME="10.2"></A> <H3>J-решено</H3>
 
-In a  2-D J-resolved NMR experiment, time domain data is recorded as a function of TE and time.  These two time dimensions will referred to as t<SUB>1</SUB> and t<SUB>2</SUB>.  For the <I>A<SUB>2</SUB>-C-C-B</I> molecule, the complete time domain signals look like this.  
+В двумерном J-разрешенном ЯМР-эксперименте данные временной области регистрируются как функция TE и времени. Эти два временных измерения будут называться t<SUB>1</SUB> и t<SUB>2</SUB>. Для молекулы <I>A<SUB>2</SUB>-C-C-B</I> полные сигналы временной области выглядят следующим образом.
 <A HREF="j2-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-This data is Fourier transformed first in the t<SUB>2</SUB>  direction to give an f<SUB>2</SUB>  dimension, 
+Эти данные сначала преобразуются Фурье в направлении t<SUB>2</SUB> для получения измерения f<SUB>2</SUB>
 <A HREF="j2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-and then in the t<SUB>1</SUB> direction to give an f<SUB>1</SUB> dimension.  
+, а затем в направлении t<SUB>1</SUB> для получения измерения f<SUB>1</SUB>.
 <A HREF="j2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-Displaying the data as shaded contours, we have the following two-dimensional data set.
+Отображая данные в виде затененных контуров, мы получаем следующий двумерный набор данных.
 <A HREF="j2-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-Rotating the data by 45 degrees makes the presentation clearer. 
-<A HREF="j2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-The f<SUB>1</SUB>  dimension gives us J coupling information while the f<SUB>2</SUB> dimension gives chemical shift information.  This type of experiment is called homonuclear J-Resolved 2-D NMR.  There is also heteronuclear J-resolved 2-D NMR which uses a spin echo sequence and techniques similar to those described in 
-<A HREF="../chap-9/chap-9.html" TARGET="TEXT">Chapter 9</A>. <P>
+Поворот данных на 45 градусов делает представление более понятным. Измерение
+<A HREF="j2-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> f<SUB>1</SUB> дает нам информацию о связи J, а измерение f<SUB>2</SUB> дает информацию о химическом сдвиге. Этот тип эксперимента называется гомоядерным J-разрешенным 2-D ЯМР. Существует также гетероядерный J-разрешенный 2-D ЯМР, который использует последовательность спинового эха и методы, аналогичные описанным в
+<A HREF="../chap-9/chap-9.html" TARGET="TEXT">Главе 9</A>. <P>
 
 
 
 <A NAME="10.3"></A> <H3>COSY </H3> 
 
-The application of two 90 degree pulses to a spin system will give a signal which varies with time t<SUB>1</SUB> where 
-t<SUB>1</SUB>  is the time between the two pulses. 
+Приложение двух 90-градусных импульсов к спиновой системе даст сигнал, который изменяется со временем t<SUB>1</SUB>, где
+t<SUB>1</SUB> — это время между двумя импульсами.
 <A HREF="j3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
 
-The Fourier transform of both the t<SUB>1</SUB> and t<SUB>2</SUB> dimensions gives us chemical shift information.  The 2-D hydrogen correlated chemical shift spectrum of ethanol will look like this.  
+Преобразование Фурье измерений t<SUB>1</SUB> и t<SUB>2</SUB> дает нам информацию о химическом сдвиге. Двумерный спектр химического сдвига этанола, коррелированный с водородом, будет выглядеть следующим образом.
 <A HREF="j4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-There is a wealth of information found in a COSY spectrum.  A normal (chemical shift) 1-D NMR spectrum can be found along the top and left sides of the 2-D spectrum.  Cross peaks exist in the 2-D COSY spectrum where there is spin-spin coupling between hydrogens.
+В спектре COSY содержится огромное количество информации. Обычный (химический сдвиг) одномерный спектр ЯМР можно найти вдоль верхней и левой сторон двумерного спектра. В двумерном спектре COSY существуют перекрестные пики, где есть спин-спиновая связь между водородами. Существуют перекрестные пики между водородами OH и
 
-There are cross peaks between OH and CH<SUB>2</SUB> hydrogens
-<A HREF="j3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>,   
+CH<SUB>2</SUB>
+<A HREF="j3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 
-and also between CH<SUB>3</SUB> and CH<SUB>2</SUB> hydrogens
-<A HREF="j3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> hydrogens.  
-There are no cross peaks between the CH<SUB>3</SUB> and OH hydrogens because there is no coupling between the CH<SUB>3</SUB> and OH hydrogens.  
+, а также между водородами CH<SUB>3</SUB> и CH<SUB>2</SUB>
+<A HREF="j3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>.
+Между водородами CH<SUB>3</SUB> и OH нет перекрестных пиков, поскольку нет связи между водородами CH<SUB>3</SUB> и OH.
 <A HREF="j3-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-Heteronuclear correlated 2-D NMR is also possible and useful.
+Гетероядерный коррелированный 2-D ЯМР также возможен и полезен.
 <A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
 
 
 
-<A NAME="10.4"></A> <H3>Examples </H3>
+<A NAME="10.4"></A> <H3>Примеры</H3>
 
-The following table presents some of the hundreds of possible 2-D NMR experiments and the data represented by the two dimensions.  The interested reader is directed to the NMR literture for more information.  
+В следующей таблице представлены некоторые из сотен возможных экспериментов 2-D ЯМР и данные, представленные двумя измерениями. Заинтересованный читатель может обратиться к литературе по ЯМР для получения дополнительной информации.
 <A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="../refs/ref-10.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="../refs/ref-08.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A><P>
 
 <CENTER>
 <TABLE  BORDER>
-<TR><TH>2-D Experiment (Acronym) <TH COLSPAN=2>Information
+<TR><TH>2-D Эксперимент (Акроним)<TH COLSPAN=2>Информация
 <TR><TH>  <TH>f<SUB>1</SUB> <TH>f<SUB>2</SUB> 
-<TR><TD>Homonuclear J resolved
+<TR><TD>Гомонуклеарный J решен
 	<TD><CENTER>J</CENTER>
 	<TD><CENTER><img src="../images/10-delta.gif"></CENTER>
-<TR><TD>Heteronuclear J resolved 
-	<TD><CENTER>J<SUB>AX</SUB></CENTER>
+<TR><TD>Гетероядерный J разрешен
+	<TD><CENTER>Дж.<SUB>AX</SUB></CENTER>
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>X</SUB></CENTER>
-<TR><TD>Homoculclear correlated spectroscopy (COSY)
+<TR><TD>Гомокулярная коррелированная спектроскопия (COSY)
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>A</SUB></CENTER>
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>A</SUB></CENTER>
-<TR><TD>Heteronuclear correlated spectroscopy (HETCOR)
+<TR><TD>Гетероядерная коррелированная спектроскопия (HETCOR)
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>A</SUB></CENTER>
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>X</SUB></CENTER>
-<TR><TD>Nuclear Overhauser Effect (2D-NOE)
-	<TD><CENTER><img src="../images/10-delta.gif"><SUB>H</SUB>, J<SUB>HH</SUB></CENTER>
-	<TD><CENTER><img src="../images/10-delta.gif"><SUB>H</SUB>, J<SUB>HH</SUB></CENTER>
-<TR><TD>2D-INADEQUATE 
+<TR><TD>Ядерный эффект Оверхаузера (2D-NOE)
+	<TD><CENTER><img src="../images/10-delta.gif"><SUB>H</SUB>, Дж.<SUB>HH</SUB></CENTER>
+	<TD><CENTER><img src="../images/10-delta.gif"><SUB>H</SUB>, Дж.<SUB>HH</SUB></CENTER>
+<TR><TD>2D-НЕДОСТАТОЧНО
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>A</SUB> + 
 		<img src="../images/10-delta.gif"><SUB>X</SUB></CENTER>
 	<TD><CENTER><img src="../images/10-delta.gif"><SUB>X</SUB></CENTER>
@@ -138,24 +137,24 @@ The following table presents some of the hundreds of possible 2-D NMR experiment
 </CENTER>
 <P>
 
-The following table of molecules contains links to their corresponding two-dimensional NMR spectra.  The spectra were recorded on a 300 MHz NMR spectrometer with CDCl<SUB>3</SUB> as the lock solvent.<P>
+Следующая таблица молекул содержит ссылки на соответствующие им двумерные спектры ЯМР. Спектры были записаны на ЯМР-спектрометре 300 МГц с CDCl<SUB>3</SUB> в качестве запирающего растворителя.<P>
  
 
 <CENTER>
 <TABLE  BORDER>
-<TR><TH>Molecule<TH>Formula<TH>Type<TH>Spectrum 
-<TR><TD>methyl ethyl ketone<TD>CH<SUB>3</SUB>(C=O)CH<SUB>2</SUB>CH<SUB>3</SUB><TD>COSY 	<TD><CENTER> <A HREF="j4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
-<TR><TD>ethanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>OH<TD>COSY 
+<TR><TH>Молекула<TH>Формула<TH>Тип<TH>Спектр
+<TR><TD>Метилэтилкетон<TD>CH<SUB>3</SUB>(C=O)CH<SUB>2</SUB>CH<SUB>3</SUB><TD>COSY 	<TD><CENTER> <A HREF="j4-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>
+<TR><TD>Этанол<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>OH<TD>COSY
 	<TD><CENTER> <A HREF="j4-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
-<TR><TD>1-propanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH<SUB>2</SUB>OH <TD>COSY 
+<TR><TD>1-пропанол<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH<SUB>2</SUB>OH <TD>COSY
 	<TD><CENTER> <A HREF="j4-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
-<TR><TD>2-propanol<TD>(CH<SUB>3</SUB>)<SUB>2</SUB>CHOH <TD>COSY 
+<TR><TD>2-пропанол<TD>(CH<SUB>3</SUB>)<SUB>2</SUB>CHOH <TD>COSY
 	<TD><CENTER> <A HREF="j4-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
-<TR><TD>2-butanol<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH(OH)CH<SUB>3</SUB><TD>COSY
+<TR><TD>2-бутанол<TD>CH<SUB>3</SUB>CH<SUB>2</SUB>CH(OH)CH<SUB>3</SUB><TD>COSY
  	<TD><CENTER> <A HREF="j4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
-<TR><TD>ethyl benzene<TD>C<SUB>6</SUB>H<SUB>5</SUB>CH<SUB>2</SUB>CH<SUB>3</SUB><TD>COSY
+<TR><TD>Этилбензол<TD>C<SUB>6</SUB>H<SUB>5</SUB>CH<SUB>2</SUB>CH<SUB>3</SUB><TD>COSY
 	<TD><CENTER><A HREF="j4-6.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  </CENTER>  
-<TR><TD>pyridine<TD>C<SUB>5</SUB>H<SUB>5</SUB>N<TD>COSY
+<TR><TD>Пиридин<TD>C<SUB>5</SUB>H<SUB>5</SUB>N<TD>COSY
 	<TD><CENTER><A HREF="j4-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A></CENTER>    
 </TABLE>
 </CENTER>
@@ -167,13 +166,16 @@ The following table of molecules contains links to their corresponding two-dimen
 
 <H5>
 <CENTER>
-Go to the: [<A HREF="../chap-11/chap-11.html">next chapter</A> 
-           | <A HREF="#top">chapter top</A> 
-           | <A HREF="../chap-9/chap-9.html">previous chapter</A> 
-           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
 
-Copyright &copy; 1997-2017 J.P. Hornak.<BR>
-All Rights Reserved.
+Переход к: [
+    <A HREF="../chap-9/chap-9.html">Предыдущая глава</A> |
+    <A HREF="#top">Начало главы</A> |
+    <A HREF="../chap-11/chap-11.html">Следующая глава</A> |
+    <A HREF="../bnmr.html" TARGET="NEW">Обложка</A> ]<P>
+
+Авторские права © 1997-2017 JP Hornak. <BR>
+Все права защищены.
+
 </CENTER>
 </H5>
 

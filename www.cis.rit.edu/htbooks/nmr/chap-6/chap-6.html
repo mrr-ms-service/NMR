@@ -4,102 +4,99 @@
 <HEAD><TITLE>CHAPTER-6</TITLE></HEAD>
 <BODY>
 <BODY BGCOLOR="#ffffff">
-<CENTER><H1>The Basics of NMR</H1>
-<H2>Chapter 6</H2>
-<H2>PULSE  SEQUENCES</H2></CENTER>
+<CENTER><H1>Основы ЯМР</H1>
+<H2>Глава 6</H2>
+<H2>ПОСЛЕДОВАТЕЛЬНОСТИ ИМПУЛЬСОВ</H2></CENTER>
 
 <HR COLOR="#CC0000">
 <H4><UL>
-	<LI><A HREF="#4.1">Introduction</A>
-	<LI><A HREF="#4.3">The 90-FID Sequence </A>
-	<LI><A HREF="#4.4">The Spin-Echo Sequence</A>
- 	<LI><A HREF="#4.5">The Inversion Recovery Sequence</A>
+	<LI><A HREF="#4.1">Введение</A>
+	<LI><A HREF="#4.3">Последовательность 90-ЗСИ</A>
+	<LI><A HREF="#4.4">Последовательность спин-эхо</A>
+ 	<LI><A HREF="#4.5">Последовательность инверсии-восстановления</A>
 
 </H4></UL>
 <HR>
-<A NAME="4.1"></A> <H3>Introduction </H3> 
+<A NAME="4.1"></A> <H3>Введение</H3>
 
-You have seen in <A HREF="../chap-5/chap-5.html" TARGET="TEXT">Chapter 5</A> how a time domain signal can be converted into a frequency domain signal.  In this chapter you will learn a few of the ways that a time domain signal can be created.  Three methods are presented here, but there are an infinite number of possibilities.  These methods are called pulse sequences.  A pulse sequence is a set of RF pulses applied to a sample to produce a specific form of NMR signal.  <P>
+В <A HREF="../chap-5/chap-5.html" TARGET="TEXT">Главе 5</A> вы увидели, как сигнал временной области может быть преобразован в сигнал частотной области. В этой главе вы узнаете несколько способов создания сигнала временной области. Здесь представлены три метода, но существует бесконечное количество возможностей. Эти методы называются импульсными последовательностями. Импульсная последовательность — это набор РЧ-импульсов, применяемых к образцу для получения определенной формы сигнала ЯМР. <P>
 
 
-<A NAME="4.3"></A> <H3>The 90-FID Sequence</H3> 
+<A NAME="4.3"></A> <H3>Последовательность 90-ЗСИ</H3>
 
-In  the 90-FID pulse  sequence, net  magnetization is rotated down  into the  X'Y' plane with  a 
-90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse.  
+В последовательности импульсов 90-FID чистая намагниченность поворачивается вниз в плоскость X'Y' с импульсом
+90<FONT SIZE="-1"><SUP>o</SUP></FONT>.
 <A HREF="../chap-3/c14-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
-The net magnetization vector begins to precess about the +Z axis.
+Вектор чистой намагниченности начинает прецессировать вокруг оси +Z.
 <A HREF="../chap-3/c13-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
-The magnitude of the vector also decays with time.
+Величина вектора также затухает со временем.
 <A HREF="d3-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
 
-A timing diagram is a multiple axis plot of some aspect of a pulse sequence versus time. A timing diagram for a 90-FID pulse sequence has a plot of RF energy versus time and another for signal versus time.
+Временная диаграмма — это многоосевой график некоторого аспекта импульсной последовательности в зависимости от времени. Временная диаграмма для импульсной последовательности 90-FID имеет график зависимости РЧ-энергии от времени и еще один график зависимости сигнала от времени.
 <A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
 <A HREF="../refs/ref-12.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
 <A HREF="d3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-When this sequence is repeated, for example when signal-to-noise improvement is needed, the amplitude of the signal after being Fourier transformed (S) will depend on 
-T<FONT SIZE="-1"><SUB>1</SUB></FONT>  and the time between repetitions, called the repetition time (TR), of the sequence.  In the signal equation below, <I>k</I> is a proportionality constant and 
-<IMG SRC="../images/10-rho.gif"> is the density of spins in the sample.<P>
+Когда эта последовательность повторяется, например, когда необходимо улучшение отношения сигнал/шум, амплитуда сигнала после преобразования Фурье (S) будет зависеть от
+T<FONT SIZE="-1"><SUB>1</SUB></FONT> и времени между повторениями, называемого временем повторения (ВП), последовательности.  В уравнении сигнала ниже, <I>k</I> является константой пропорциональности и
+<IMG SRC="../images/10-rho.gif"> представляет собой плотность спинов в образце.<P>
 
 <CENTER>
 S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - e<SUP>-TR/T1</SUP> )
 </CENTER><P>
 
 
-<A NAME="4.4"></A> <H3>The Spin-Echo Sequence </H3> 
+<A NAME="4.4"></A> <H3>Последовательность спин-эхо</H3>
 
-Another commonly used pulse sequence is the spin-echo  pulse  sequence.   
+Другая часто используемая последовательность импульсов — это последовательность импульсов спин-эхо
 <A HREF="../refs/ref-02.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
-<A HREF="../refs/ref-12.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
-Here a 90<FONT SIZE="-1"><SUP>o</SUP></FONT> 
-pulse  is first applied  to the spin system.
-<A HREF="d4-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
-The 90<FONT SIZE="-1"><SUP>o</SUP></FONT> 
-degree pulse rotates  the  magnetization down into the  X'Y' plane.  The transverse magnetization begins to dephase.
+<A HREF="../refs/ref-12.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>.
+Здесь сначала к спиновой системе применяется импульс 90<FONT SIZE="-1"><SUP>o</SUP></FONT>
+<A HREF="d4-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>.
+Импульс 90<FONT SIZE="-1"><SUP>o</SUP></FONT>
+поворачивает намагниченность вниз в плоскость X'Y'. Поперечная намагниченность начинает дефазироваться.
 <A HREF="d4-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
 
-At some point in time after the 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse, a 
-180<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse is applied.  
-This pulse rotates the magnetization by 180<FONT SIZE="-1"><SUP>o</SUP></FONT> about the X' axis.
+В какой-то момент времени после импульса 90<FONT SIZE="-1"><SUP>o</SUP></FONT> подается импульс
+180<FONT SIZE="-1"><SUP>o</SUP></FONT>.
+Этот импульс поворачивает намагниченность на 180<FONT SIZE="-1"><SUP>o</SUP></FONT> вокруг оси X'.
 <A HREF="d4-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
 
-The 180<FONT SIZE="-1"><SUP>o</SUP></FONT> 
-pulse causes the magnetization  to  at least partially rephase and to produce a signal called an echo.
+Импульс 180<FONT SIZE="-1"><SUP>o</SUP></FONT>
+заставляет намагниченность по крайней мере частично рефазировать и производить сигнал, называемый эхом.
 <A HREF="d4-4.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A><P>
 
-A timing  diagram shows the relative positions of the two radio frequency  pulses and the signal.
+Временная диаграмма показывает относительное положение двух радиочастотных импульсов и сигнала.
 <A HREF="d4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-The signal equation for a repeated spin echo sequence as a function of the repetition time, TR, and the echo time (TE) defined as the time between the 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse and the maximum amplitude in the echo is<P>
+Уравнение сигнала для повторяющейся последовательности спинового эха как функции времени повторения, ВП, и времени эха (ВЭ), определяемого как время между импульсом 90<FONT SIZE="-1"><SUP>o</SUP></FONT> и максимальной амплитудой в эхе, имеет вид<P>
 
 <CENTER>
 S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - e<SUP>-TR/T1</SUP> ) e<SUP>-TE/T2</SUP>
 </CENTER><P>
 
 
-<A NAME="4.5"></A> <H3>The Inversion Recovery Sequence </H3> 
+<A NAME="4.5"></A> <H3>Последовательность инверсии-восстановления</H3>
 
-An  inversion recovery pulse sequence can  also be used to record an NMR spectrum.  In this sequence, a 
-180<FONT SIZE="-1"><SUP>o</SUP></FONT>  
-pulse is first applied.  This rotates the net magnetization down to the -Z axis.  
-<A HREF="d5-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
-The magnetization undergoes spin-lattice relaxation and returns toward its equilibrium position along the +Z axis.  
+Последовательность импульсов инверсия-восстановление также может использоваться для записи спектра ЯМР. В этой последовательности сначала применяется импульс 180<FONT SIZE="-1"><SUP>o</SUP></FONT>.
+<A HREF="d5-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
+Это поворачивает чистую намагниченность вниз к оси -Z.
 <A HREF="d5-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
-Before it reaches equilibrium, a 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse is applied which rotates the longitudinal magnetization into the XY plane.  In this example, the 90<FONT SIZE="-1"><SUP>o</SUP></FONT> pulse is applied shortly after the 180<FONT SIZE="-1"><SUP>o</SUP></FONT>  pulse.
+Намагниченность подвергается спин-решеточной релаксации и возвращается к своему равновесному положению вдоль оси +Z. Прежде чем она достигнет равновесия, применяется импульс 90<FONT SIZE="-1"><SUP>o</SUP></FONT>, который поворачивает продольную намагниченность в плоскость XY. В этом примере импульс 900<FONT SIZE="-1"><SUP>o</SUP></FONT> применяется вскоре после импульса 180<FONT SIZE="-1"><SUP>o</SUP></FONT>.
 <A HREF="d5-3.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A> 
-Once magnetization is present in the XY plane it rotates about the Z axis and dephases giving a FID.<P>  
+Как только намагниченность присутствует в плоскости XY, она поворачивается вокруг оси Z и дефазирует, давая ЗСИ.<P>
 
-Once again, the  timing  diagram  shows the  relative positions of the  two radio frequency pulses and the signal.
+И снова временная диаграмма показывает относительное положение двух радиочастотных импульсов и сигнала.
 <A HREF="d5-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-The signal as a function of TI when the sequence is not repeated is<P>
+Сигнал как функция TI, когда последовательность не повторяется, равен<P>
 
 <CENTER>
 S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - 2e<SUP>-TI/T1</SUP> )
 <A HREF="d5-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 </CENTER><P>
 
-It should be noted at this time that the zero crossing of this function occurs for TI = 
+В настоящее время следует отметить, что переход через нулевое значение этой функции происходит при TI =
 T<FONT SIZE="-1"><SUB>1</SUB></FONT> <I>ln</I>2.
 
 
@@ -107,13 +104,16 @@ T<FONT SIZE="-1"><SUB>1</SUB></FONT> <I>ln</I>2.
 
 <H5>
 <CENTER>
-Go to the: [<A HREF="../chap-7/chap-7.html">next chapter</A> 
-           | <A HREF="#top">chapter top</A> 
-           | <A HREF="../chap-5/chap-5.html">previous chapter</A> 
-           | <A HREF="../bnmr.html" TARGET="NEW">cover</A> ]<P>
 
-Copyright &copy; 1997-2017 J.P. Hornak.<BR>
-All Rights Reserved.
+Переход к: [
+    <A HREF="../chap-5/chap-5.html">Предыдущая глава</A> |
+    <A HREF="#top">Начало главы</A> |
+    <A HREF="../chap-7/chap-7.html">Следующая глава</A> |
+    <A HREF="../bnmr.html" TARGET="NEW">Обложка</A> ]<P>
+
+Авторские права © 1997-2017 JP Hornak. <BR>
+Все права защищены.
+
 </CENTER>
 </H5>
 
