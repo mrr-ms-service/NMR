@@ -4,190 +4,166 @@
 <HEAD><TITLE>CHAPTER-11</TITLE></HEAD>
 <BODY>
 <BODY BGCOLOR="#ffffff">
-<CENTER><H1>The Basics of NMR</H1>
-<H2>Chapter 11</H2>
-<H2>ADVANCED  SPECTROSCOPIC  TECHNIQUES</H2></CENTER>
+<CENTER><H1>Основы ЯМР</H1>
+<H2>Глава 11</H2>
+<H2>ПЕРЕДОВЫЕ СПЕКТРОСКОПИЧЕСКИЕ МЕТОДЫ</H2></CENTER>
 <HR COLOR="#CC0000">
 <H4><UL>
 
-	<LI><A HREF="#11.1">Introduction </A>
- 	<LI><A HREF="#11.2">Diffusion </A>
-	<LI><A HREF="#11.3">Spin Relaxation Time </A>
-	<LI><A HREF="#11.4">Solid State </A>
-	<LI><A HREF="#11.5">Microscopy </A>
-	<LI><A HREF="#11.6">Solvent Suppression</A>
-	<LI><A HREF="#11.7">Field Cycling NMR</A>
+	<LI><A HREF="#11.1">Введение</A>
+ 	<LI><A HREF="#11.2">Диффузия</A>
+	<LI><A HREF="#11.3">Время релаксации спина</A>
+	<LI><A HREF="#11.4">Твердотельный</A>
+	<LI><A HREF="#11.5">Микроскопия</A>
+	<LI><A HREF="#11.6">Подавление растворителей</A>
+	<LI><A HREF="#11.7">ЯМР с циклическим полем</A>
 
 
 </H4></UL>
 <HR>
 
 <A NAME="11.1"></A> 
-<H3>Introduction </H3> 
+<H3>Введение</H3>
 
-Nuclear magnetic resonance spectroscopy is one of the richest spectroscopies available.  
-In previous chapters you have seen how it can be used to elucidate chemical structure.  
-In this chapter you will see some of the other more advanced applications of NMR.  
-Two of these techniques, solid state NMR and gradient enhanced spectroscopy,  
-will assist us further in the determination of molecular structure.  
-Two additional techniques will assist us in studying molecular dynamics, 
-or the rotational and translational motions of molecules.  
-The last technique, NMR microscopy, will enable us to determine the spatial distribution of nuclear spins in a sample.
+Спектроскопия ядерного магнитного резонанса является одним из самых богатых доступных спектроскопий. В предыдущих главах вы увидели, как ее можно использовать для выяснения химической структуры. В этой главе вы увидите некоторые другие более продвинутые приложения ЯМР. Два из этих методов, ЯМР твердого тела и спектроскопия с градиентным усилением, помогут нам в дальнейшем определении молекулярной структуры. Два дополнительных метода помогут нам в изучении молекулярной динамики или вращательных и поступательных движений молекул. Последний метод, ЯМР-микроскопия, позволит нам определить пространственное распределение ядерных спинов в образце.
 <P> 
 
 
-<A NAME="11.2"></A> <H3>Diffusion </H3> 
+<A NAME="11.2"></A> <H3>Диффузия</H3>
 
-Diffusion is the motion of particles due to Brownian motion.  
-The diffusion coefficient, D, is a measure of the diffusion.  
-The pulsed-gradient spin-echo sequence permits us to measure the diffusion coefficient.  
-The sequence is in theory capable of measuring both the rotational and translational diffusion coefficients, 
-but is used primarily for studying translational diffusion.  <P>
+Диффузия — это движение частиц вследствие броуновского движения. Коэффициент диффузии, D, является мерой диффузии. Последовательность спин-эхо с импульсным градиентом позволяет нам измерить коэффициент диффузии. Последовательность теоретически способна измерять как вращательные, так и поступательные коэффициенты диффузии, но в основном используется для изучения поступательной диффузии. <P>
 
-To understand how the pulsed-gradient spin-echo sequence allows us to measure diffusion, 
-consider the timing diagram for the sequence.
+Чтобы понять, как импульсно-градиентная спин-эхо последовательность позволяет нам измерять диффузию, рассмотрим временную диаграмму для последовательности.
 <A HREF="k2-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-This sequence is very similar to the spin echo sequence introduced in <A HREF="../chap-6/chap-6.html#4.4" TARGET="TEXT">Chapter 6</A>, except that two gradient pulses have been applied.  These two gradient pulses are identical in amplitude, G, and width, <img src="../images/10-delta.gif">.  The two gradient pulses are separated by a time <img src="../images/10_delta.gif"> and are placed symmetrically about the 180 degree pulse.<P>
+Эта последовательность очень похожа на последовательность спин-эхо, представленную в <A HREF="../chap-6/chap-6.html#4.4" TARGET="TEXT">Главе 6</A>, за исключением того, что были применены два градиентных импульса. Эти два градиентных импульса идентичны по амплитуде, G, и ширине, <img src="../images/10-delta.gif">. Два градиентных импульса разделены временем <img src="../images/10_delta.gif"> и размещены симметрично относительно 180-градусного импульса.<P>
 
-The function of the gradient pulses is to dephase magnetization from spins which have diffused to a new location in the period 
-<img src="../images/10_delta.gif">.    These pulses have no effect on  stationary spins.  For example, a stationary spin exposed to the first gradient pulse, applied along the Z axis, will acquire a phase in radians given by<P>
+Функция градиентных импульсов заключается в дефазировке намагниченности спинов, которые диффундировали в новое место в периоде
+<img src="../images/10_delta.gif">. Эти импульсы не оказывают никакого влияния на стационарные спины. Например, стационарный спин, подвергнутый воздействию первого градиентного импульса, приложенного вдоль оси Z, приобретет фазу в радианах, заданную формулой<P>
 
 <CENTER>
 <IMG SRC="../images/12-phi.gif"> = 2 <IMG SRC="../images/10-pi.gif"> <IMG SRC="../images/10-gamma.gif"> 
 <IMG SRC="../images/10-integ.gif">  z G<font size="-1"><SUB>z</SUB></font> dt  .<BR>
 </CENTER>
 
-The spin will acquire an equal but opposite phase from the second pulse since the pulses are on different sides of the 180 degree RF pulse.   Thus, their effects cancel each other out.<P>
+Спин приобретет равную, но противоположную фазу от второго импульса, поскольку импульсы находятся по разные стороны от 180-градусного РЧ-импульса. Таким образом, их эффекты компенсируют друг друга. <P>
 
-Consider the following illustration of the effect of the gradient pulses on the phase of stationary and moving spins.  
+Рассмотрим следующую иллюстрацию влияния градиентных импульсов на фазу стационарных и движущихся спинов.
 <A HREF="k2-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
-The illustration presents the phase of a diffusing spin relative to that of a reference spin and a stationary spin. The reference spin is one which experiences no gradient pulses.  The stationary spin is not diffusing during the time illustrated by the sequence.  The diffusing spin moves along Z during the sequence.  The blue line in the timing diagram represents the time of the 180 degree pulse in the spin echo sequence.  When you put the illustration into motion, the stationary spin comes back into phase with the reference one, indicating a positive contribution to the echo.  
-The diffusing spin does not come back into phase with the reference spin so it diminishes the echo height.
+На иллюстрации представлена фаза рассеивающегося спина относительно фазы опорного спина и стационарного спина. Опорный спин — это тот, который не испытывает градиентных импульсов. Стационарный спин не рассеивается в течение времени, проиллюстрированного последовательностью. Рассеивающий спин движется вдоль Z в течение последовательности. Синяя линия на временной диаграмме представляет время 180-градусного импульса в последовательности спинового эха. Когда вы приводите иллюстрацию в движение, неподвижный спин возвращается в фазу с опорным, что указывает на положительный вклад в эхо. Рассеивающий спин не возвращается в фазу с опорным спином, поэтому он уменьшает высоту эха.
 <A HREF="k2-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>   
 
 
-The relationship between the signal (S) obtained in the presence of a gradient amplitude G<SUB>i</SUB> in the <I>i</I> direction and the diffusion coefficient in the same direction is given by the following equation 
-where S<SUB>o</SUB> is the signal at zero gradient. 
+Соотношение между сигналом (S), полученным при наличии амплитуды градиента G<SUB>i</SUB> в направлении <I>i</I>, и коэффициентом диффузии в том же направлении определяется следующим уравнением, где S<SUB>o</SUB> — сигнал при нулевом градиенте.
 <A HREF="../refs/ref-39.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> <P>
 
 <CENTER>
 S/S<SUB>o</SUB> = exp[-(G<SUB>i</SUB> <img src="../images/10-gamma.gif"> <img src="../images/10-delta.gif">)<SUP>2</SUP> D<SUB>i</SUB> (<img src="../images/10_delta.gif"> - <img src="../images/10-delta.gif">/3)]
 </CENTER><P>
 
-The diffusion coefficient is typically calculated from a plot of ln(S/S<SUB>o</SUB>) versus 
+Коэффициент диффузии обычно рассчитывается из графика ln(S/S<SUB>o</SUB>) против
 (G <img src="../images/10-gamma.gif"> <img src="../images/10-delta.gif">)<SUP>2</SUP> (<img src="../images/10_delta.gif"> - <img src="../images/10-delta.gif">/3).  
-Diffusion in the x, y, or z direction may be measured by applying the gradient respectively in the x, y, or z direction.<P>
+Диффузию в направлении x, y или z можно измерить, применяя градиент соответственно в направлении x, y или z.<P>
 
 
 
 <A NAME="11.3"></A> 
-<H3>Spin Relaxation Time </H3> 
+<H3>Время релаксации спина</H3>
 
-The spin-lattice and spin-spin relaxation times, T<SUB>1</SUB> and T<SUB>2</SUB> respectively, 
-of the components of a solution are valuable tools for studying molecular dynamics.  
-You saw in 
-<A HREF="../chap-3/chap-3.html#3.15" TARGET="TEXT">Chapter 3</A> 
-that T<SUB>1</SUB><SUP>-1</SUP> is proportional to the number of molecular motions at the Larmor frequency, 
-while T<SUB>2</SUB><SUP>-1</SUP> is proportional to the number of molecular motions at frequencies less than or equal to the Larmor frequency.  
-When we are dealing with solutions these motions are predominantly rotational motions.  <P>
+Времена спин-решеточной и спин-спиновой релаксации, T<SUB>1</SUB> и T<SUB>2</SUB> соответственно, компонентов раствора являются ценными инструментами для изучения молекулярной динамики. Вы видели в
+<A HREF="../chap-3/chap-3.html#3.15" TARGET="TEXT">Главе 3</A>,
+что T<SUB>1</SUB><SUP>-1</SUP> пропорционально числу молекулярных движений на частоте Лармора, тогда как T<SUB>2</SUB><SUP>-1</SUP> пропорционально числу молекулярных движений на частотах, меньших или равных частоте Лармора. Когда мы имеем дело с растворами, эти движения являются преимущественно вращательными движениями. <P>
 
-There are many pulse sequences which may be used to measure T<SUB>1</SUB> and T<SUB>2</SUB>.   
-The inversion recovery, 90-FID, and spin-echo sequences may be used to measure T<SUB>1</SUB>. 
-Each technique has its own advantages and disadvantages.  The spin-echo sequence may be used to measure T<SUB>2</SUB>. <P>
+Существует много импульсных последовательностей, которые могут быть использованы для измерения T<SUB>1</SUB> и T<SUB>2</SUB>.
+Последовательности инверсии-восстановления, 90-СЗИ и спин-эхо могут быть использованы для измерения T<SUB>1</SUB>.
+Каждый метод имеет свои преимущества и недостатки. Последовательность спин-эхо может быть использована для измерения T<SUB>2</SUB>. <P>
 
-For accurate measurements with each pulse sequence, 
-it is important that the sample experience experience a spatially uniform B<SUB>1</SUB> magnetic field.  
-When inhomogeneous fields are used, 
-inaccurate rotations result and the spins do not follow the general equation for the pulse sequence. 
-One common cause of an inhomogeneous B<SUB>1</SUB> magnetic field in a sample is a sample extending beyond the homogeneous bounds of the RF coil.  
-It is best that the sample be confined to the volume of the RF coil.  
-In practice this means filling an NMR tube with sample to a height no greater than the length of the RF coil, 
-and positioning the tube with sample in the center of the coil.  
+Для точных измерений с каждой последовательностью импульсов важно, чтобы образец испытывал пространственно однородное магнитное поле B<SUB>1</SUB>.
+При использовании неоднородных полей возникают неточные вращения, и спины не следуют общему уравнению для последовательности импульсов. Одной из распространенных причин неоднородного магнитного поля B<SUB>1</SUB> в образце является выход образца за пределы однородных границ РЧ-катушки. Лучше всего, чтобы образец был ограничен объемом РЧ-катушки. На практике это означает заполнение ЯМР-трубки образцом на высоту, не превышающую длину РЧ-катушки, и размещение трубки с образцом в центре катушки.
 
 <A HREF="k3-0.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
 
-This position will require reshimming the sample if you are concerned about narrow lines widths. <P>
+Это положение потребует повторной подгонки образца, если вас беспокоят узкие ширины линий.<P>
 
    
  
 
-<I>T<SUB>1</SUB> Measurement</I><BR>
+<I>Измерение T<SUB>1</SUB></I><BR>
 
-Recall the timing diagram for an inversion recovery sequence first presented in 
-<A HREF="../chap-6/chap-6.html#6.4" TARGET="TEXT">Chapter 6</A>.
+Вспомним временную диаграмму для последовательности инверсии-восстановления, впервые представленную в
+<A HREF="../chap-6/chap-6.html#6.4" TARGET="TEXT">Главе 6</A>.
 
 <A HREF="../chap-6/d5-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-The signal as a function of TI when the sequence is not repeated is <P>
+Сигнал как функция TI, когда последовательность не повторяется, равен <P>
 
 <CENTER>
 S = <I>k</I> <IMG SRC="../images/10-rho.gif"> ( 1 - 2e<SUP>TI/T1</SUP> )  
 <A HREF="../chap-6/d5-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>.<P>
 </CENTER><P>
 
-If the curve is well defined (<I>i.e.</I> if there is a high density of data points recorded at different TI times), the T<SUB>1</SUB> value can be determined from the zero crossing of the curve which is T<FONT SIZE="-1"><SUB>1</SUB></FONT> <I>ln</I>2.<P>
+Если кривая хорошо определена (<I>т.е.</I> если имеется высокая плотность точек данных, зарегистрированных в разные моменты времени TI), значение T<SUB>1</SUB> можно определить из нулевого пересечения кривой, которое равно T<FONT SIZE="-1"><SUB>1</SUB></FONT> <I>ln</I>2.<P>
 
-Alternatively the relaxation curve as a function of TI 
+Альтернативно кривая релаксации как функция TI
 <A HREF="k3-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-may be fit using the equation <P>
+может быть подобрана с использованием уравнения <P>
 <CENTER>S = S<SUB>o</SUB> (1 - 2e<SUP>-TI/T1</SUP>). </CENTER><P>
-This approach is favored when there are fewer data points as a function of TI.<P>
+Этот подход предпочтителен, когда имеется меньше точек данных в зависимости от TI.<P>
 
-T<SUB>1</SUB> may also be determined from a 90-FID 
+T<SUB>1</SUB> также может быть определен из 90-ЗСИ
 <A HREF="../chap-6/d3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-or spin-echo sequence 
-<A HREF="../chap-6/d4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-which is repeated at various repetition times (TR).  For example, if the 90-FID sequence is repeated many times at TR<SUB>1</SUB> and then many times at TR<SUB>2</SUB>, TR<SUB>3</SUB>, etc, the plot of signal as a function of TR will be an exponential growth of the form<P>
+или спин-эхо последовательности
+<A HREF="../chap-6/d4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>,
+, которая повторяется с различными временами повторения (TR). Например, если последовательность 90-FID повторяется много раз в TR<SUB>1</SUB>, а затем много раз в TR<SUB>2</SUB>, TR<SUB>3</SUB> и т. д., график сигнала как функции TR будет иметь экспоненциальный рост вида<P>
 <CENTER>S = <I>k</I> ( 1 - e<SUP>TR/T1</SUP> )  
 <A HREF="k3-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>.</CENTER>  
 <P>
-This data may be fit to obtain T<SUB>1</SUB>.  
+Эти данные могут быть пригодны для получения T<SUB>1</SUB>.
 <A HREF="k3-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
 <P>
 
-The difficulty with fitting this data and the inversion recovery data is a lack of knowledge of the value of the equilibrium magnetization or signal S<SUB>o</SUB>.  Other techniques have been proposed which do not require knowledge of the equilibrium magnetization or signal
+Трудность подгонки этих данных и данных инверсии-восстановления заключается в отсутствии знания значения равновесной намагниченности или сигнала S<SUB>o</SUB>. Были предложены другие методы, которые не требуют знания равновесной намагниченности или сигнала
 <A HREF="../refs/ref-37.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>.  <P>
 
 
-<I>T<SUB>2</SUB> Measurement </I><BR>
+<I>Измерение T<SUB>2</SUB></I><BR>
 
-Measurement of the spin-spin relaxation time requires the use of a spin-echo pulse sequence.  
+Измерение времени релаксации спин-спин требует использования последовательности импульсов спин-эхо.
 <A HREF="../chap-6/d4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-The echo amplitude, S, as a function of echo time, TE, is exponentially decaying.
+Амплитуда эха, S, как функция времени эха, TE, экспоненциально затухает.
 <A HREF="k3-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-Plotting ln(S/S<SUB>o</SUB>) versus TE yields a straight line, the slope of which is -1/T<SUB>2</SUB>.  
+Построение графика ln(S/S<SUB>o</SUB>) в зависимости от TE дает прямую линию, наклон которой равен -1/T<SUB>2</SUB>.
 <A HREF="k3-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-A linear least squares algorithm is often used to find the slope and hence T<SUB>2</SUB> value.  
-This approach can result in lead to large errors in the calculated T<SUB>2</SUB> values when the data has noise.  
-The later points in the decay curve have poorer signal-to-noise ratio than the earlier points, but are given equal weight by the linear least squares  algorithm.  
-The solution to this problem is to use a non-linear least squares procedure.
+Для нахождения наклона и, следовательно, значения T<SUB>2</SUB> часто используется линейный алгоритм наименьших квадратов.
+Такой подход может привести к большим ошибкам в вычисленных значениях T<SUB>2</SUB>, если данные содержат шум.
+Более поздние точки на кривой затухания имеют худшее отношение сигнал/шум, чем более ранние точки, но линейный алгоритм наименьших квадратов присваивает им равный вес.
+Решением этой проблемы является использование нелинейной процедуры наименьших квадратов.
 
 <A HREF="../refs/ref-38.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> <P>
 
 
 
-<A NAME="11.4"></A> <H3>Solid State </H3> 
+<A NAME="11.4"></A> <H3>Твердотельный</H3>
 
-We saw in <A HREF="../chap-4/chap-4.html#4.6" TARGET="TEXT">Chapter 4</A> 
-that the magnitude of the chemical shift is related to the extent to which the electron can shield the nucleus from the applied magnetic field.  In a spherically symmetric molecule, the chemical shift is independent of molecular orientation.  
+В <A HREF="../chap-4/chap-4.html#4.6" TARGET="TEXT">Главе 4</A>
+мы увидели , что величина химического сдвига связана со степенью, в которой электрон может экранировать ядро от приложенного магнитного поля. В сферически симметричной молекуле химический сдвиг не зависит от ориентации молекулы.
 <A HREF="../chap-4/d6-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
-In an asymmetric molecule, the chemical shift is dependent on the orientation.  
+В асимметричной молекуле химический сдвиг зависит от ориентации.
 <A HREF="k4-1.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>  
-The magnetic field experienced by the nucleus varies as a function of the orientation of the molecule in the magnetic field.  
+Магнитное поле, испытываемое ядром, изменяется в зависимости от ориентации молекулы в магнитном поле.
 <A HREF="../refs/ref-50.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="k4-2.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>
 
-The NMR spectrum from a random distribution of fixed orientations, such as in a solid, would look like this.  
+Спектр ЯМР от случайного распределения фиксированных ориентаций, например, в твердом теле, будет выглядеть следующим образом.
 <A HREF="k4-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-The larger signal at lower field strength is due to the fact that there are more perpendicular orientations.  
-In a nonviscous liquid, the fields at the various orientations average out due to the tumbling of the molecule.
+Более сильный сигнал при меньшей напряженности поля обусловлен тем, что существует больше перпендикулярных ориентаций.
+В невязкой жидкости поля при различных ориентациях усредняются из-за переворачивания молекулы.
 <A HREF="k4-4.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-The anisotropic chemical shift is one reason why the NMR spectra of solid samples display broad spectral lines.  Another reason for broad spectral lines is dipolar broadening. A dipolar interaction is one between two spin 1/2 nuclei.  The magnitude of the interaction varies with angle 
-<img src="../images/10-theta.gif"> and distance r.  
+Анизотропный химический сдвиг является одной из причин, по которой спектры ЯМР твердых образцов демонстрируют широкие спектральные линии. Другой причиной широких спектральных линий является дипольное уширение. Дипольное взаимодействие — это взаимодействие между двумя ядрами со спином 1/2. Величина взаимодействия изменяется в зависимости от угла
+<img src="../images/10-theta.gif"> и расстояния r.
 <A HREF="../refs/ref-50.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="k4-5.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>
-As a function of <img src="../images/10-theta.gif">, the magnetic field B experienced by the red nucleus is 
+Как функция, магнитное поле B, испытываемое красным ядром, равно <img src="../images/10-theta.gif">
 <P>
 <CENTER>
 (3cos<SUP>2</SUP><img src="../images/10-theta.gif"> - 1). 
@@ -195,123 +171,111 @@ As a function of <img src="../images/10-theta.gif">, the magnetic field B experi
 </CENTER> 
 <P>
 
-A group of dipoles with a random distribution of orientations, 
+Группа диполей со случайным распределением ориентаций,
 <A HREF="k4-7a.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-as in a solid, gives this spectrum.  
+как в твердом теле, дает этот спектр.
 <A HREF="k4-7.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-The higher signal at mid-field strength is due to the larger presence of orientations perpendicular to the direction of the B<SUB>o</SUB> field.  This signal is made up of components from the red and blue nuclei in the dipole.  In a nonviscous liquid, the interaction averages out due to the presence of rapid tumbling of the molecule. 
+Более высокий сигнал в средней силе поля обусловлен большим присутствием ориентаций, перпендикулярных направлению поля B<SUB>o</SUB>. Этот сигнал состоит из компонентов от красных и синих ядер в диполе. В невязкой жидкости взаимодействие усредняется из-за наличия быстрого опрокидывания молекулы.
 <A HREF="k4-8.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
   
-When the angle <img src="../images/10-theta.gif"> in the above equation is 54.7<SUP>o</SUP>, 125.3<SUP>o</SUP>,  234.7<SUP>o</SUP>,  or 305.3<SUP>o</SUP>, the dipole interaction vanishes.  
+Когда угол <img src="../images/10-theta.gif"> в приведенном выше уравнении равен 54.7<SUP>o</SUP>, 125.3<SUP>o</SUP>,  234.7<SUP>o</SUP>, или 305.3<SUP>o</SUP>, дипольное взаимодействие исчезает.
 <A HREF="k4-9.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  
-The angle 54.7<SUP>o</SUP> is called the magic angle, <img src="../images/10-theta.gif"><SUB>m</SUB>.<P>
+Угол 54.7<SUP>o</SUP> называется магическим углом, <img src="../images/10-theta.gif"><SUB>m</SUB>.<P>
 
-If all the molecules could be positioned at <img src="../images/10-theta.gif"><SUB>m</SUB>, the spectrum would narrow to the fast tumbling limit.   
+Если бы все молекулы можно было расположить в точке <img src="../images/10-theta.gif"><SUB>m</SUB>, спектр сузился бы до предела быстрого переворачивания.
 <A HREF="k4-10.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A><P>
 
-Since this is not possible, the next best thing is to cause the average orientation of the molecules to be 
+Поскольку это невозможно, то лучшим решением будет сделать среднюю ориентацию молекул равной
 <img src="../images/10-theta.gif"><SUB>m</SUB>.  
 <A HREF="k4-11.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
-Even this is not exactly possible, but the closest approximation is to rapidly spin the entire sample at an angle 
-<img src="../images/10-theta.gif"><SUB>m</SUB>  relative to B<SUB>o</SUB>.  
+Даже это не совсем возможно, но наиболее близким приближением является быстрое вращение всего образца под углом
+<img src="../images/10-theta.gif"><SUB>m</SUB> относительно B<SUB>o</SUB>.
 <A HREF="../refs/ref-50.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 
-In solid state NMR, samples are placed in a special sample tube and the tube is placed inside a rotor.  The rotor, and hence the sample, are oriented at an angle <img src="../images/10-theta.gif"><SUB>m</SUB> with respect to the B<SUB>o</SUB> magnetic field.  
+В твердотельном ЯМР образцы помещаются в специальную пробирку для образцов, а пробирка помещается внутрь ротора. Ротор, а следовательно, и образец, ориентированы под углом <img src="../images/10-theta.gif"><SUB>m</SUB> относительно магнитного поля B<SUB>o</SUB>.
 <A HREF="k4-12.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>   
-The sample is then spun at a rate of thousands of revolutions per second.  
+Затем образец вращается со скоростью тысяч оборотов в секунду.
 <A HREF="k4-13.html" TARGET="ANIMATION"><IMG SRC="../images/play.gif"></A>   
 <P>
 
-The spinning rate must be comparable to the solid state line width.  The centrifigal force created by spinning the sample tube at a rate of several thousands of revolutions per second is enough to destroy a typical glass NMR sample tube.  Specially engineered sample tubes and rotors are needed.
+Скорость вращения должна быть сопоставима с шириной линии твердого тела. Центробежная сила, создаваемая вращением пробирки с образцом со скоростью в несколько тысяч оборотов в секунду, достаточна для разрушения типичной стеклянной пробирки с образцом ЯМР. Необходимы специально спроектированные пробирки с образцом и роторы.
 <A HREF="../refs/ref-50.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="../refs/ref-01.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <P>
 
 
 
-<A NAME="11.5"></A> <H3>Microscopy </H3> 
+<A NAME="11.5"></A> <H3>Микроскопия</H3>
 
-NMR microscopy is the application of magnetic resonance imaging (MRI) principles to the study of small objects.  Objects which are studied are typically less than 5 mm in diameter.  NMR microscopy requires special hardware not found on conventional NMR spectrometers.  This includes gradient coils to produce a gradient in the magnetic field along the X, Y, and Z axes; gradient coil drivers; RF pulse shaping software; and image processing software.  Resultant images can have 20 to 50 <img src="../images/10-mu.gif">m resolution.  
+Микроскопия ЯМР — это применение принципов магнитно-резонансной томографии (МРТ) для изучения малых объектов. Объекты, которые изучаются, обычно имеют диаметр менее 5 мм. Для микроскопии ЯМР требуется специальное оборудование, которого нет в обычных спектрометрах ЯМР. Оно включает в себя градиентные катушки для создания градиента в магнитном поле вдоль осей X, Y и Z; драйверы градиентных катушек; программное обеспечение для формирования радиочастотных импульсов; и программное обеспечение для обработки изображений. Результирующие изображения могут иметь <img src="../images/10-mu.gif">m разрешение от 20 до 50 мкм.
 
-The reader interested in more information on NMR microscopy is encouraged to read the author's hypertext book on MRI entitled <I>The Basics of MRI</I> located at 
+Читателю, заинтересованному в дополнительной информации о микроскопии ЯМР, рекомендуется прочитать гипертекстовую книгу автора по МРТ под названием <I>Основы МРТ</I> расположенную по адресу
 <A HREF = "http://www.cis.rit.edu/htbooks/mri/" TARGET="NEW" > http://www.cis.rit.edu/htbooks/mri/. </A><P>
 
 
 
 
-<A NAME="11.6"></A> <H3>Solvent Suppression </H3> 
+<A NAME="11.6"></A> <H3>Подавление растворителей</H3>
 
-Occasionally, it becomes necessary to eliminate the signal from one constituent of a sample.  
-An example is an unwanted water signal which overwhelms the signal from the desired constituent.
+Иногда возникает необходимость устранить сигнал от одного компонента образца. Примером может служить нежелательный сигнал воды, который подавляет сигнал от желаемого компонента.
 <A HREF="k5-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   
 
-If T<SUB>1</SUB> of the two components differ, this may be accomplished by using an inversion recovery sequence, presented in 
-<A HREF="../chap-6/chap-6.html#6.4" TARGET="TEXT">Chapter 6</A>.   
-To eliminate the water signal, choose the TI to be the time when the water signal passes through zero.  
+Если T<SUB>1</SUB> двух компонентов различается, это можно сделать с помощью последовательности инверсии-восстановления, представленной в
+<A HREF="../chap-6/chap-6.html#6.4" TARGET="TEXT">Главе 6</A>.
+Чтобы устранить сигнал воды, выберите TI как время, когда сигнал воды проходит через ноль.
 
 <A HREF="k5-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>  <P> 
 <CENTER>
 TI = T<FONT SIZE="-1"><SUB>1</SUB></FONT> <I>ln</I>2 
 </CENTER>
 
-<P>In this example, a TI = 1 s would eliminate the water signal.
+<P>В этом примере TI = 1 с исключит сигнал от воды.
 
 <A HREF="k5-3.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A>   <P>
 
-Another method of eliminating a solvent absorption signal is to saturate it.  
-In this procedure, a saturation pulse similar to that employed in C-13 NMR (See <A HREF="../chap-9/chap-9.html#9.2" TARGET="TEXT">Chapter 9</A>) is used to decouple hydrogen coupling.  
-The frequency of the saturation pulse is set to the solvent resonance.  
-The width of the saturation pulse is very long, so its bandwidth is very small causing it to affect only the solvent resonance.<P>
+Другой метод устранения сигнала поглощения растворителя — его насыщение. В этой процедуре импульс насыщения, аналогичный используемому в ЯМР C-13 (см. <A HREF="../chap-9/chap-9.html#9.2" TARGET="TEXT">Главу 9</A>), используется для разъединения водородной связи. Частота импульса насыщения устанавливается на резонанс растворителя. Ширина импульса насыщения очень велика, поэтому его полоса пропускания очень мала, из-за чего он влияет только на резонанс растворителя.<P>
 
 
-<A NAME="11.7"></A> <H3>Field Cycling NMR </H3>
+<A NAME="11.7"></A> <H3>ЯМР с циклическим полем</H3>
 
-Field cycling NMR spectroscopy is used to obtain spin-lattice relaxation rates, 
-R<FONT SIZE="-1"><SUB>1</SUB></FONT>, where<P>
+Спектроскопия ЯМР с циклическим полем используется для получения скоростей релаксации спин-решетки,
+R<FONT SIZE="-1"><SUB>1</SUB></FONT>, где<P>
 
 <CENTER>
 R<FONT SIZE="-1"><SUB>1</SUB></FONT> = 1/T<FONT SIZE="-1"><SUB>1</SUB> ,</FONT>
 </CENTER><P>
 
-as a function of magnetic field or Larmor frequency.  
-Therefore, field cycling NMR finds applications in the study of molecular dynamics.  
-The animation window contains an example of results from a field cycling NMR spectrometer. 
+как функция магнитного поля или частоты Лармора. Таким образом, ЯМР с циклическим полем находит применение в изучении молекулярной динамики. Окно анимации содержит пример результатов спектрометра ЯМР с циклическим полем.
 <A HREF="k7-2.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> 
-The plot represents the R<FONT SIZE="-1"><SUB>1</SUB></FONT> value of the hydrogen nuclei in various concentration aqueous solutions of 
-Mn<FONT SIZE="-1"><SUP>+2</SUP></FONT> at 25<FONT SIZE="-1"><SUP>o</SUP></FONT> as a function of the proton Larmor frequency.
+График представляет значение R<FONT SIZE="-1"><SUB>1</SUB></FONT> ядер водорода в водных растворах
+Mn<FONT SIZE="-1"><SUP>+2</SUP></FONT> различной концентрации при 25<FONT SIZE="-1"><SUP>o</SUP></FONT> как функцию частоты Лармора протона.
 <P>
 
 
-Many different techniques have been used to obtain R<FONT SIZE="-1"><SUB>1</SUB></FONT> as a function of magnetic field.  
+Для получения R<FONT SIZE="-1"><SUB>1</SUB></FONT> как функции магнитного поля использовалось много различных методов.
 
 <A HREF="../refs/ref-45.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A>
  
 
-Some techniques move the sample rapidly between different magnetic field strengths.  
-One of the more popular techniques keeps the sample at a fixed location and rapidly varies the magnetic field the sample experiences. 
-This technique is referred to as rapid field cycling NMR spectroscopy.  
+Некоторые методы быстро перемещают образец между различными значениями напряженности магнитного поля. Один из наиболее популярных методов удерживает образец в фиксированном положении и быстро изменяет магнитное поле, которое испытывает образец. Этот метод называется ЯМР-спектроскопией с быстрым циклированием поля.
 
 <A HREF="../refs/ref-46.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> 
 <A HREF="../refs/ref-47.html" TARGET="ANIMATION"><IMG SRC="../images/ref.gif"></A> <P>
 
 
-The principle behind a rapid field cycling NMR spectrometer is to polarize the spins in the sample using a high magnetic field, B<FONT SIZE="-1"><SUB>p</SUB></FONT>.  
-The magnetic field is rapidly changed to the value at which relaxation occurs, B<FONT SIZE="-1"><SUB>r</SUB></FONT>.  
-B<FONT SIZE="-1"><SUB>r</SUB></FONT> is the value at which R<FONT SIZE="-1"><SUB>1</SUB></FONT> is to be determined.
-After a period of time, <FONT FACE="symbol">t</FONT>, the magnetic field is switched to a value,
-B<FONT SIZE="-1"><SUB>d</SUB></FONT>, at which detection of a signal occurs.  
-B<FONT SIZE="-1"><SUB>d</SUB></FONT> is fixed so that the operating frequency of the detection circuitry does not need to be changed.  
-The signal, an FID, is created by the application of a 90<FONT SIZE="-1"><SUP>o</SUP></FONT> RF pulse. 
-The timing diagram for this sequence can be found in the animation window.   
+Принцип, лежащий в основе ЯМР-спектрометра с быстрым циклированием поля, заключается в поляризации спинов в образце с использованием сильного магнитного поля, B<FONT SIZE="-1"><SUB>p</SUB></FONT>.
+Магнитное поле быстро изменяется до значения, при котором происходит релаксация, B<FONT SIZE="-1"><SUB>r</SUB></FONT>.
+B<FONT SIZE="-1"><SUB>r</SUB></FONT> — это значение, при котором необходимо определить R<FONT SIZE="-1"><SUB>1</SUB></FONT>.
+По истечении некоторого периода времени, <FONT FACE="symbol">t</FONT>, магнитное поле переключается на значение,
+B<FONT SIZE="-1"><SUB>d</SUB></FONT>, при котором происходит обнаружение сигнала.
+B<FONT SIZE="-1"><SUB>d</SUB></FONT> фиксируется, так что рабочую частоту схемы обнаружения менять не нужно. Сигнал, СЗИ, создается путем подачи 90<FONT SIZE="-1"><SUP>o</SUP></FONT> РЧ-импульса. Временную диаграмму для этой последовательности можно найти в окне анимации.
 <A HREF="k7-1.html" TARGET="ANIMATION"><IMG SRC="../images/start.gif"></A> <P>
 
-The FT of the FID represents the amount of magnetization present in the sample after relaxing for a period <FONT FACE="symbol">t</FONT> in B<FONT SIZE="-1"><SUB>r</SUB></FONT>.
-A plot of this magnetization as a function of <FONT FACE="symbol">t</FONT> is an exponentially decaying function, starting from the equilibrium magnetization at 
-B<FONT SIZE="-1"><SUB>p</SUB></FONT> and going to the value at B<FONT SIZE="-1"><SUB>r</SUB></FONT>.  
-When a single type of spin is present, the relaxation is monoexponential with rate constant R<FONT SIZE="-1"><SUB>1</SUB></FONT> at B<FONT SIZE="-1"><SUB>r</SUB></FONT>.  <P>
+РЧ СЗИ представляет собой количество намагниченности, присутствующей в образце после релаксации в течение периода <FONT FACE="symbol">t</FONT> в B<FONT SIZE="-1"><SUB>r</SUB></FONT>.
+График этой намагниченности как функции <FONT FACE="symbol">t</FONT> представляет собой экспоненциально затухающую функцию, начинающуюся с равновесной намагниченности при B<FONT SIZE="-1"><SUB>p</SUB></FONT> и идущую к значению при B<FONT SIZE="-1"><SUB>r</SUB></FONT>.
+Когда присутствует один тип спина, релаксация является моноэкспоненциальной с константой скорости R<FONT SIZE="-1"><SUB>1</SUB></FONT> при B<FONT SIZE="-1"><SUB>r</SUB></FONT>.  <P>
 
-When B<FONT SIZE="-1"><SUB>r</SUB></FONT> is very large compared to B<FONT SIZE="-1"><SUB>d</SUB></FONT>, B<FONT SIZE="-1"><SUB>p</SUB></FONT> is often set to zero and 
-the plot of this magnetization as a function of <FONT FACE="symbol">t</FONT> is an exponentially growing function.<P>
+Когда B<FONT SIZE="-1"><SUB>r</SUB></FONT> очень велико по сравнению с B<FONT SIZE="-1"><SUB>d</SUB></FONT>, B<FONT SIZE="-1"><SUB>p</SUB></FONT> часто принимается равным нулю, а график этой намагниченности как функции <FONT FACE="symbol">t</FONT> представляет собой экспоненциально растущую функцию.<P>
 <P>  
 
 <P>
